@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>posicionamento (static, relative, absolute e fixed)</title>
+
+	<style type="text/css">
+		body{
+			background: #007fc8;
+		}
+		#container{
+			background: #fff;
+			width: 800px;
+			margin: 10px auto;
+			padding: 15px;
+			position: relative;
+		}
+		.relative{
+			position: relative;
+			left: 80px;
+		}
+		.absolute{
+			border: 1px solid red;
+			position: absolute;
+			background: #f2f2f2;
+			top: 0px;
+			right: 60px;
+
+		}
+		.fixed{
+			border: 1px solid red;
+			position: fixed;
+			background: #f2f2c5;
+			top: 0px;
+			right: 0px;
+
+		}
+		p{
+			width: 300px;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		
+		<h1>Posicionamento</h1>
+		<p class="fixed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus lorem id sollicitudin interdum. Integer nibh dui, pellentesque eu consequat at, semper id ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec elit quam, dignissim id mi sed, dictum mattis nulla. Morbi urna ante, rutrum eu velit vel, aliquet vulputate tellus. Vestibulum dignissim ut mi eget volutpat. Nullam euismod purus a leo consequat venenatis. Maecenas felis tellus, auctor et erat pulvinar, aliquet convallis tellus. Vestibulum dapibus quam velit, ac luctus ante maximus non. Etiam a libero risus. Nulla id suscipit nisi, eget consequat nunc. Nam ullamcorper pellentesque dapibus. Cras sed ante non orci ullamcorper blandit. Morbi rutrum in dolor sed aliquam. Morbi et condimentum erat. Phasellus euismod tellus non tristique lacinia.</p>
+
+		<p class="absolute">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus lorem id sollicitudin interdum. Integer nibh dui, pellentesque eu consequat at, semper id ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec elit quam, dignissim id mi sed, dictum mattis nulla. Morbi urna ante, rutrum eu velit vel, aliquet vulputate tellus. Vestibulum dignissim ut mi eget volutpat. Nullam euismod purus a leo consequat venenatis. Maecenas felis tellus, auctor et erat pulvinar, aliquet convallis tellus. Vestibulum dapibus quam velit, ac luctus ante maximus non. Etiam a libero risus. Nulla id suscipit nisi, eget consequat nunc. Nam ullamcorper pellentesque dapibus. Cras sed ante non orci ullamcorper blandit. Morbi rutrum in dolor sed aliquam. Morbi et condimentum erat. Phasellus euismod tellus non tristique lacinia.</p>
+
+		<p class="relative">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus lorem id sollicitudin interdum. Integer nibh dui, pellentesque eu consequat at, semper id ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec elit quam, dignissim id mi sed, dictum mattis nulla. Morbi urna ante, rutrum eu velit vel, aliquet vulputate tellus. Vestibulum dignissim ut mi eget volutpat. Nullam euismod purus a leo consequat venenatis. Maecenas felis tellus, auctor et erat pulvinar, aliquet convallis tellus. Vestibulum dapibus quam velit, ac luctus ante maximus non. Etiam a libero risus. Nulla id suscipit nisi, eget consequat nunc. Nam ullamcorper pellentesque dapibus. Cras sed ante non orci ullamcorper blandit. Morbi rutrum in dolor sed aliquam. Morbi et condimentum erat. Phasellus euismod tellus non tristique lacinia.</p>
+
+	</div>
+</body>
+</html>
