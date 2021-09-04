@@ -1,0 +1,23 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* configurações*/
+
+#menu_topo{
+	background-color: #8B008B;
+	padding: 10px;
+	height:120px
+
+}
+
+
+
+/*geral*/
+h2{
+	color: white;
+	text-align: center;
+	margin: 20px;
+
+}
