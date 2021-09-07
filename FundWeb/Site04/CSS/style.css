@@ -1,28 +1,30 @@
 *{
     margin: 0px;
     padding: 0px;
-    
 }
 
 body {
     margin-left: 20px;
     margin-right: 20px; 
 }
+footer {
+    background-color:#00A591;
+    height:300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
 #principal{
     background-color: #00A591;
    margin-top: 100px;
     height:250px;
-    
-
-
 }
 
 #menu{
     margin: 70px;
     margin-top:30px;
     margin-left: 120px;
-
- 
 }
 #pre-conteudo{
     background-color: #eee;
@@ -36,12 +38,7 @@ body {
 }
 #conteudo-img{
     display:flex;
-    justify-content: center   ;
-  
-
-
-  
-    
+    justify-content: center;
 }
 .imglogo{
     padding-left: 150px;
@@ -81,15 +78,11 @@ h2{
 
 ul{
     display: flex;
-    list-style: none;
-
-    
+    list-style: none; 
 }
 
 li{
     list-style: none;
-    
-  
 }
 
 a:link, a:visited{
@@ -110,6 +103,17 @@ a:link, a:visited{
 #principal a:hover{
     text-decoration: underline;
 }
+#pre-rodape{
+    background-color: #f3f3f3;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.boximg2{
+    background-color: #f3f3f3;
+    justify-content: center;
+    height:auto;
+    display: flex;
+}
 .butao a:link,.butao a:visited{
     text-decoration: none;
     color: white;
@@ -125,7 +129,25 @@ p,h4{
     margin-left: 10px;
 
 }
+.boximg2 img{
+    width: 1200px;
+    margin:auto;  
+}
 .box-img p {
 padding-left: 50px;
 padding-right: 50px;    
+}
+.boximg3{
+    margin: auto;
+}
+h1{
+    font-size:3.5em;
+    text-align: center;
+    padding-top:30px;
+    padding-bottom: 50px;
+}
+h6{ 
+    padding-top: 120px;
+    opacity: 0.4;
+    text-align: center;
 }
