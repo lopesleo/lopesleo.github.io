@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Atividade js</title>
+</head>
+<body>
+	<h1>atividade 1</h1>
+	<p> <code>function fatorial(n){
+   
+    if(n == 0 || n == 1)
+        return 1;
+
+    else
+        return n * fatorial(n-1);
+    
+
+let n = 4;
+resposta = fatorial(n)
+console.log("o fatorial de " + n + " é " + resposta);</code></p>
+<h1>Atividade 2</h1>
+<p><code>function pot30(){
+    let pot = 4;
+    var teste;
+
+    for (var i = 1; i <=30; i++) {
+       
+       teste = pot**i;
+
+       console.log(teste);
+    
+
+   }
+
+}</code></p>
+<h1>Atividade 3</h1>
+<p><code>function npositivo()_{
+    let max = 1000;
+    var res;
+    for (var i = 0; i <= max; i++) {
+        
+        if (i%2==0) {
+            
+            console.log(i)
+        }
+    }
+}</code></p>
+<h1>Atividade 4</h1>
+<p><code>function fibo(){
+
+    var v1=0,v2=1,v3;
+
+    for (var i = 0; i < 100; i++) {
+        console.log(v1);
+        v3 = v1 + v2;
+        v1 = v2;
+        v2=v3;
+
+}
+}</code></p>
+<h1>Atividade 5</h1>
+<p><code>function primo(num) {
+    if(num < 2) return false;
+    for (var i = 2; i < num; i++) {
+        if(num%i==0)
+            return false;
+    }
+    return true;
+}
+
+function testa(){
+    for(var i = 0; i < 1000; i++){
+    if(primo(i)) console.log(i);
+}
+}</code></p>
+
+</body>
+</html>
