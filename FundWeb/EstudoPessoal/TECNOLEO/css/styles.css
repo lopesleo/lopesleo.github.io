@@ -1,0 +1,133 @@
+*, *::before, *::after {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
+	font-family: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: "Trebuchet monospace", "Helvetica", sans-serif;
+	font-size: 10px;
+}
+
+body {
+	background: #e6e6e6;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #F7b600;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	color: #4e4e4e;
+	font-size: 2.5em;
+}
+
+h2 {
+	color: #f7b600;
+}
+
+h3 {
+	color: #585858;
+	background: #ccc;
+	padding: 5px;
+}
+
+header {
+	background-color: #f7b600;
+	padding: 2rem;
+	text-align: center;
+}
+
+header>div:nth-of-type(1) {
+	padding: 1rem
+}
+
+header>div:nth-of-type(1) span {
+	color: white;
+}
+
+main {
+	width: 920px;
+	padding: 15px;
+	margin: 0px auto;
+}
+
+main>section {
+	width: 660px;
+	float: left;
+}
+
+aside {
+	width: 240px;
+	float: right;
+}
+
+main>section>article {
+	padding: 20px;
+	margin-bottom: 20px;
+	background: white;
+}
+
+.data-postagem {
+	font-size: 0.8em;
+	border-bottom: 1px solid #f4f4f4;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+main>aside>section {
+	background: white;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+main>aside>section>article {
+	font-size: 0.8em;
+	padding: 5px;
+	border-bottom: 1px dotted #ccc;
+}
+
+header nav a:link, header nav a:visited {
+	color: #FFF;
+	padding: 8px 12px;
+}
+
+header nav a:hover {
+	color: #f7b600;
+	background: #FFF;
+	text-decoration: none;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	padding: 15px;
+	background: #ccc;
+}
+
+/* Tiny devices */
+@media (max-width: 575px) {
+}
+
+/* Small devices */
+@media (min-width: 576px) {}
+
+/*  Medium devices*/
+@media (min-width: 768px) {}
+
+/*  Large devices*/
+@media (min-width: 992px) {}
+
+/*  Extra large devices*/
+@media (min-width: 1200px) {}
