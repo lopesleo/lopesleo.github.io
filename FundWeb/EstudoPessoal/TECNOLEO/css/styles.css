@@ -21,6 +21,7 @@ img {
 
 a {
 	text-decoration: none;
+	font-size: 1rem;
 }
 
 a:link, a:visited {
@@ -37,13 +38,19 @@ h1 {
 }
 
 h2 {
+	font-size: 2.5rem;
 	color: #f7b600;
 }
 
 h3 {
+	font-size: 1.6rem;
 	color: #585858;
 	background: #ccc;
 	padding: 0.5rem;
+}
+
+h4 {
+	font-size: 1.3rem;
 }
 
 header {
@@ -65,31 +72,32 @@ header .logo span {
 	color: white;
 }
 
-header nav {
+.main-menu {
 	display: flex;
 	justify-content: space-around;
 }
 
-header nav ul {
+.main-menu ul {
 	list-style-type: none;
 	display: flex;
 }
 
-header nav ul li {
+.main-menu ul li {
 	padding: 0 0.4rem;
 }
 
-header nav a {
+.main-menu a {
 	color: #FFF;
 	font-size: 2rem;
-	padding: 0.3rem;
+	padding: 0.5rem;
+	border-radius: 4px;
 }
 
-header nav a:link, header nav a:visited {
+.main-menu a:link, .main-menu a:visited {
 	color: #FFF;
 }
 
-header nav a:hover {
+.main-menu a:hover {
 	color: #000;
 	background: #FFF;
 	text-decoration: none;
@@ -99,41 +107,71 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 1.5rem;
-	margin: 0.5rem;
-	border: solid 1px red;
+	background: #E6E6E6;
+	max-width: 1200px;
+	margin: 2rem auto;
 }
 
-main>section {
+.content {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-main>aside {}
-
-main>section>article {
-	padding: 2rem;
-	margin-bottom: 2rem;
 	background: white;
 }
 
+.lateral {
+	padding-left: 2rem;
+}
+
+.post {
+	padding: 2rem;
+}
+
+.post>figure {
+	margin-bottom: 1rem;
+}
+
+.post>p {
+	font-size: 1.5rem;
+}
+
+.post>a {
+	font-size: 1.2rem;
+}
+
+.post:not(:last-child) {
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
 .data-postagem {
-	font-size: 0.8em;
+	font-size: 1.5rem;
 	border-bottom: 1px solid #f4f4f4;
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
 	display: block;
 }
 
-main>aside>section {
+.lateral-box {
 	background: white;
 	padding: 1rem;
+}
+
+.lateral-box:not(:last-child) {
 	margin-bottom: 2rem;
 }
 
-main>aside>section>article {
+.lateral-box>article {
 	font-size: 0.8em;
 	padding: 0.5rem;
 	border-bottom: 1px dotted #ccc;
+}
+
+.lateral-box>article>p {
+	font-size: 1.2rem;
+}
+
+.lateral-box>article>a {
+	font-size: 1.2rem;
 }
 
 footer {
@@ -146,10 +184,13 @@ footer {
 /* Tiny devices */
 
 @media (max-width: 575px) {
-	main>section {
+	html {
+		font-size: 7px;
+	}
+	.content {
 		flex: 0 0 100%;
 	}
-	main>aside {
+	.lateral {
 		display: none;
 	}
 }
@@ -157,13 +198,16 @@ footer {
 /* Small devices */
 
 @media (min-width: 576px) {
-	main>section {
+	html {
+		font-size: 8px;
+	}
+	.content {
 		flex: 0 0 100%;
 	}
-	main>section>article {
+	.post {
 		flex: 0 0 50%;
 	}
-	main>aside {
+	.lateral {
 		display: none;
 	}
 }
@@ -171,14 +215,16 @@ footer {
 /*  Medium devices*/
 
 @media (min-width: 768px) {
-	main>section {
-		flex: 0 0 75%;
-		background-color: yellow;
+	html {
+		font-size: 9px;
 	}
-	main>section>article {
+	.content {
+		flex: 0 0 75%;
+	}
+	.post {
 		flex: 0 0 100%;
 	}
-	main>aside {
+	.lateral {
 		display: block;
 		flex: 0 0 25%;
 	}
@@ -186,8 +232,8 @@ footer {
 
 /*  Large devices*/
 
-@media (min-width: 992px) {}
-
-/*  Extra large devices*/
-
-@media (min-width: 1200px) {}
+@media (min-width: 992px) {
+	html {
+		font-size: 10px;
+	}
+}

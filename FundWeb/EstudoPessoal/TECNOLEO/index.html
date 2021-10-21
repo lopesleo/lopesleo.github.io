@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Tecleo</title>
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
@@ -14,7 +15,7 @@
 			<h1>Tec<span>Leo</span></h1>
 		</div>
 
-		<nav>
+		<nav class='main-menu'>
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="index.html">Jogos</a></li>
@@ -26,12 +27,14 @@
 	</header>
 
 	<main>
-		<section>
-
-			<article>
+		<section class="content">
+			<article class="post">
 				<h2>Titulo 1</h2>
 				<span class="data-postagem">Postado em 03/09/2021</span>
-				<img src="img/imagem1.jpg" alt="">
+				<figure>
+					<img src="img/imagem1.jpg" alt="">
+				</figure>
+				
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tempor lectus eget
 					scelerisque. Fusce ut facilisis eros, sed ornare arcu. Maecenas convallis imperdiet nibh eu posuere.
@@ -41,22 +44,24 @@
 
 			</article>
 
-			<article>
+			<article class="post">
 				<h2>Titulo 2</h2>
 				<span class="data-postagem">Postado em 03/09/2021</span>
-				<img src="img/imagem2.jpg" alt="">
+				<figure>
+					<img src="img/imagem2.jpg" alt="">
+				</figure>
+				
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tempor lectus eget
 					scelerisque. Fusce ut facilisis eros, sed ornare arcu. Maecenas convallis imperdiet nibh eu posuere.
 					Vivamus rutrum efficitur diam a mollis. Integer vel velit
 				</p>
 				<a href="">Leia mais</a>
-
 			</article>
 		</section>
 
-		<aside>
-			<section>
+		<aside class="lateral">
+			<section class="lateral-box">
 				<h3>
 					Postagens recentes
 				</h3>
@@ -75,16 +80,23 @@
 				</article>
 			</section>
 
-			<section>
-				<h3>Categorias</h3>
-				<nav>
-					<ul>
-						<li><a href="">Jogos</a></li>
-						<li><a href="">Celulares</a></li>
-						<li><a href="">Eletrônicos</a></li>
-						<li><a href="">Informática</a></li>
-					</ul>
-				</nav>
+			<section class="lateral-box">
+				<h3>
+					Postagens recentes
+				</h3>
+				<article>
+					<h4>Título</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tempor lectus eget
+						scelerisque.</p>
+					<a href="">Leia mais</a>
+				</article>
+
+				<article>
+					<h4>Título</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tempor lectus eget
+						scelerisque.</p>
+					<a href="">Leia mais</a>
+				</article>
 			</section>
 		</aside>
 	</main>
