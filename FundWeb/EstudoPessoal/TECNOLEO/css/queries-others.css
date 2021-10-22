@@ -1,0 +1,56 @@
+/* Tiny devices */
+
+@media (max-width: 575px) {
+    html {
+        font-size: 7px;
+    }
+    .content {
+        flex: 0 0 100%;
+    }
+    .lateral {
+        display: none;
+    }
+}
+
+/* Small devices */
+
+@media (min-width: 576px) {
+    html {
+        font-size: 8px;
+    }
+    .content {
+        flex: 0 0 100%;
+    }
+    .post {
+        flex: 0 0 100%;
+    }
+    .lateral {
+        display: none;
+    }
+}
+
+/*  Medium devices*/
+
+@media (min-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+    .content {
+        flex: 0 0 75%;
+    }
+    .post {
+        flex: 0 0 100%;
+    }
+    .lateral {
+        display: block;
+        flex: 0 0 25%;
+    }
+}
+
+/*  Large devices*/
+
+@media (min-width: 992px) {
+    html {
+        font-size: 10px;
+    }
+}
