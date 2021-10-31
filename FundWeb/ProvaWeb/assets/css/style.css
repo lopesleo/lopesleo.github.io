@@ -1,0 +1,44 @@
+body {
+    background-color: #262626;
+    color:#fff;
+}
+h1 {
+    text-align: center;
+    margin:100px;
+}
+
+.container {
+    width:100%;
+    max-width:1024px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container a {
+    color:#fff;
+    text-decoration: none;
+}
+
+.box {
+    width:150px;
+    height:150px;
+    background-color: #1e90ff;
+    margin:10px;
+    padding:30px;
+    text-align: center;
+    font-size:1.3rem;
+}
+
+.box:hover {
+    opacity: 0.5;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.verde {
+    background-color: #7CFC00;
+}
