@@ -2,16 +2,29 @@ const projects = [
   {
     title: "NutriAPI",
     description:
-      "API completa para gerenciamento nutricional com funcionalidades avançadas de cálculo de macronutrientes, planejamento de refeições e acompanhamento de progresso. Desenvolvida com foco em performance e escalabilidade.",
-    technologies: ["C#", ".NET", "PostgreSQL", "Docker"],
-    github: "https://github.com/lopesleo/nutriapi",
+      "API desenvolvida em ASP.NET Core para gerenciar nutricionistas e seus pacientes, utilizando Entity Framework Core para a persistência de dados com PostgreSQL.",
+    technologies: ["C#", ".NET", "PostgreSQL", "Swagger"],
+    github: "https://github.com/lopesleo/NutriAPI",
   },
   {
     title: "Rent-A-Bike",
     description:
-      "Sistema completo de aluguel de bicicletas com gestão de frota, reservas online e integração com sistemas de pagamento. Inclui dashboard administrativo e aplicativo mobile para usuários.",
-    technologies: ["Java", "Spring Boot", "MySQL", "React"],
+      "Aplicação completa para gerenciamento de aluguel de bicicletas, aplicando arquitetura DDD. O sistema permite o controle de clientes, funcionários, itens e locações.",
+    technologies: ["TypeScript", "PHP", "MySQL", "Docker"],
     github: "https://github.com/lopesleo/rent-a-bike",
+  },
+  {
+    title: "SteamFamilyWppBot",
+    description:
+      "Chatbot para WhatsApp que gerencia bibliotecas da Steam Family, com integrações com a Steam API e Gemini API para consultas e interações inteligentes.",
+    technologies: [
+      "TypeScript",
+      "Baileys",
+      "Gemini API",
+      "Steam API",
+      "PostgreSQL",
+    ],
+    github: "https://github.com/lopesleo/SteamFamilyWppBot",
   },
 ];
 
