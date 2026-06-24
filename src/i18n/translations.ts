@@ -31,15 +31,15 @@ export const ui = {
       badge: "Disponível para novos projetos",
       role: "Desenvolvedor Back-end & Automação",
       tagline:
-        "Construo APIs robustas, automações de processos (RPA) e soluções com IA aplicada que transformam tarefas manuais em sistemas eficientes e escaláveis.",
+        "Crio APIs, automações de processos (RPA) e integrações com IA para trocar trabalho manual repetitivo por sistemas confiáveis.",
       ctaProjects: "Ver Projetos",
       ctaContact: "Entre em Contato",
     },
     about: {
       eyebrow: "Sobre mim",
-      heading: "Transformo processos em sistemas eficientes",
-      p1: "Desenvolvedor back-end e de automação com experiência em **C#/.NET, Python e Node.js (TypeScript)**. Crio soluções que otimizam processos e agregam valor real ao negócio.",
-      p2: "Minha experiência inclui **APIs RESTful**, **automação de processos (RPA)** e **IA aplicada** — de classificação de e-mails com Google Gemini a pipelines de transcrição e scoring com LLMs. Mantenho projetos open-source, incluindo um **pacote npm publicado** (sdkcorreiosts).",
+      heading: "Automatizo trabalho repetitivo com back-end e RPA",
+      p1: "Sou desenvolvedor back-end e de automação. No dia a dia trabalho com **C#/.NET, Python e Node.js (TypeScript)**, construindo APIs e robôs que cortam trabalho manual.",
+      p2: "Já construí **APIs RESTful**, **robôs de RPA** e ferramentas com **IA**, como um classificador de e-mails com Google Gemini e um pipeline de transcrição e corte de vídeo com LLMs. Também mantenho projetos open-source, incluindo um **pacote publicado no npm** (sdkcorreiosts).",
       pillars: [
         {
           title: "Back-end & APIs",
@@ -54,7 +54,7 @@ export const ui = {
         {
           title: "IA Aplicada",
           description:
-            "Integração de LLMs (Gemini, Anthropic) e modelos como Whisper em produtos reais — function calling, classificação e pipelines.",
+            "LLMs (Gemini, Anthropic) e modelos como Whisper em projetos que já rodam: classificação, function calling e pipelines de vídeo.",
         },
       ],
     },
@@ -76,7 +76,7 @@ export const ui = {
       company: "GoLiveTech",
       period: "Maio 2023 – Atual",
       description:
-        "Desenvolvimento de sistemas back-end e APIs RESTful e automação de fluxos web e desktop (RPA). Automatizo integrações com portais do governo (eCAC, SEFAZ, PROUNI) usando Selenium, Chrome DevTools Protocol e FlaUI, com foco em confiabilidade e performance.",
+        "Desenvolvo back-end e APIs RESTful e automatizo fluxos web e desktop (RPA). Boa parte do trabalho é automatizar integrações com portais do governo (eCAC, SEFAZ, PROUNI) usando Selenium, Chrome DevTools Protocol e FlaUI.",
       tags: [
         "Back-end & APIs",
         "RPA Web & Desktop",
@@ -88,7 +88,7 @@ export const ui = {
       eyebrow: "Contato",
       heading: "Vamos trabalhar juntos?",
       subtitle:
-        "Estou aberto a novas oportunidades e projetos interessantes. Me chame pelo e-mail ou pelas redes abaixo.",
+        "Estou aberto a novas oportunidades e projetos. Me chama no e-mail ou nas redes abaixo.",
       copy: "Copiar",
       copied: "Copiado!",
       send: "Enviar e-mail",
@@ -113,20 +113,20 @@ export const ui = {
       badge: "Available for new projects",
       role: "Back-end & Automation Developer",
       tagline:
-        "I build robust APIs, process automation (RPA) and AI-powered solutions that turn manual tasks into efficient, scalable systems.",
+        "I build APIs, process automation (RPA) and AI integrations to replace repetitive manual work with systems that run on their own.",
       ctaProjects: "View Projects",
       ctaContact: "Get in Touch",
     },
     about: {
       eyebrow: "About me",
-      heading: "I turn processes into efficient systems",
-      p1: "Back-end and automation developer with experience in **C#/.NET, Python and Node.js (TypeScript)**. I build solutions that optimise processes and deliver real business value.",
-      p2: "My work spans **RESTful APIs**, **process automation (RPA)** and **applied AI** — from email classification with Google Gemini to transcription and scoring pipelines with LLMs. I maintain open-source projects, including a **published npm package** (sdkcorreiosts).",
+      heading: "I automate repetitive work with back-end and RPA",
+      p1: "I'm a back-end and automation developer. Day to day I work with **C#/.NET, Python and Node.js (TypeScript)**, building APIs and robots that cut out manual work.",
+      p2: "I've built **RESTful APIs**, **RPA robots** and **AI** tools, like an email classifier with Google Gemini and a video transcription-and-clipping pipeline with LLMs. I also maintain open-source projects, including a **package published on npm** (sdkcorreiosts).",
       pillars: [
         {
           title: "Back-end & APIs",
           description:
-            "High-performance RESTful APIs in C#/.NET, Python (FastAPI) and Node.js, with a focus on best practices and clean code.",
+            "RESTful APIs in C#/.NET, Python (FastAPI) and Node.js, with clean, well-tested code.",
         },
         {
           title: "Automation & RPA",
@@ -136,7 +136,7 @@ export const ui = {
         {
           title: "Applied AI",
           description:
-            "Integrating LLMs (Gemini, Anthropic) and models like Whisper into real products — function calling, classification and pipelines.",
+            "LLMs (Gemini, Anthropic) and models like Whisper in projects that already ship: classification, function calling and video pipelines.",
         },
       ],
     },
@@ -158,7 +158,7 @@ export const ui = {
       company: "GoLiveTech",
       period: "May 2023 – Present",
       description:
-        "Development of back-end systems and RESTful APIs plus web and desktop automation (RPA). I automate integrations with government portals (eCAC, SEFAZ, PROUNI) using Selenium, Chrome DevTools Protocol and FlaUI, focused on reliability and performance.",
+        "I develop back-end systems and RESTful APIs and automate web and desktop flows (RPA). A lot of the work is automating integrations with government portals (eCAC, SEFAZ, PROUNI) using Selenium, Chrome DevTools Protocol and FlaUI.",
       tags: [
         "Back-end & APIs",
         "Web & Desktop RPA",
@@ -170,7 +170,7 @@ export const ui = {
       eyebrow: "Contact",
       heading: "Let's work together?",
       subtitle:
-        "I'm open to new opportunities and interesting projects. Reach out by email or on the channels below.",
+        "I'm open to new opportunities and projects. Reach out by email or on the channels below.",
       copy: "Copy",
       copied: "Copied!",
       send: "Send email",
