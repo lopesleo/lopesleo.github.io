@@ -1,26 +1,61 @@
+import { Server, Bot, Sparkles } from "lucide-react";
+import { Reveal } from "./reveal";
+import { RichText } from "./rich-text";
+import { useLang } from "../i18n/language";
+
+const icons = [Server, Bot, Sparkles];
+
 export function About() {
+  const { t } = useLang();
+  const a = t.about;
+
   return (
-    <section className="py-20 bg-secondary/20">
+    <section id="about" className="py-24">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance text-foreground">Sobre Mim</h2>
-          <div className="bg-card rounded-2xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow duration-300">
-            <p className="text-lg text-card-foreground leading-relaxed text-pretty mb-6">
-              Sou um desenvolvedor apaixonado por tecnologia com foco em desenvolvimento back-end e automação. Com
-              experiência sólida em linguagens como <span className="text-primary font-medium">C#, Python e Java</span>,
-              tenho me dedicado a criar soluções eficientes e escaláveis que otimizam processos e agregam valor aos
-              negócios.
+        <div className="mx-auto max-w-5xl">
+          <Reveal className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand">
+              {a.eyebrow}
             </p>
-            <p className="text-lg text-card-foreground leading-relaxed text-pretty">
-              Minha jornada profissional inclui o desenvolvimento de{" "}
-              <span className="text-primary font-medium">APIs robustas</span>, implementação de sistemas de
-              <span className="text-primary font-medium"> automação RPA</span> e criação de soluções que conectam
-              diferentes tecnologias. Estou sempre em busca de novos desafios e oportunidades para aplicar meu
-              conhecimento técnico em projetos inovadores.
+            <h2 className="text-balance text-3xl font-bold md:text-4xl">
+              {a.heading}
+            </h2>
+          </Reveal>
+
+          <Reveal
+            delay={80}
+            className="mx-auto mb-12 max-w-3xl space-y-6 text-center text-lg leading-relaxed text-muted-foreground"
+          >
+            <p className="text-pretty">
+              <RichText text={a.p1} />
             </p>
+            <p className="text-pretty">
+              <RichText text={a.p2} />
+            </p>
+          </Reveal>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {a.pillars.map((pillar, i) => {
+              const Icon = icons[i];
+              return (
+                <Reveal as="article" key={pillar.title} delay={i * 120}>
+                  <div className="group h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow">
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition-transform group-hover:scale-110">
+                      <Icon size={24} />
+                    </div>
+                    <h3 className="mb-2 text-lg font-semibold text-card-foreground">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-pretty leading-relaxed text-muted-foreground">
+                      {pillar.description}
+                    </p>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

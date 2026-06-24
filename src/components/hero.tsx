@@ -1,32 +1,96 @@
+import { ArrowRight, Download } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Mail } from "lucide-react";
+import { useLang } from "../i18n/language";
+
 export function Hero() {
+  const { t, lang } = useLang();
+  const cvHref = `/cv/leonardo-lopes-${lang}.html`;
+
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-accent/10 pt-20">
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16"
+    >
+      {/* Animated gradient backdrop */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-grid opacity-70" />
+        <div className="absolute left-1/4 top-1/4 h-72 w-72 -translate-x-1/2 rounded-full bg-brand/30 blur-3xl animate-blob" />
+        <div className="absolute right-1/4 top-1/3 h-80 w-80 translate-x-1/2 rounded-full bg-brand-2/20 blur-3xl animate-blob [animation-delay:5s]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/40 to-background" />
+      </div>
+
       <div className="container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 text-balance">Leonardo Lopes</h1>
-          <p className="text-xl md:text-2xl text-primary mb-8 text-balance font-medium">
-            Desenvolvedor Back-end & Automação
+        <div className="mx-auto max-w-4xl animate-fade-in">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            {t.hero.badge}
+          </span>
+
+          <h1 className="mb-6 text-balance text-5xl font-bold tracking-tight text-foreground md:text-7xl">
+            Leonardo Lopes
+          </h1>
+          <p className="mb-6 text-balance text-xl font-semibold md:text-2xl">
+            <span className="text-gradient">{t.hero.role}</span>
           </p>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">
-            Especialista em desenvolvimento back-end, automação de processos e soluções RPA. Transformando ideias em
-            código eficiente e sistemas robustos.
+          <p className="mx-auto mb-10 max-w-2xl text-pretty text-lg text-muted-foreground">
+            {t.hero.tagline}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#projects"
-              className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="group inline-flex items-center gap-2 rounded-lg bg-brand px-7 py-3 font-medium text-brand-foreground shadow-glow transition-all duration-300 hover:-translate-y-0.5"
             >
-              Ver Projetos
+              {t.hero.ctaProjects}
+              <ArrowRight
+                size={18}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </a>
             <a
-              href="#contact"
-              className="border border-border text-foreground px-8 py-3 rounded-lg font-medium hover:bg-secondary transition-all duration-300 hover:border-primary"
+              href={cvHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-border px-7 py-3 font-medium text-foreground transition-all duration-300 hover:border-brand/50 hover:text-brand"
             >
-              Entre em Contato
+              <Download size={18} />
+              {t.downloadCV}
+            </a>
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-3">
+            <a
+              href="https://github.com/lopesleo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/leonardolopesalmeida/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="mailto:lopesleo.dev@gmail.com"
+              aria-label="Email"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
+            >
+              <Mail size={20} />
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

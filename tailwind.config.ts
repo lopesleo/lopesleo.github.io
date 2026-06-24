@@ -37,6 +37,11 @@ const config: Config = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          foreground: "hsl(var(--brand-foreground))",
+          2: "hsl(var(--brand-2))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -67,6 +72,17 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: [
+          '"Geist Sans"',
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+      },
+      boxShadow: {
+        glow: "0 0 0 1px hsl(var(--brand) / 0.15), 0 12px 40px -12px hsl(var(--brand) / 0.4)",
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -84,10 +100,20 @@ const config: Config = {
             height: "0",
           },
         },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out both",
+        float: "float 4s ease-in-out infinite",
       },
     },
   },

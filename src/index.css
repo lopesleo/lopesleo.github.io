@@ -15,7 +15,6 @@
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
 
-    /* CORRIGIDO: Muted agora é um cinza mais visível */
     --muted: 240 4.8% 93%;
     --muted-foreground: 240 3.8% 46.1%;
 
@@ -25,23 +24,27 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.5rem;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+
+    /* Brand accent — a single vivid color drives links, gradients, glows */
+    --brand: 262 83% 58%;
+    --brand-foreground: 0 0% 100%;
+    --brand-2: 199 89% 48%;
   }
 
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 240 8% 6%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 240 3.7% 12%;
     --secondary-foreground: 0 0% 98%;
 
-    /* CORRIGIDO: Muted no modo escuro */
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
@@ -49,9 +52,13 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 0 0% 83.1%;
+    --border: 240 3.7% 16%;
+    --input: 240 3.7% 16%;
+    --ring: 263 90% 66%;
+
+    --brand: 263 90% 68%;
+    --brand-foreground: 240 10% 3.9%;
+    --brand-2: 199 89% 60%;
   }
 }
 
@@ -60,16 +67,98 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: "Geist Sans", system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Geist Sans", system-ui, -apple-system, sans-serif;
   }
   html {
     scroll-behavior: smooth;
+  }
+  /* Offset anchor targets so they aren't hidden under the fixed header */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+  ::selection {
+    background-color: hsl(var(--brand) / 0.25);
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Gradient text using the brand colors */
+  .text-gradient {
+    background-image: linear-gradient(
+      120deg,
+      hsl(var(--brand)),
+      hsl(var(--brand-2))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Subtle dotted grid background for hero */
+  .bg-grid {
+    background-image: radial-gradient(
+      hsl(var(--foreground) / 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  /* Scroll reveal — initial hidden state, animates in when .is-visible is added */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .animate-blob {
+    animation: blob 14s ease-in-out infinite;
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-blob {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
   }
 }

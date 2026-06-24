@@ -5,31 +5,21 @@ import { Technologies } from "./components/technologies"
 import { Projects } from "./components/projects"
 import { Experience } from "./components/experience"
 import { Contact } from "./components/contact"
+import { Footer } from "./components/footer"
 
 function App() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section id="home">
-          <Hero />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="technologies">
-          <Technologies />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
+        <Hero />
+        <About />
+        <Technologies />
+        <Projects />
+        <Experience />
+        <Contact />
       </main>
+      <Footer />
     </div>
   )
 }
