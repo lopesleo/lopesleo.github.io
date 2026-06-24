@@ -39,7 +39,7 @@ export const ui = {
       eyebrow: "Sobre mim",
       heading: "Automatizo trabalho repetitivo com back-end e RPA",
       p1: "Sou desenvolvedor back-end e de automação. No dia a dia trabalho com **C#/.NET, Python e Node.js (TypeScript)**, construindo APIs e robôs que cortam trabalho manual.",
-      p2: "Já construí **APIs RESTful**, **robôs de RPA** e ferramentas com **IA**, como um classificador de e-mails com Google Gemini e um pipeline de transcrição e corte de vídeo com LLMs. Também mantenho projetos open-source, incluindo um **pacote publicado no npm** (sdkcorreiosts).",
+      p2: "Já construí **APIs RESTful**, **robôs de RPA** e ferramentas com **IA**, como um classificador de e-mails com Google Gemini e um pipeline de transcrição e corte de vídeo com LLMs. Também mantenho projetos open-source, incluindo o **sdkcorreiosts**, um SDK dos Correios em TypeScript.",
       pillars: [
         {
           title: "Back-end & APIs",
@@ -121,7 +121,7 @@ export const ui = {
       eyebrow: "About me",
       heading: "I automate repetitive work with back-end and RPA",
       p1: "I'm a back-end and automation developer. Day to day I work with **C#/.NET, Python and Node.js (TypeScript)**, building APIs and robots that cut out manual work.",
-      p2: "I've built **RESTful APIs**, **RPA robots** and **AI** tools, like an email classifier with Google Gemini and a video transcription-and-clipping pipeline with LLMs. I also maintain open-source projects, including a **package published on npm** (sdkcorreiosts).",
+      p2: "I've built **RESTful APIs**, **RPA robots** and **AI** tools, like an email classifier with Google Gemini and a video transcription-and-clipping pipeline with LLMs. I also maintain open-source projects, including **sdkcorreiosts**, a TypeScript SDK for Brazil's Correios.",
       pillars: [
         {
           title: "Back-end & APIs",
