@@ -72,11 +72,11 @@ export const ui = {
     experience: {
       eyebrow: "Carreira",
       heading: "Experiência profissional",
-      role: "Desenvolvedor Back-end",
+      role: "Desenvolvedor de Software",
       company: "GoLiveTech",
       period: "Maio 2023 – Atual",
       description:
-        "Desenvolvo back-end e APIs RESTful e automatizo fluxos web e desktop (RPA). Boa parte do trabalho é automatizar integrações com portais do governo (eCAC, SEFAZ, PROUNI) usando Selenium, Chrome DevTools Protocol e FlaUI.",
+        "Atuo entre desenvolvimento back-end e automação. Construo APIs e serviços (C#/.NET, Python, Node.js) e crio automações de processos (RPA) com Selenium, Chrome DevTools Protocol e FlaUI, incluindo integrações com portais do governo (eCAC, SEFAZ, PROUNI).",
       tags: [
         "Back-end & APIs",
         "RPA Web & Desktop",
@@ -154,11 +154,11 @@ export const ui = {
     experience: {
       eyebrow: "Career",
       heading: "Professional experience",
-      role: "Back-end Developer",
+      role: "Software Developer",
       company: "GoLiveTech",
       period: "May 2023 – Present",
       description:
-        "I develop back-end systems and RESTful APIs and automate web and desktop flows (RPA). A lot of the work is automating integrations with government portals (eCAC, SEFAZ, PROUNI) using Selenium, Chrome DevTools Protocol and FlaUI.",
+        "I work across back-end development and automation. I build APIs and services (C#/.NET, Python, Node.js) and create process automation (RPA) with Selenium, Chrome DevTools Protocol and FlaUI, including integrations with government portals (eCAC, SEFAZ, PROUNI).",
       tags: [
         "Back-end & APIs",
         "Web & Desktop RPA",
