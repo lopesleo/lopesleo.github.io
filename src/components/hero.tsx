@@ -1,11 +1,38 @@
+import { lazy, Suspense, useEffect, useState } from "react";
 import { ArrowRight, Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
 import { useLang } from "../i18n/language";
 
+// Lazy-loaded so three.js ships in a separate chunk, off the critical path.
+const Hero3D = lazy(() => import("./hero-3d"));
+
+function canRender3D() {
+  if (typeof window === "undefined") return false;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const narrow = window.innerWidth < 768;
+  let webgl = false;
+  try {
+    const c = document.createElement("canvas");
+    webgl = !!(
+      window.WebGLRenderingContext &&
+      (c.getContext("webgl") || c.getContext("experimental-webgl"))
+    );
+  } catch {
+    webgl = false;
+  }
+  // Mobile excluded by width; respect reduced-motion for accessibility.
+  return webgl && !reduce && !narrow;
+}
+
 export function Hero() {
   const { t, lang } = useLang();
   const cvHref = `/cv/leonardo-lopes-${lang}.html`;
+  const [show3D, setShow3D] = useState(false);
+
+  useEffect(() => {
+    setShow3D(canRender3D());
+  }, []);
 
   return (
     <section
@@ -13,14 +40,19 @@ export function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden pt-16"
     >
       {/* Animated gradient backdrop */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-grid opacity-70" />
         <div className="absolute left-1/4 top-1/4 h-72 w-72 -translate-x-1/2 rounded-full bg-brand/30 blur-3xl animate-blob" />
         <div className="absolute right-1/4 top-1/3 h-80 w-80 translate-x-1/2 rounded-full bg-brand-2/20 blur-3xl animate-blob [animation-delay:5s]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/40 to-background" />
+        {show3D && (
+          <Suspense fallback={null}>
+            <Hero3D />
+          </Suspense>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/20 to-background" />
       </div>
 
-      <div className="container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="mx-auto max-w-4xl animate-fade-in">
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
             <span className="relative flex h-2 w-2">

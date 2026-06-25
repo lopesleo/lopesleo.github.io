@@ -29,22 +29,22 @@ export const ui = {
     langLabel: "English",
     hero: {
       badge: "Disponível para novos projetos",
-      role: "Desenvolvedor Back-end & Automação",
+      role: "Desenvolvedor de Sistemas · Back-end & Automação",
       tagline:
-        "Crio APIs, automações de processos (RPA) e integrações com IA para trocar trabalho manual repetitivo por sistemas confiáveis.",
+        "Crio sistemas completos (do back-end à tela), automações de processos (RPA) e integrações com IA para trocar trabalho manual repetitivo por software confiável.",
       ctaProjects: "Ver Projetos",
       ctaContact: "Entre em Contato",
     },
     about: {
       eyebrow: "Sobre mim",
-      heading: "Automatizo trabalho repetitivo com back-end e RPA",
-      p1: "Sou desenvolvedor back-end e de automação. No dia a dia trabalho com **C#/.NET, Python e Node.js (TypeScript)**, construindo APIs e robôs que cortam trabalho manual.",
-      p2: "Já construí **APIs RESTful**, **robôs de RPA** e ferramentas com **IA**, como um classificador de e-mails com Google Gemini e um pipeline de transcrição e corte de vídeo com LLMs. Também mantenho projetos open-source, incluindo o **sdkcorreiosts**, um SDK dos Correios em TypeScript.",
+      heading: "Desenvolvo sistemas completos, do back-end à interface",
+      p1: "Sou desenvolvedor de sistemas com foco em back-end e automação. Trabalho com **C#/.NET, Python e Node.js (TypeScript)** no servidor e **React e Next.js** na interface, então entrego o produto funcionando de ponta a ponta, da API à tela.",
+      p2: "Já construí desde **APIs RESTful** e **automações (RPA)** (incluindo integrações com portais do governo como eCAC, SEFAZ e PROUNI) até **ferramentas com IA**, como um classificador de e-mails com Google Gemini e um pipeline de transcrição e corte de vídeo com LLMs. Também mantenho projetos open-source, como o **DeckTools**, um plugin para Steam Deck e meu repositório mais popular no GitHub.",
       pillars: [
         {
-          title: "Back-end & APIs",
+          title: "Sistemas Full-stack",
           description:
-            "APIs RESTful performáticas em C#/.NET, Python (FastAPI) e Node.js, com foco em boas práticas e código limpo.",
+            "APIs em C#/.NET, Python (FastAPI) e Node.js com interfaces em React e Next.js. Entrego o sistema completo, com tela, não só o back-end.",
         },
         {
           title: "Automação & RPA",
@@ -111,22 +111,22 @@ export const ui = {
     langLabel: "Português",
     hero: {
       badge: "Available for new projects",
-      role: "Back-end & Automation Developer",
+      role: "Systems Developer · Back-end & Automation",
       tagline:
-        "I build APIs, process automation (RPA) and AI integrations to replace repetitive manual work with systems that run on their own.",
+        "I build complete systems (back-end to UI), process automation (RPA) and AI integrations to replace repetitive manual work with reliable software.",
       ctaProjects: "View Projects",
       ctaContact: "Get in Touch",
     },
     about: {
       eyebrow: "About me",
-      heading: "I automate repetitive work with back-end and RPA",
-      p1: "I'm a back-end and automation developer. Day to day I work with **C#/.NET, Python and Node.js (TypeScript)**, building APIs and robots that cut out manual work.",
-      p2: "I've built **RESTful APIs**, **RPA robots** and **AI** tools, like an email classifier with Google Gemini and a video transcription-and-clipping pipeline with LLMs. I also maintain open-source projects, including **sdkcorreiosts**, a TypeScript SDK for Brazil's Correios.",
+      heading: "I build complete systems, from back-end to UI",
+      p1: "I'm a systems developer focused on back-end and automation. I work with **C#/.NET, Python and Node.js (TypeScript)** on the server and **React and Next.js** on the front, so I ship products that work end to end, from the API to the screen.",
+      p2: "I've built everything from **RESTful APIs** and **automation (RPA)** (including integrations with government portals like eCAC, SEFAZ and PROUNI) to **AI tools**, like an email classifier with Google Gemini and a video transcription-and-clipping pipeline with LLMs. I also maintain open-source projects, like **DeckTools**, a Steam Deck plugin that's my most-starred repo on GitHub.",
       pillars: [
         {
-          title: "Back-end & APIs",
+          title: "Full-stack Systems",
           description:
-            "RESTful APIs in C#/.NET, Python (FastAPI) and Node.js, with clean, well-tested code.",
+            "APIs in C#/.NET, Python (FastAPI) and Node.js with React and Next.js front-ends. I deliver the whole system, screens included, not just the back-end.",
         },
         {
           title: "Automation & RPA",
