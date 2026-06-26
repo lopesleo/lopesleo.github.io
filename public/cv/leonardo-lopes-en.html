@@ -47,13 +47,11 @@
       .meta { color: var(--muted); font-size: 12px; }
       ul { margin: 6px 0 0; padding-left: 18px; }
       li { margin-bottom: 3px; }
-      .skills span {
-        display: inline-block; background: #f4f4f5; border: 1px solid var(--line);
-        border-radius: 999px; padding: 2px 10px; margin: 2px 4px 2px 0; font-size: 12px;
-      }
+      .skills p { margin: 0 0 5px; }
+      .skills b { color: var(--ink); font-weight: 600; }
       .proj { margin-bottom: 10px; }
       .proj .stack { color: var(--brand); font-size: 11px; font-weight: 600; }
-      .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+      .proj .role { font-size: 13px; }
       .toolbar { position: fixed; top: 16px; right: 16px; }
       .toolbar button {
         background: var(--brand); color: #fff; border: 0; border-radius: 8px;
@@ -100,40 +98,32 @@
 
       <h2>Skills</h2>
       <div class="skills">
-        <span>C# / .NET</span><span>ASP.NET Core</span><span>Python</span>
-        <span>FastAPI</span><span>TypeScript</span><span>Node.js</span><span>Java</span>
-        <span>RESTful APIs</span><span>Automation / RPA</span><span>Selenium</span>
-        <span>Chrome DevTools Protocol</span><span>FlaUI</span>
-        <span>Applied AI (Gemini / LLMs)</span><span>PostgreSQL</span>
-        <span>Docker</span><span>Git</span><span>Swagger/OpenAPI</span>
+        <p><b>Back-end:</b> C# / .NET, ASP.NET Core, Python, FastAPI, Node.js, TypeScript, Java</p>
+        <p><b>Automation / RPA:</b> Selenium, Chrome DevTools Protocol, FlaUI</p>
+        <p><b>Applied AI:</b> Google Gemini, LLMs, Whisper</p>
+        <p><b>APIs &amp; Data:</b> RESTful APIs, Swagger/OpenAPI, PostgreSQL, Entity Framework Core</p>
+        <p><b>DevOps &amp; Tooling:</b> Docker, Git</p>
       </div>
 
       <h2>Professional Experience</h2>
       <div class="role">Software Developer</div>
-      <div class="meta">GoLiveTech &nbsp;•&nbsp; May 2023 – Present</div>
+      <div class="meta">GoLiveTech &nbsp;•&nbsp; May 2023 - Present</div>
       <ul>
-        <li>Develop and maintain back-end systems and RESTful APIs focused on performance and best practices.</li>
-        <li>Automate web and desktop flows (RPA) with Selenium, Chrome DevTools Protocol and FlaUI, removing recurring manual tasks.</li>
-        <li>Build integrations with government portals (eCAC, SEFAZ, PROUNI), ensuring reliable data flows.</li>
+        <li>Designed and built RESTful APIs in C#/.NET and Node.js/TypeScript end to end, from data model to Swagger/OpenAPI docs, standardizing integrations across systems.</li>
+        <li>Automated repetitive web and desktop processes (RPA) with Selenium, Chrome DevTools Protocol and FlaUI, replacing manual tasks with reliable unattended runs.</li>
+        <li>Integrated applications with government portals (eCAC, SEFAZ, PROUNI), handling authentication, data capture and validation for consistent tax/fiscal workflows.</li>
       </ul>
 
-      <h2>Education &amp; Courses</h2>
+      <h2>Education</h2>
       <div class="role">Bachelor's in Information Systems</div>
-      <div class="meta">CEFET/RJ · Nova Friburgo, Brazil &nbsp;•&nbsp; 2019 – 2026 (expected)</div>
-      <div class="role" style="margin-top:12px;">Java10x · Java (beginner to advanced)</div>
-      <div class="meta">Hands-on, project-based course · Spring Boot, Docker, AWS &nbsp;•&nbsp; In progress</div>
+      <div class="meta">CEFET/RJ · Nova Friburgo, Brazil &nbsp;•&nbsp; 2019 - 2026 (expected)</div>
 
       <h2>Featured Projects</h2>
-      <div class="two">
+      <div>
         <div class="proj">
           <div class="role">Oasis da Superdotação · in production</div>
           <div class="stack">Next.js · TypeScript · Node.js · PostgreSQL</div>
           <div>Full-stack neuropsychological assessment platform: courses, blog, online therapy and a logged-in area.</div>
-        </div>
-        <div class="proj">
-          <div class="role">Carolina Almeida · Nutritionist · in production</div>
-          <div class="stack">Next.js · TypeScript · Tailwind · Framer Motion</div>
-          <div>Booking site with a validated form (Zod) and WhatsApp integration. Custom domain.</div>
         </div>
         <div class="proj">
           <div class="role">DeckTools</div>
@@ -151,19 +141,9 @@
           <div>Pipeline: download → transcription (Whisper) → LLM scoring → captioned Shorts export.</div>
         </div>
         <div class="proj">
-          <div class="role">SteamFamilyZap</div>
-          <div class="stack">TypeScript · Baileys · Gemini · PostgreSQL</div>
-          <div>WhatsApp bot with AI (function calling) integrated with the Steam Web API, persisting to PostgreSQL.</div>
-        </div>
-        <div class="proj">
           <div class="role">NutriAPI</div>
           <div class="stack">C# · ASP.NET Core 8 · EF Core · PostgreSQL</div>
           <div>REST API for managing nutritionists and patients, documented with Swagger.</div>
-        </div>
-        <div class="proj">
-          <div class="role">SeleniumRobot (RPA)</div>
-          <div class="stack">C# · Selenium · EPPlus</div>
-          <div>Robot that automates extraction from the Official Gazette and exports to Excel.</div>
         </div>
       </div>
 
