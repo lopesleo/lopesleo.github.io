@@ -1,4 +1,4 @@
-import{r as Ye,g as j0,j as Wt}from"./index-13a54bf1.js";/**
+import{r as Ye,g as j0,j as Wt}from"./index-336d584a.js";/**
  * @license
  * Copyright 2010-2024 Three.js Authors
  * SPDX-License-Identifier: MIT
