@@ -1,13 +1,38 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
 /**
  * Subtle "constellation" network for the hero — drifting nodes connected by thin
  * lines when they get close. Reads as data / systems / integrations, which fits a
- * back-end + automation profile. Lazy-loaded, desktop-only, additive blending.
+ * back-end + automation profile. Lazy-loaded, desktop-only.
+ *
+ * Theme-aware: on dark the nodes glow via additive blending; on light (white
+ * background) additive blending would wash out to invisible, so we switch to
+ * normal blending with the opaque brand violet so it stays visible.
  */
-function Network({ count = 80 }: { count?: number }) {
+
+/** Tracks the `dark` class on <html> (the shared source of truth the header sets). */
+function useIsDark() {
+  const [isDark, setIsDark] = useState(
+    () =>
+      typeof document !== "undefined" &&
+      document.documentElement.classList.contains("dark")
+  );
+
+  useEffect(() => {
+    const el = document.documentElement;
+    const update = () => setIsDark(el.classList.contains("dark"));
+    update();
+    const obs = new MutationObserver(update);
+    obs.observe(el, { attributes: true, attributeFilter: ["class"] });
+    return () => obs.disconnect();
+  }, []);
+
+  return isDark;
+}
+
+function Network({ count = 80, isDark }: { count?: number; isDark: boolean }) {
   const pointsRef = useRef<THREE.Points>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
   const group = useRef<THREE.Group>(null);
@@ -77,6 +102,13 @@ function Network({ count = 80 }: { count?: number }) {
     if (group.current) group.current.rotation.y += delta * 0.025;
   });
 
+  // Dark: glow (additive). Light: solid violet on white (normal blending).
+  const blending = isDark ? THREE.AdditiveBlending : THREE.NormalBlending;
+  const pointColor = isDark ? "#a78bfa" : "#7c3aed";
+  const lineColor = isDark ? "#38bdf8" : "#6d28d9";
+  const pointOpacity = isDark ? 0.9 : 0.85;
+  const lineOpacity = isDark ? 0.17 : 0.3;
+
   return (
     <group ref={group}>
       <points ref={pointsRef}>
@@ -84,13 +116,13 @@ function Network({ count = 80 }: { count?: number }) {
           <bufferAttribute attach="attributes-position" args={[data.positions, 3]} />
         </bufferGeometry>
         <pointsMaterial
-          size={0.05}
-          color="#a78bfa"
+          size={isDark ? 0.05 : 0.055}
+          color={pointColor}
           sizeAttenuation
           transparent
-          opacity={0.9}
+          opacity={pointOpacity}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={blending}
         />
       </points>
       <lineSegments ref={linesRef}>
@@ -98,11 +130,11 @@ function Network({ count = 80 }: { count?: number }) {
           <bufferAttribute attach="attributes-position" args={[data.linePositions, 3]} />
         </bufferGeometry>
         <lineBasicMaterial
-          color="#38bdf8"
+          color={lineColor}
           transparent
-          opacity={0.17}
+          opacity={lineOpacity}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={blending}
         />
       </lineSegments>
     </group>
@@ -110,6 +142,7 @@ function Network({ count = 80 }: { count?: number }) {
 }
 
 export default function Hero3D() {
+  const isDark = useIsDark();
   return (
     <div className="absolute inset-0">
       <Canvas
@@ -117,7 +150,7 @@ export default function Hero3D() {
         dpr={[1, 1.5]}
         gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
       >
-        <Network />
+        <Network isDark={isDark} />
       </Canvas>
     </div>
   );
