@@ -62,8 +62,10 @@ public/
 - **Scroll animations**: wrap blocks in `<Reveal delay={ms}>`; it respects
   `prefers-reduced-motion` (handled in `index.css`).
 - **CV download**: header/hero link to `/cv/leonardo-lopes-${lang}.html` so the
-  downloaded CV matches the site's current language. Update both HTML files when
-  facts change.
+  downloaded CV matches the site's current language. **Always mirror content
+  changes here too**: whenever you change owner facts on the site (stack,
+  experience, education/courses, projects, contact), update **both** CV HTML
+  files (`-pt` and `-en`) in the same change so the site and CV never drift.
 
 ## Owner facts (for content)
 
@@ -79,3 +81,5 @@ Published npm package: `@lopesleo/sdkcorreiosts`.
   confirmed by the owner.
 - The GitHub profile README lives in a separate repo (`lopesleo/lopesleo`), not here.
 - Don't `git push` / deploy without explicit approval.
+- Site and CV must stay in sync: any content/fact change to the site also goes
+  into both `public/cv/leonardo-lopes-{pt,en}.html` (see CV download convention).

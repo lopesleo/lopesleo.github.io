@@ -32,6 +32,9 @@ export function About() {
             <p className="text-pretty">
               <RichText text={a.p2} />
             </p>
+            <p className="text-pretty">
+              <RichText text={a.p3} />
+            </p>
           </Reveal>
 
           <div className="grid gap-6 md:grid-cols-3">

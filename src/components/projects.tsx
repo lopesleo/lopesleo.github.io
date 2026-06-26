@@ -63,15 +63,17 @@ export function Projects() {
                     </div>
 
                     <div className="mt-auto flex flex-wrap items-center gap-4 pt-2">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-brand"
-                      >
-                        <Github size={18} />
-                        {t.projects.code}
-                      </a>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-brand"
+                        >
+                          <Github size={18} />
+                          {t.projects.code}
+                        </a>
+                      )}
                       {project.live && (
                         <a
                           href={project.live}

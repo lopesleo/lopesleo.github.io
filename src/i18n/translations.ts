@@ -4,6 +4,7 @@ import {
   DiReact,
   DiDocker,
   DiPostgresql,
+  DiJava,
 } from "react-icons/di";
 import { TbBrandCSharp, TbBrandTypescript } from "react-icons/tb";
 import { SiSelenium, SiDotnet, SiFastapi, SiGooglegemini } from "react-icons/si";
@@ -40,6 +41,7 @@ export const ui = {
       heading: "Desenvolvo sistemas completos, do back-end à interface",
       p1: "Sou desenvolvedor de sistemas com foco em back-end e automação. Trabalho com **C#/.NET, Python e Node.js (TypeScript)** no servidor e **React e Next.js** na interface, então entrego o produto funcionando de ponta a ponta, da API à tela.",
       p2: "Já construí desde **APIs RESTful** e **automações (RPA)** (incluindo integrações com portais do governo como eCAC, SEFAZ e PROUNI) até **ferramentas com IA**, como um classificador de e-mails com Google Gemini e um pipeline de transcrição e corte de vídeo com LLMs. Também mantenho projetos open-source, como o **DeckTools**, um plugin para Steam Deck e meu repositório mais popular no GitHub.",
+      p3: "No momento estou aprofundando o lado **Java** do meu back-end pelo **java10x**, um curso prático e baseado em projetos reais que cobre **Spring Boot**, **Docker** e **AWS**.",
       pillars: [
         {
           title: "Sistemas Full-stack",
@@ -122,6 +124,7 @@ export const ui = {
       heading: "I build complete systems, from back-end to UI",
       p1: "I'm a systems developer focused on back-end and automation. I work with **C#/.NET, Python and Node.js (TypeScript)** on the server and **React and Next.js** on the front, so I ship products that work end to end, from the API to the screen.",
       p2: "I've built everything from **RESTful APIs** and **automation (RPA)** (including integrations with government portals like eCAC, SEFAZ and PROUNI) to **AI tools**, like an email classifier with Google Gemini and a video transcription-and-clipping pipeline with LLMs. I also maintain open-source projects, like **DeckTools**, a Steam Deck plugin that's my most-starred repo on GitHub.",
+      p3: "I'm currently deepening the **Java** side of my back-end through **java10x**, a hands-on, project-based course covering **Spring Boot**, **Docker** and **AWS**.",
       pillars: [
         {
           title: "Full-stack Systems",
@@ -194,6 +197,7 @@ export const technologies: { name: string; icon: IconType }[] = [
   { name: "FastAPI", icon: SiFastapi },
   { name: "TypeScript", icon: TbBrandTypescript },
   { name: "Node.js", icon: FaNode },
+  { name: "Java", icon: DiJava },
   { name: "React", icon: DiReact },
   { name: "PostgreSQL", icon: DiPostgresql },
   { name: "Selenium", icon: SiSelenium },
@@ -207,7 +211,7 @@ export const technologies: { name: string; icon: IconType }[] = [
 export interface Project {
   title: string;
   tech: string[];
-  github: string;
+  github?: string;
   live?: string;
   featured?: boolean;
   pt: { description: string; highlights: string[] };
@@ -215,6 +219,30 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "Oasis da Superdotação",
+    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+    live: "https://oasisdasuperdotacao.com.br/",
+    featured: true,
+    pt: {
+      description:
+        "Plataforma web full-stack para avaliação neuropsicológica e apoio a pessoas superdotadas/neurodivergentes, com cursos, blog, terapia online e área logada.",
+      highlights: [
+        "Desenvolvimento full-stack (front-end e back-end) em Next.js",
+        "Autenticação de usuários e área logada",
+        "Cursos, blog e agendamento de avaliações em produção",
+      ],
+    },
+    en: {
+      description:
+        "Full-stack web platform for neuropsychological assessment and support for gifted/neurodivergent people, with courses, a blog, online therapy and a logged-in area.",
+      highlights: [
+        "Full-stack development (front-end and back-end) in Next.js",
+        "User authentication and logged-in area",
+        "Courses, blog and assessment scheduling in production",
+      ],
+    },
+  },
   {
     title: "DeckTools",
     tech: ["Python", "TypeScript", "React"],
