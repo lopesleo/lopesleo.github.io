@@ -14,6 +14,8 @@
 ## Featured projects
 - `Oasis da Superdotação -> https://oasisdasuperdotacao.com.br/`: Full-stack Next.js
   platform for neuropsychological assessment (courses, blog, therapy, auth).
+- `Carolina Almeida (nutritionist) -> https://www.nutricarolinaalmeida.com.br/`:
+  Next.js booking landing page with a validated form (Zod) and WhatsApp integration.
 - `AutoMail -> https://github.com/lopesleo/AutoMail`: FastAPI + React app that
   classifies emails and drafts replies with Google Gemini.
 - `DeckTools -> https://github.com/lopesleo/DeckTools`: Steam Deck (Decky Loader)
