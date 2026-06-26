@@ -1,0 +1,29 @@
+# Leonardo Lopes Almeida — Systems Developer (Back-end & Automation)
+> Personal portfolio. Full-stack: back-end (C#/.NET, Python/FastAPI, Node/TS, Java) +
+> front-end (React, Next.js) + automation/RPA (Selenium, Chrome DevTools Protocol, FlaUI)
+> + applied AI (Gemini, Whisper, LLMs). Based in Nova Friburgo/RJ, Brazil. English B2.
+
+## About
+- Back-end & automation developer at GoLiveTech (since May 2023).
+- Information Systems student at CEFET/RJ Nova Friburgo (2019–2026 expected).
+- Focus: RESTful APIs, RPA robots (web & desktop), and applied LLM tooling.
+- Maintains open-source projects, including DeckTools (Steam Deck plugin, most-starred
+  repo) and `@lopesleo/sdkcorreiosts`, a TypeScript SDK for Brazil's Correios.
+- Currently deepening Java via the java10x course (Spring Boot, Docker, AWS).
+
+## Featured projects
+- `Oasis da Superdotação -> https://oasisdasuperdotacao.com.br/`: Full-stack Next.js
+  platform for neuropsychological assessment (courses, blog, therapy, auth).
+- `AutoMail -> https://github.com/lopesleo/AutoMail`: FastAPI + React app that
+  classifies emails and drafts replies with Google Gemini.
+- `DeckTools -> https://github.com/lopesleo/DeckTools`: Steam Deck (Decky Loader)
+  plugin; most-starred repo.
+- `Clipper -> https://github.com/lopesleo/clipper-pipeline`: Whisper + LLM auto-clip
+  pipeline exporting captioned 9:16 Shorts.
+- `NutriAPI -> https://github.com/lopesleo/NutriAPI`: ASP.NET Core 8 + EF Core REST API.
+- `SteamFamilyZap -> https://github.com/lopesleo/SteamFamilyWppBot`: WhatsApp assistant
+  with Gemini function calling + PostgreSQL.
+
+## Contact
+- GitHub: https://github.com/lopesleo
+- LinkedIn: https://www.linkedin.com/in/leonardolopesalmeida/
