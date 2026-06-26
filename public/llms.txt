@@ -1,4 +1,4 @@
-# Leonardo Lopes Almeida — Systems Developer (Back-end & Automation)
+# Leonardo Lopes Almeida — Full-Stack Developer (Automation & AI)
 > Personal portfolio. Full-stack: back-end (C#/.NET, Python/FastAPI, Node/TS, Java) +
 > front-end (React, Next.js) + automation/RPA (Selenium, Chrome DevTools Protocol, FlaUI)
 > + applied AI (Gemini, Whisper, LLMs). Based in Nova Friburgo/RJ, Brazil. English B2.
@@ -8,7 +8,7 @@
 - Information Systems student at CEFET/RJ Nova Friburgo (2019–2026 expected).
 - Focus: RESTful APIs, RPA robots (web & desktop), and applied LLM tooling.
 - Maintains open-source projects, including DeckTools (Steam Deck plugin, most-starred
-  repo) and `@lopesleo/sdkcorreiosts`, a TypeScript SDK for Brazil's Correios.
+  repo).
 - Currently deepening Java via the java10x course (Spring Boot, Docker, AWS).
 
 ## Featured projects

@@ -73,7 +73,6 @@ SI student at CEFET/RJ Nova Friburgo (2019–2026 expected); back-end dev at
 **GoLiveTech** since May 2023; Nova Friburgo/RJ; English B2.
 Focus: back-end (C#/.NET, Python/FastAPI, Node/TS) + automation/RPA (Selenium,
 CDP, FlaUI; gov portals eCAC/SEFAZ/PROUNI) + applied AI (Gemini, Whisper, LLMs).
-Published npm package: `@lopesleo/sdkcorreiosts`.
 
 ## Guardrails
 

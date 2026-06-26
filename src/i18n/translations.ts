@@ -30,7 +30,7 @@ export const ui = {
     langLabel: "English",
     hero: {
       badge: "Disponível para novos projetos",
-      role: "Desenvolvedor de Sistemas · Back-end & Automação",
+      role: "Desenvolvedor Full-Stack · Automação & IA",
       tagline:
         "Crio sistemas completos (do back-end à tela), automações de processos (RPA) e integrações com IA para trocar trabalho manual repetitivo por software confiável.",
       ctaProjects: "Ver Projetos",
@@ -113,7 +113,7 @@ export const ui = {
     langLabel: "Português",
     hero: {
       badge: "Available for new projects",
-      role: "Systems Developer · Back-end & Automation",
+      role: "Full-Stack Developer · Automation & AI",
       tagline:
         "I build complete systems (back-end to UI), process automation (RPA) and AI integrations to replace repetitive manual work with reliable software.",
       ctaProjects: "View Projects",
