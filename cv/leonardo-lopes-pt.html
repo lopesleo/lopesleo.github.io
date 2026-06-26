@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leonardo Lopes Almeida · Currículo</title>
+    <!--
+      TODO (Leonardo): preencha os campos marcados [...] com seus dados reais:
+      - Telefone, cidade/UF
+      - Datas da GoLiveTech (início) e da formação (CEFET: curso + ano)
+      Depois é só abrir esta página e clicar em "Salvar como PDF".
+    -->
+    <style>
+      :root {
+        --brand: #7c3aed;
+        --ink: #18181b;
+        --muted: #52525b;
+        --line: #e4e4e7;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; }
+      body {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: var(--ink);
+        background: #f4f4f5;
+        line-height: 1.5;
+        font-size: 13px;
+      }
+      .page {
+        max-width: 800px;
+        margin: 24px auto;
+        background: #fff;
+        padding: 40px 48px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      }
+      h1 { font-size: 28px; margin: 0; letter-spacing: -0.5px; }
+      .title { color: var(--brand); font-weight: 600; font-size: 15px; margin: 2px 0 10px; }
+      .contact { font-size: 12px; color: var(--muted); }
+      .contact a { color: var(--muted); text-decoration: none; }
+      h2 {
+        font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;
+        color: var(--brand); border-bottom: 1.5px solid var(--line);
+        padding-bottom: 4px; margin: 22px 0 10px;
+      }
+      p { margin: 0 0 8px; }
+      .role { font-weight: 600; font-size: 14px; }
+      .meta { color: var(--muted); font-size: 12px; }
+      ul { margin: 6px 0 0; padding-left: 18px; }
+      li { margin-bottom: 3px; }
+      .skills p { margin: 0 0 5px; }
+      .skills b { color: var(--ink); font-weight: 600; }
+      .proj { margin-bottom: 10px; }
+      .proj .stack { color: var(--brand); font-size: 11px; font-weight: 600; }
+      .proj .role { font-size: 13px; }
+      .toolbar {
+        position: fixed; top: 16px; right: 16px;
+      }
+      .toolbar button {
+        background: var(--brand); color: #fff; border: 0; border-radius: 8px;
+        padding: 10px 16px; font-size: 13px; font-weight: 600; cursor: pointer;
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+      }
+      @media print {
+        body { background: #fff; font-size: 11.5px; }
+        .page { box-shadow: none; margin: 0; max-width: none; padding: 0; }
+        .toolbar { display: none; }
+        @page { margin: 14mm; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button onclick="window.print()">⬇ Salvar como PDF</button>
+    </div>
+
+    <div class="page">
+      <header>
+        <h1>Leonardo Lopes Almeida</h1>
+        <div class="title">Desenvolvedor Full-Stack · Automação &amp; IA</div>
+        <div class="contact">
+          <a href="mailto:lopesleo.dev@gmail.com">lopesleo.dev@gmail.com</a>
+          &nbsp;•&nbsp; +55 (22) 99823-7519 &nbsp;•&nbsp; Nova Friburgo, RJ
+          <br />
+          <a href="https://www.linkedin.com/in/leonardolopesalmeida/">linkedin.com/in/leonardolopesalmeida</a>
+          &nbsp;•&nbsp;
+          <a href="https://github.com/lopesleo">github.com/lopesleo</a>
+          &nbsp;•&nbsp;
+          <a href="https://lopesleo.github.io/">lopesleo.github.io</a>
+        </div>
+      </header>
+
+      <h2>Resumo Profissional</h2>
+      <p>
+        Desenvolvedor back-end e de automação. Trabalho com C#/.NET, Python e Node.js
+        (TypeScript) construindo APIs RESTful, integrações e robôs de RPA. Também uso IA
+        no dia a dia: classifiquei e-mails com Google Gemini e montei um pipeline de
+        transcrição e corte de vídeo com LLMs. Mantenho projetos open-source, incluindo
+        o DeckTools (plugin para Steam Deck, meu repositório mais popular).
+      </p>
+
+      <h2>Competências</h2>
+      <div class="skills">
+        <p><b>Back-end:</b> C# / .NET, ASP.NET Core, Python, FastAPI, Node.js, TypeScript, Java</p>
+        <p><b>Automação / RPA:</b> Selenium, Chrome DevTools Protocol, FlaUI</p>
+        <p><b>IA aplicada:</b> Google Gemini, LLMs, Whisper</p>
+        <p><b>APIs &amp; Dados:</b> APIs RESTful, Swagger/OpenAPI, PostgreSQL, Entity Framework Core</p>
+        <p><b>DevOps &amp; Ferramentas:</b> Docker, Git</p>
+      </div>
+
+      <h2>Experiência Profissional</h2>
+      <div class="role">Desenvolvedor de Software</div>
+      <div class="meta">GoLiveTech &nbsp;•&nbsp; Maio 2023 - Atual</div>
+      <ul>
+        <li>Projetei e desenvolvi APIs RESTful em C#/.NET e Node.js/TypeScript de ponta a ponta, do modelo de dados à documentação (Swagger/OpenAPI), padronizando integrações entre sistemas.</li>
+        <li>Automatizei processos repetitivos de web e desktop (RPA) com Selenium, Chrome DevTools Protocol e FlaUI, substituindo tarefas manuais por execuções confiáveis e sem supervisão.</li>
+        <li>Integrei aplicações a portais do governo (eCAC, SEFAZ, PROUNI), tratando autenticação, captura e validação de dados para fluxos fiscais consistentes.</li>
+      </ul>
+
+      <h2>Formação</h2>
+      <div class="role">Bacharelado em Sistemas de Informação</div>
+      <div class="meta">CEFET/RJ · Nova Friburgo, Brasil &nbsp;•&nbsp; 2019 - 2026 (previsto)</div>
+
+      <h2>Projetos em Destaque</h2>
+      <div>
+        <div class="proj">
+          <div class="role">Oasis da Superdotação · em produção</div>
+          <div class="stack">Next.js · TypeScript · Node.js · PostgreSQL</div>
+          <div>Plataforma full-stack de avaliação neuropsicológica: cursos, blog, terapia online e área logada.</div>
+        </div>
+        <div class="proj">
+          <div class="role">DeckTools</div>
+          <div class="stack">Python · TypeScript · React</div>
+          <div>Plugin para Steam Deck (Decky Loader) de gestão de biblioteca e configurações; integra múltiplas APIs. Repositório mais popular do meu GitHub.</div>
+        </div>
+        <div class="proj">
+          <div class="role">AutoMail · em produção</div>
+          <div class="stack">Python (FastAPI) · Google Gemini · React</div>
+          <div>App que classifica e-mails e gera resposta pronta com IA; back-end FastAPI e SPA em React.</div>
+        </div>
+        <div class="proj">
+          <div class="role">Clipper</div>
+          <div class="stack">Python · Whisper · LLM · FFmpeg</div>
+          <div>Pipeline de clipagem: download → transcrição (Whisper) → scoring por LLM → export de Shorts legendados.</div>
+        </div>
+        <div class="proj">
+          <div class="role">NutriAPI</div>
+          <div class="stack">C# · ASP.NET Core 8 · EF Core · PostgreSQL</div>
+          <div>API REST para gestão de nutricionistas e pacientes, documentada com Swagger.</div>
+        </div>
+      </div>
+
+      <h2>Idiomas</h2>
+      <p>Português: Nativo &nbsp;•&nbsp; Inglês: B2 (intermediário-avançado)</p>
+    </div>
+  </body>
+</html>
