@@ -244,6 +244,30 @@ export const projects: Project[] = [
     },
   },
   {
+    title: "Carolina Almeida · Nutricionista",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    live: "https://www.nutricarolinaalmeida.com.br/",
+    featured: true,
+    pt: {
+      description:
+        "Site de agendamento para a nutricionista Carolina Almeida (Duque de Caxias/RJ), com especialidades, experiência, formação, FAQ e contato direto via WhatsApp.",
+      highlights: [
+        "Next.js + TypeScript com animações em Framer Motion",
+        "Formulário de agendamento validado (React Hook Form + Zod) integrado ao WhatsApp",
+        "Em produção com domínio próprio",
+      ],
+    },
+    en: {
+      description:
+        "Booking site for nutritionist Carolina Almeida (Duque de Caxias/RJ), with specialties, experience, education, an FAQ and direct contact via WhatsApp.",
+      highlights: [
+        "Next.js + TypeScript with Framer Motion animations",
+        "Validated booking form (React Hook Form + Zod) wired to WhatsApp",
+        "Live in production on a custom domain",
+      ],
+    },
+  },
+  {
     title: "DeckTools",
     tech: ["Python", "TypeScript", "React"],
     github: "https://github.com/lopesleo/DeckTools",
