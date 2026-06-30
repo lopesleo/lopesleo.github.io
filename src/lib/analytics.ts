@@ -33,6 +33,7 @@ export function initAnalytics(): void {
       capture_pageview: true,
       capture_pageleave: true,
       autocapture: true,
+      enable_heatmaps: true, // pointer/click data for the Toolbar heatmap
       disable_session_recording: true,
     });
     client = posthog;
