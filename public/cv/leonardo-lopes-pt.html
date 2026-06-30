@@ -70,7 +70,12 @@
   </head>
   <body>
     <div class="toolbar">
-      <button onclick="window.print()">⬇ Salvar como PDF</button>
+      <button onclick="cvDownload()">⬇ Salvar como PDF</button>
+      <a
+        href="/privacy-pt.html"
+        style="display:block;margin-top:8px;text-align:center;font-size:11px;color:var(--muted);text-decoration:none;"
+        >Privacidade</a
+      >
     </div>
 
     <div class="page">
@@ -152,5 +157,35 @@
       <h2>Idiomas</h2>
       <p>Português: Nativo &nbsp;•&nbsp; Inglês: B2 (intermediário-avançado)</p>
     </div>
+
+    <!--
+      Mede o download real do CV (clique em "Salvar como PDF"). Evento anônimo
+      enviado direto ao PostHog via sendBeacon (sem SDK, sem cookies). A
+      api_key é a chave pública de projeto, segura no client. Ver /privacy-pt.html.
+    -->
+    <script>
+      function cvDownload() {
+        try {
+          var id =
+            (window.crypto && crypto.randomUUID && crypto.randomUUID()) ||
+            "anon-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+          var body = JSON.stringify({
+            api_key: "phc_yk5xJd7QQN4XRStH6heLBpStdmWbbngXwQQyhBkkzQ7n",
+            event: "cv_downloaded",
+            distinct_id: id,
+            properties: {
+              lang: "pt",
+              $current_url: location.href,
+              $process_person_profile: false,
+            },
+          });
+          navigator.sendBeacon(
+            "https://us.i.posthog.com/capture/",
+            new Blob([body], { type: "application/json" })
+          );
+        } catch (e) {}
+        window.print();
+      }
+    </script>
   </body>
 </html>

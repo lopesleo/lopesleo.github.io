@@ -75,11 +75,16 @@ public/
 - Enabled only when `VITE_POSTHOG_KEY` is set (see `.env.example`; put real key
   in `.env.local`). Without it, all tracking no-ops. Privacy-conscious defaults:
   `person_profiles: "identified_only"`, session recording off.
-- Events: `cv_download` ({lang, location}), `project_opened` ({project, type,
-  lang}), `project_viewed` ({project, lang}, impression on viewport entry),
-  `section_dwell` ({section, seconds}, attention-only — pauses on idle/hidden),
-  `scroll_depth` ({percent}), `contact_click` ({channel, location}),
+- Events (taxonomy: `object_pastVerb`): `cv_opened` ({lang, location}, header/hero
+  click that opens the CV page), `project_opened` ({project, type, lang}),
+  `project_viewed` ({project, lang}, impression on viewport entry),
+  `section_viewed` ({section, seconds}, attention-only — pauses on idle/hidden),
+  `page_scrolled` ({percent}), `contact_clicked` ({channel, location}),
   `theme_changed` ({theme}), `language_changed` ({language}).
+- The CV HTML pages (`public/cv/leonardo-lopes-{pt,en}.html`) fire
+  `cv_downloaded` ({lang}) on the "Save as PDF" click, sent directly to PostHog
+  via `navigator.sendBeacon` (no SDK, no cookies, anonymous —
+  `$process_person_profile: false`). Funnel: `cv_opened` → `cv_downloaded`.
 - Hooks in `src/hooks/`: `use-section-dwell.ts`, `use-scroll-depth.ts` (both
   wired in `App.tsx`); impressions live in `projects.tsx`. Reuse `track()` for
   any new events; don't sprinkle `posthog` calls in components.

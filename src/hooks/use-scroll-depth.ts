@@ -4,7 +4,7 @@ import { track } from "../lib/analytics";
 const MARKS = [25, 50, 75, 100] as const;
 
 /**
- * Fires `scroll_depth` { percent } once when the visitor first reaches each of
+ * Fires `page_scrolled` { percent } once when the visitor first reaches each of
  * 25/50/75/100% of the page height. Shows how far down people actually get.
  */
 export function useScrollDepth(): void {
@@ -19,7 +19,7 @@ export function useScrollDepth(): void {
       for (const mark of MARKS) {
         if (pct >= mark && !fired.has(mark)) {
           fired.add(mark);
-          track("scroll_depth", { percent: mark });
+          track("page_scrolled", { percent: mark });
         }
       }
     };

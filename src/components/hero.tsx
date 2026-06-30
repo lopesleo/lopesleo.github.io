@@ -88,7 +88,7 @@ export function Hero() {
               href={cvHref}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => track("cv_download", { lang, location: "hero" })}
+              onClick={() => track("cv_opened", { lang, location: "hero" })}
               className="inline-flex items-center gap-2 rounded-lg border border-border px-7 py-3 font-medium text-foreground transition-all duration-300 hover:border-brand/50 hover:text-brand"
             >
               <Download size={18} />
@@ -102,7 +102,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              onClick={() => track("contact_click", { channel: "github", location: "hero" })}
+              onClick={() => track("contact_clicked", { channel: "github", location: "hero" })}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
             >
               <FaGithub size={20} />
@@ -112,7 +112,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              onClick={() => track("contact_click", { channel: "linkedin", location: "hero" })}
+              onClick={() => track("contact_clicked", { channel: "linkedin", location: "hero" })}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
             >
               <FaLinkedin size={20} />
@@ -120,7 +120,7 @@ export function Hero() {
             <a
               href="mailto:lopesleo.dev@gmail.com"
               aria-label="Email"
-              onClick={() => track("contact_click", { channel: "email", location: "hero" })}
+              onClick={() => track("contact_clicked", { channel: "email", location: "hero" })}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
             >
               <Mail size={20} />

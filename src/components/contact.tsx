@@ -27,7 +27,7 @@ export function Contact() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
-    track("contact_click", { channel: "email_copy", location: "contact" });
+    track("contact_clicked", { channel: "email_copy", location: "contact" });
     try {
       await navigator.clipboard.writeText(EMAIL);
       setCopied(true);
@@ -72,7 +72,7 @@ export function Contact() {
                 </button>
                 <a
                   href={`mailto:${EMAIL}`}
-                  onClick={() => track("contact_click", { channel: "email", location: "contact" })}
+                  onClick={() => track("contact_clicked", { channel: "email", location: "contact" })}
                   className="inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-all hover:-translate-y-0.5"
                 >
                   {t.contact.send}
@@ -89,7 +89,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
-                    track("contact_click", {
+                    track("contact_clicked", {
                       channel: c.label.toLowerCase(),
                       location: "contact",
                     })

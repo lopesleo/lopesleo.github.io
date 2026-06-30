@@ -5,7 +5,7 @@ const IDLE_MS = 20000; // pause timing after this long with no interaction
 
 /**
  * Measures how long each section holds the visitor's *attention* and reports it
- * as `section_dwell` { section, seconds }.
+ * as `section_viewed` { section, seconds }.
  *
  * Only one section is "active" at a time (the one crossing the middle band,
  * matching the header's scrollspy), so the times don't overlap. Timing only
@@ -79,7 +79,7 @@ export function useSectionDwell(sectionIds: readonly string[]): void {
       accrue();
       elapsedMs.forEach((ms, id) => {
         const seconds = Math.round(ms / 1000);
-        if (seconds >= 1) track("section_dwell", { section: id, seconds });
+        if (seconds >= 1) track("section_viewed", { section: id, seconds });
       });
       elapsedMs.clear();
       recompute(); // keep timing if the section is still active/visible
