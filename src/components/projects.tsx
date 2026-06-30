@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
 import { Reveal } from "./reveal";
 import { useLang } from "../i18n/language";
@@ -7,6 +8,32 @@ import { track } from "../lib/analytics";
 export function Projects() {
   const { t, lang } = useLang();
   const featured = projects.filter((p) => p.featured);
+
+  // Fire `project_viewed` once per card when it first enters the viewport, so we
+  // can compute open-rate (views vs. project_opened). Lang read via ref so the
+  // observer isn't re-created (and impressions re-fired) on language toggle.
+  const langRef = useRef(lang);
+  langRef.current = lang;
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const cards = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-project]")
+    );
+    if (!cards.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const name = (entry.target as HTMLElement).dataset.project;
+          if (name) track("project_viewed", { project: name, lang: langRef.current });
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    cards.forEach((c) => observer.observe(c));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="projects" className="py-24">
@@ -26,7 +53,10 @@ export function Projects() {
               const content = project[lang];
               return (
                 <Reveal as="article" key={project.title} delay={i * 100}>
-                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow">
+                  <div
+                    data-project={project.title}
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow"
+                  >
                     <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand to-brand-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                     <div className="mb-4 flex items-start justify-between gap-4">

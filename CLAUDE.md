@@ -75,10 +75,14 @@ public/
 - Enabled only when `VITE_POSTHOG_KEY` is set (see `.env.example`; put real key
   in `.env.local`). Without it, all tracking no-ops. Privacy-conscious defaults:
   `person_profiles: "identified_only"`, session recording off.
-- Events: `cv_download` ({lang, location}), `project_opened`
-  ({project, type, lang}), `section_dwell` ({section, seconds}) — the last from
-  `src/hooks/use-section-dwell.ts`, wired in `App.tsx`. Reuse `track()` for any
-  new events; don't sprinkle `posthog` calls in components.
+- Events: `cv_download` ({lang, location}), `project_opened` ({project, type,
+  lang}), `project_viewed` ({project, lang}, impression on viewport entry),
+  `section_dwell` ({section, seconds}, attention-only — pauses on idle/hidden),
+  `scroll_depth` ({percent}), `contact_click` ({channel, location}),
+  `theme_changed` ({theme}), `language_changed` ({language}).
+- Hooks in `src/hooks/`: `use-section-dwell.ts`, `use-scroll-depth.ts` (both
+  wired in `App.tsx`); impressions live in `projects.tsx`. Reuse `track()` for
+  any new events; don't sprinkle `posthog` calls in components.
 
 ## Owner facts (for content)
 
@@ -95,3 +99,4 @@ CDP, FlaUI; gov portals eCAC/SEFAZ/PROUNI) + applied AI (Gemini, Whisper, LLMs).
 - Don't `git push` / deploy without explicit approval.
 - Site and CV must stay in sync: any content/fact change to the site also goes
   into both `public/cv/leonardo-lopes-{pt,en}.html` (see CV download convention).
+- Never commit with co-authored

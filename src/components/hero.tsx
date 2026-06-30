@@ -102,6 +102,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              onClick={() => track("contact_click", { channel: "github", location: "hero" })}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
             >
               <FaGithub size={20} />
@@ -111,6 +112,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              onClick={() => track("contact_click", { channel: "linkedin", location: "hero" })}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
             >
               <FaLinkedin size={20} />
@@ -118,6 +120,7 @@ export function Hero() {
             <a
               href="mailto:lopesleo.dev@gmail.com"
               aria-label="Email"
+              onClick={() => track("contact_click", { channel: "email", location: "hero" })}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
             >
               <Mail size={20} />

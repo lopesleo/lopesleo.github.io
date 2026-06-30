@@ -3,6 +3,7 @@ import { Mail, Copy, Check } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Reveal } from "./reveal";
 import { useLang } from "../i18n/language";
+import { track } from "../lib/analytics";
 
 const EMAIL = "lopesleo.dev@gmail.com";
 
@@ -26,6 +27,7 @@ export function Contact() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
+    track("contact_click", { channel: "email_copy", location: "contact" });
     try {
       await navigator.clipboard.writeText(EMAIL);
       setCopied(true);
@@ -70,6 +72,7 @@ export function Contact() {
                 </button>
                 <a
                   href={`mailto:${EMAIL}`}
+                  onClick={() => track("contact_click", { channel: "email", location: "contact" })}
                   className="inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-all hover:-translate-y-0.5"
                 >
                   {t.contact.send}
@@ -85,6 +88,12 @@ export function Contact() {
                   href={c.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    track("contact_click", {
+                      channel: c.label.toLowerCase(),
+                      location: "contact",
+                    })
+                  }
                   className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow"
                 >
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand transition-transform group-hover:scale-110">

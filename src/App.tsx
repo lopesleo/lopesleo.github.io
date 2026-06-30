@@ -9,6 +9,7 @@ import { Contact } from "./components/contact"
 import { Footer } from "./components/footer"
 import { initAnalytics } from "./lib/analytics"
 import { useSectionDwell } from "./hooks/use-section-dwell"
+import { useScrollDepth } from "./hooks/use-scroll-depth"
 
 const SECTION_IDS = [
   "home",
@@ -24,6 +25,7 @@ function App() {
     initAnalytics()
   }, [])
   useSectionDwell(SECTION_IDS)
+  useScrollDepth()
 
   return (
     <div className="min-h-screen bg-background">

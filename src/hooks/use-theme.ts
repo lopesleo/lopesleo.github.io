@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { track } from "../lib/analytics";
 
 type Theme = "light" | "dark";
 
@@ -37,8 +38,12 @@ export function useTheme() {
     return () => media.removeEventListener("change", onChange);
   }, []);
 
+  const themeRef = useRef(theme);
+  themeRef.current = theme;
   const toggleTheme = useCallback(() => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    const next = themeRef.current === "dark" ? "light" : "dark";
+    track("theme_changed", { theme: next });
+    setTheme(next);
   }, []);
 
   return { theme, toggleTheme };

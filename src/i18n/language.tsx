@@ -4,10 +4,12 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
 import { ui, type Lang, type UIStrings } from "./translations";
+import { track } from "../lib/analytics";
 
 interface LanguageContextValue {
   lang: Lang;
@@ -33,11 +35,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
   }, [lang]);
 
-  const setLang = useCallback((next: Lang) => setLangState(next), []);
-  const toggleLang = useCallback(
-    () => setLangState((p) => (p === "pt" ? "en" : "pt")),
-    []
-  );
+  const langRef = useRef(lang);
+  langRef.current = lang;
+  const setLang = useCallback((next: Lang) => {
+    if (next !== langRef.current) track("language_changed", { language: next });
+    setLangState(next);
+  }, []);
+  const toggleLang = useCallback(() => {
+    const next = langRef.current === "pt" ? "en" : "pt";
+    track("language_changed", { language: next });
+    setLangState(next);
+  }, []);
 
   const value = useMemo(
     () => ({ lang, setLang, toggleLang, t: ui[lang] }),
