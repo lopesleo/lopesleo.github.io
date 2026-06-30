@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Header } from "./components/header"
 import { Hero } from "./components/hero"
 import { About } from "./components/about"
@@ -6,8 +7,24 @@ import { Projects } from "./components/projects"
 import { Experience } from "./components/experience"
 import { Contact } from "./components/contact"
 import { Footer } from "./components/footer"
+import { initAnalytics } from "./lib/analytics"
+import { useSectionDwell } from "./hooks/use-section-dwell"
+
+const SECTION_IDS = [
+  "home",
+  "about",
+  "technologies",
+  "projects",
+  "experience",
+  "contact",
+] as const
 
 function App() {
+  useEffect(() => {
+    initAnalytics()
+  }, [])
+  useSectionDwell(SECTION_IDS)
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

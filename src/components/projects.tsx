@@ -2,6 +2,7 @@ import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
 import { Reveal } from "./reveal";
 import { useLang } from "../i18n/language";
 import { projects } from "../i18n/translations";
+import { track } from "../lib/analytics";
 
 export function Projects() {
   const { t, lang } = useLang();
@@ -68,6 +69,13 @@ export function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() =>
+                            track("project_opened", {
+                              project: project.title,
+                              type: "github",
+                              lang,
+                            })
+                          }
                           className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-brand"
                         >
                           <Github size={18} />
@@ -79,6 +87,13 @@ export function Projects() {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() =>
+                            track("project_opened", {
+                              project: project.title,
+                              type: "live",
+                              lang,
+                            })
+                          }
                           className="inline-flex items-center gap-2 text-sm font-medium text-brand transition-colors hover:text-brand/80"
                         >
                           <ExternalLink size={18} />
@@ -97,6 +112,7 @@ export function Projects() {
               href="https://github.com/lopesleo"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => track("project_opened", { project: "github_profile", type: "more", lang })}
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-medium text-foreground transition-all hover:border-brand/50 hover:text-brand"
             >
               <Github size={18} />

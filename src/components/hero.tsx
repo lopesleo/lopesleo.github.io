@@ -3,6 +3,7 @@ import { ArrowRight, Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
 import { useLang } from "../i18n/language";
+import { track } from "../lib/analytics";
 
 // Lazy-loaded so three.js ships in a separate chunk, off the critical path.
 const Hero3D = lazy(() => import("./hero-3d"));
@@ -87,6 +88,7 @@ export function Hero() {
               href={cvHref}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => track("cv_download", { lang, location: "hero" })}
               className="inline-flex items-center gap-2 rounded-lg border border-border px-7 py-3 font-medium text-foreground transition-all duration-300 hover:border-brand/50 hover:text-brand"
             >
               <Download size={18} />

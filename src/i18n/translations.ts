@@ -98,6 +98,7 @@ export const ui = {
     footer: {
       madeWith: "Feito com React, Vite e Tailwind.",
       backToTop: "Voltar ao topo",
+      privacy: "Privacidade",
     },
   },
   en: {
@@ -181,6 +182,7 @@ export const ui = {
     footer: {
       madeWith: "Built with React, Vite and Tailwind.",
       backToTop: "Back to top",
+      privacy: "Privacy",
     },
   },
 };

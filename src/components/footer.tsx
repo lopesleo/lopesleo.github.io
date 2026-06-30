@@ -3,8 +3,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useLang } from "../i18n/language";
 
 export function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const year = new Date().getFullYear();
+  const privacyHref = `/privacy-${lang}.html`;
 
   return (
     <footer className="border-t border-border py-10">
@@ -15,7 +16,15 @@ export function Footer() {
           </a>
 
           <p className="text-sm text-muted-foreground">
-            © {year} Leonardo Lopes. {t.footer.madeWith}
+            © {year} Leonardo Lopes. {t.footer.madeWith}{" "}
+            <a
+              href={privacyHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 transition-colors hover:text-brand hover:underline"
+            >
+              {t.footer.privacy}
+            </a>
           </p>
 
           <div className="flex items-center gap-2">

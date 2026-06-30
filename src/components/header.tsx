@@ -3,6 +3,7 @@ import { Menu, X, Moon, Sun, Languages, Download } from "lucide-react";
 import { useTheme } from "../hooks/use-theme";
 import { useLang } from "../i18n/language";
 import { cn } from "../lib/utils";
+import { track } from "../lib/analytics";
 
 const sectionIds = [
   "home",
@@ -128,6 +129,7 @@ export function Header() {
                 href={cvHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("cv_download", { lang, location: "header" })}
                 className="inline-flex h-10 items-center gap-2 rounded-lg bg-brand px-4 text-sm font-medium text-brand-foreground transition-all hover:-translate-y-0.5"
               >
                 <Download size={16} />
@@ -184,7 +186,10 @@ export function Header() {
             href={cvHref}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              track("cv_download", { lang, location: "header_mobile" });
+              setOpen(false);
+            }}
             className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-brand px-4 py-3 text-base font-medium text-brand-foreground"
           >
             <Download size={18} />

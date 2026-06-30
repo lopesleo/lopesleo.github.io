@@ -67,6 +67,19 @@ public/
   experience, education/courses, projects, contact), update **both** CV HTML
   files (`-pt` and `-en`) in the same change so the site and CV never drift.
 
+## Analytics (PostHog)
+
+- Custom event tracking lives in `src/lib/analytics.ts` (`initAnalytics()` +
+  `track(event, props)`). `posthog-js` is **dynamically imported in the browser
+  only** so it never runs during the SSR/prerender build.
+- Enabled only when `VITE_POSTHOG_KEY` is set (see `.env.example`; put real key
+  in `.env.local`). Without it, all tracking no-ops. Privacy-conscious defaults:
+  `person_profiles: "identified_only"`, session recording off.
+- Events: `cv_download` ({lang, location}), `project_opened`
+  ({project, type, lang}), `section_dwell` ({section, seconds}) — the last from
+  `src/hooks/use-section-dwell.ts`, wired in `App.tsx`. Reuse `track()` for any
+  new events; don't sprinkle `posthog` calls in components.
+
 ## Owner facts (for content)
 
 SI student at CEFET/RJ Nova Friburgo (2019–2026 expected); back-end dev at
