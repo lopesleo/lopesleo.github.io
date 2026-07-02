@@ -68,7 +68,12 @@
   </head>
   <body>
     <div class="toolbar">
-      <button onclick="window.print()">⬇ Save as PDF</button>
+      <button onclick="cvDownload()">⬇ Save as PDF</button>
+      <a
+        href="/privacy-en.html"
+        style="display:block;margin-top:8px;text-align:center;font-size:11px;color:var(--muted);text-decoration:none;"
+        >Privacy</a
+      >
     </div>
 
     <div class="page">
@@ -150,5 +155,35 @@
       <h2>Languages</h2>
       <p>Portuguese: Native &nbsp;•&nbsp; English: B2 (upper-intermediate)</p>
     </div>
+
+    <!--
+      Measures real CV downloads (the "Save as PDF" click). Anonymous event sent
+      straight to PostHog via sendBeacon (no SDK, no cookies). The api_key is the
+      public project key, safe on the client. See /privacy-en.html.
+    -->
+    <script>
+      function cvDownload() {
+        try {
+          var id =
+            (window.crypto && crypto.randomUUID && crypto.randomUUID()) ||
+            "anon-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+          var body = JSON.stringify({
+            api_key: "phc_yk5xJd7QQN4XRStH6heLBpStdmWbbngXwQQyhBkkzQ7n",
+            event: "cv_downloaded",
+            distinct_id: id,
+            properties: {
+              lang: "en",
+              $current_url: location.href,
+              $process_person_profile: false,
+            },
+          });
+          navigator.sendBeacon(
+            "https://us.i.posthog.com/capture/",
+            new Blob([body], { type: "application/json" })
+          );
+        } catch (e) {}
+        window.print();
+      }
+    </script>
   </body>
 </html>
