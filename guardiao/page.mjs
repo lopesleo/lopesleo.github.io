@@ -1,5 +1,6 @@
 // Monta o HTML da página oficial num idioma. Sem framework: HTML estático + guardiao.js.
 import fs from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { icon } from "./icons.mjs";
@@ -12,14 +13,18 @@ const BOSSES = JSON.parse(fs.readFileSync(path.join(HERE, "data/bosses.json"), "
 const PUB = path.join(HERE, "../public/guardiao");
 const A = `${C.BASE}assets/`;
 
-// Cache-busting simples: muda quando o arquivo muda
+// Cache-busting pelo CONTEÚDO (a data do arquivo muda a cada checkout e quebraria o cache à toa)
+const hashes = new Map();
 const ver = (rel) => {
-  try {
-    const st = fs.statSync(path.join(PUB, "assets", rel));
-    return `${A}${rel}?v=${Math.round(st.mtimeMs / 1000).toString(36)}`;
-  } catch {
-    return `${A}${rel}`;
+  if (!hashes.has(rel)) {
+    try {
+      hashes.set(rel, createHash("sha1").update(fs.readFileSync(path.join(PUB, "assets", rel))).digest("hex").slice(0, 8));
+    } catch {
+      hashes.set(rel, "");
+    }
   }
+  const h = hashes.get(rel);
+  return h ? `${A}${rel}?v=${h}` : `${A}${rel}`;
 };
 const mb = (rel) => {
   const b = fs.statSync(path.join(PUB, "assets", rel)).size;
