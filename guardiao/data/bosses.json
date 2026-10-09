@@ -1,0 +1,167 @@
+[
+ {
+  "id": "mula",
+  "pt": {
+   "name": "Mula sem Cabeça",
+   "role": "Minichefe · galope em chamas, coice e chuva de brasas",
+   "origin": "Lenda de origem ibérica espalhada pelo interior do Brasil: uma mula que solta fogo pelo pescoço e galopa pelos campos em noites escuras."
+  },
+  "en": {
+   "name": "Headless Mule",
+   "role": "Miniboss · flaming gallop, kick and ember rain",
+   "origin": "A legend of Iberian origin spread across Brazil's countryside: a mule that breathes fire from its neck and gallops across the fields on dark nights."
+  },
+  "es": {
+   "name": "Mula sin Cabeza",
+   "role": "Minijefe · galope en llamas, coz y lluvia de brasas",
+   "origin": "Leyenda de origen ibérico extendida por el interior de Brasil: una mula que echa fuego por el cuello y galopa por los campos en noches oscuras."
+  },
+  "ja": {
+   "name": "首なしラバ",
+   "role": "中ボス・炎の疾走、蹴り、火の粉の雨",
+   "origin": "ブラジルの内陸に広まったイベリア由来の伝説：首から炎を噴き、暗い夜に野を駆けるラバ。"
+  },
+  "zh": {
+   "name": "无头骡",
+   "role": "小头目 · 烈焰奔袭、踢击和火星雨",
+   "origin": "源自伊比利亚、流传于巴西内陆的传说：一头从脖子喷火的骡子，在漆黑的夜里奔过田野。"
+  },
+  "zht": {
+   "name": "無頭騾",
+   "role": "小頭目 · 烈焰奔襲、踢擊和火星雨",
+   "origin": "源自伊比利亞、流傳於巴西內陸的傳說：一頭從脖子噴火的騾子，在漆黑的夜裡奔過田野。"
+  }
+ },
+ {
+  "id": "corposeco",
+  "pt": {
+   "name": "Corpo-Seco",
+   "role": "Minichefe · seca a vida, foge pela terra, solta cipós",
+   "origin": "Contada no interior do Sudeste: alguém tão cruel em vida que nem a terra o aceitou, e ficou seco, vagando. Aqui, a Podridão o levantou."
+  },
+  "en": {
+   "name": "Corpo-Seco",
+   "role": "Miniboss · drains life, flees through the earth, lashes vines",
+   "origin": "Told in Brazil's Southeast: someone so cruel in life that not even the earth would take him, so he dried up and wanders. Here, the Rot raised him."
+  },
+  "es": {
+   "name": "Corpo-Seco",
+   "role": "Minijefe · seca la vida, huye bajo tierra, lanza lianas",
+   "origin": "Contada en el interior del Sudeste de Brasil: alguien tan cruel en vida que ni la tierra lo aceptó, y quedó seco, vagando. Aquí, la Podredumbre lo levantó."
+  },
+  "ja": {
+   "name": "コルポ・セコ",
+   "role": "中ボス・生命を吸い、地中を逃げ、つるを放つ",
+   "origin": "ブラジル南東部の内陸で語られる：生前あまりに残酷で、大地にさえ拒まれ、干からびてさまよう者。ここでは腐敗がよみがえらせた。"
+  },
+  "zh": {
+   "name": "干尸",
+   "role": "小头目 · 吸取生命、遁地逃跑、甩出藤蔓",
+   "origin": "流传于巴西东南部内陆：一个生前极其残忍的人，连大地都不肯收留他，于是干枯游荡。在这里，腐朽让他重新站了起来。"
+  },
+  "zht": {
+   "name": "乾屍",
+   "role": "小頭目 · 吸取生命、遁地逃跑、甩出藤蔓",
+   "origin": "流傳於巴西東南部內陸：一個生前極其殘忍的人，連大地都不肯收留他，於是乾枯遊蕩。在這裡，腐朽讓他重新站了起來。"
+  }
+ },
+ {
+  "id": "mapinguari",
+  "pt": {
+   "name": "Mapinguari",
+   "role": "Chefe · bocarra na barriga, grito e o olho da Podridão",
+   "origin": "Gigante da Amazônia, peludo, com um olho na testa e a boca na barriga. Há quem ligue a lenda às preguiças-gigantes extintas. Vencê-lo o liberta."
+  },
+  "en": {
+   "name": "Mapinguari",
+   "role": "Boss · belly maw, scream and the eye of the Rot",
+   "origin": "A furry giant of the Amazon with one eye on its forehead and its mouth on its belly. Some link the legend to the extinct giant ground sloths. Defeating it sets it free."
+  },
+  "es": {
+   "name": "Mapinguari",
+   "role": "Jefe · fauces en la barriga, grito y el ojo de la Podredumbre",
+   "origin": "Gigante peludo de la Amazonía, con un ojo en la frente y la boca en la barriga. Hay quien relaciona la leyenda con los perezosos gigantes extintos. Vencerlo lo libera."
+  },
+  "ja": {
+   "name": "マピングアリ",
+   "role": "ボス・腹の大口、叫び、腐敗の目",
+   "origin": "アマゾンの毛深い巨人。額に一つ目、腹に口がある。絶滅した巨大ナマケモノと結びつける人もいる。倒せば解放される。"
+  },
+  "zh": {
+   "name": "马品瓜里",
+   "role": "头目 · 腹中巨口、尖啸与腐朽之眼",
+   "origin": "亚马孙的多毛巨人，额头上一只眼，嘴长在肚子上。有人把这个传说与已灭绝的巨型地懒联系起来。击败它就能解放它。"
+  },
+  "zht": {
+   "name": "馬品瓜里",
+   "role": "頭目 · 腹中巨口、尖嘯與腐朽之眼",
+   "origin": "亞馬孫的多毛巨人，額頭上一隻眼，嘴長在肚子上。有人把這個傳說與已滅絕的巨型地懶聯想在一起。擊敗它就能解放它。"
+  }
+ },
+ {
+  "id": "cabra",
+  "pt": {
+   "name": "Cabra Cabriola",
+   "role": "Minichefe da Caatinga · galope em chamas, coice e brasas",
+   "origin": "Assombração de origem ibérica contada em Pernambuco: uma cabra que salta e solta fogo pelos olhos. Aqui, a Podridão a tomou; vencida, volta a ser só uma cabra do sertão."
+  },
+  "en": {
+   "name": "Cabra Cabriola",
+   "role": "Caatinga miniboss · flaming gallop, kick and embers",
+   "origin": "A haunting of Iberian origin told in Pernambuco: a goat that leaps and shoots fire from its eyes. Here, the Rot took it; once defeated, it is just a goat of the backlands again."
+  },
+  "es": {
+   "name": "Cabra Cabriola",
+   "role": "Minijefe de la Caatinga · galope en llamas, coz y brasas",
+   "origin": "Aparición de origen ibérico contada en Pernambuco: una cabra que salta y echa fuego por los ojos. Aquí, la Podredumbre la tomó; vencida, vuelve a ser solo una cabra del sertón."
+  },
+  "ja": {
+   "name": "カブラ・カブリオラ",
+   "role": "カアチンガの中ボス・炎の疾走、蹴り、火の粉",
+   "origin": "ペルナンブーコで語られるイベリア由来の怪異：跳びはね、目から火を放つヤギ。ここでは腐敗に取りつかれている。倒せば、ただの奥地のヤギに戻る。"
+  },
+  "zh": {
+   "name": "卡布里奥拉山羊",
+   "role": "卡廷加的小头目 · 烈焰奔袭、踢击和火星",
+   "origin": "源自伊比利亚、流传于伯南布哥的怪谈：一只会跳跃、眼中喷火的山羊。在这里它被腐朽占据；被击败后，它又变回一只普通的腹地山羊。"
+  },
+  "zht": {
+   "name": "卡布里奧拉山羊",
+   "role": "卡廷加的小頭目 · 烈焰奔襲、踢擊和火星",
+   "origin": "源自伊比利亞、流傳於伯南布哥的怪談：一隻會跳躍、眼中噴火的山羊。在這裡它被腐朽佔據；被擊敗後，它又變回一隻普通的腹地山羊。"
+  }
+ },
+ {
+  "id": "caboclo",
+  "pt": {
+   "name": "Caboclo d'Água",
+   "role": "Chefe da Caatinga · cheia, rebojo e arrastão; foge das carrancas",
+   "origin": "Guardião do Rio São Francisco: vira canoas de quem maltrata o rio. Os barqueiros punham carrancas na proa para espantá-lo. A Podridão o trouxe para o sertão seco."
+  },
+  "en": {
+   "name": "Caboclo d'Água",
+   "role": "Caatinga boss · flood, whirlpool and drag; flees from figureheads",
+   "origin": "Guardian of the São Francisco River: he capsizes the canoes of those who mistreat the river. Boatmen put carved figureheads on their bows to scare him away. The Rot brought him to the dry backlands."
+  },
+  "es": {
+   "name": "Caboclo d'Água",
+   "role": "Jefe de la Caatinga · crecida, remolino y arrastre; huye de los mascarones",
+   "origin": "Guardián del río São Francisco: vuelca las canoas de quien maltrata el río. Los barqueros ponían mascarones en la proa para espantarlo. La Podredumbre lo trajo al sertón seco."
+  },
+  "ja": {
+   "name": "カボクロ・ダグア",
+   "role": "カアチンガのボス・増水、渦、引きずり込み。船首像から逃げる",
+   "origin": "サン・フランシスコ川の守り手：川を粗末にする者のカヌーをひっくり返す。船頭たちは彼を追い払うため、船首に像を飾った。腐敗が彼を乾いた奥地へ連れてきた。"
+  },
+  "zh": {
+   "name": "卡博克洛水灵",
+   "role": "卡廷加的头目 · 洪水、漩涡和拖拽；害怕船首像",
+   "origin": "圣弗朗西斯科河的守护者：会掀翻虐待河流之人的独木舟。船夫们在船头装上船首像来吓退他。腐朽把他带到了干旱的腹地。"
+  },
+  "zht": {
+   "name": "卡博克洛水靈",
+   "role": "卡廷加的頭目 · 洪水、漩渦和拖拽；害怕船首像",
+   "origin": "聖弗朗西斯科河的守護者：會掀翻虐待河流之人的獨木舟。船伕們在船頭裝上船首像來嚇退他。腐朽把他帶到了乾旱的腹地。"
+  }
+ }
+]
