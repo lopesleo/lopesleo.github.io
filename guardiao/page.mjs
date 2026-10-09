@@ -275,6 +275,7 @@ ${head(t, L, {
       ${primaryCta(t, L, "hero")}
       <a class="btn btn-ghost" href="#trailer" data-cta="hero_trailer" data-where="hero">${icon("play", { size: 2 })}<span>${esc(t.hero.trailer)}</span></a>
     </div>
+    ${C.STAGE === "teste" ? `<p class="ios-note" hidden>${esc(st.ios)}</p>` : ""}
     <p class="stage-badge"><span class="dot" aria-hidden="true"></span>${esc(st.badge)}</p>
     <ul class="facts">${t.hero.facts.map((f) => `<li>${icon("spark", { size: 2 })}<span>${esc(f)}</span></li>`).join("")}</ul>
   </div>
@@ -456,6 +457,7 @@ ${head(t, L, {
       <h2 class="sec-title" id="h-join">${esc(join.title)}</h2>
       <p class="join-text">${esc(join.text)}</p>
       ${join.steps.length ? `<ol class="join-steps">${join.steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>` : ""}
+      ${C.STAGE === "teste" ? `<p class="ios-note" hidden>${esc(t.stage.teste.ios)}</p>` : ""}
       <div class="cta-row center">${primaryCta(t, L, "join")}</div>
       ${C.STAGE === "teste" && C.TESTER_GROUP_URL ? `<p class="join-optin"><a href="${esc(C.TEST_OPTIN_URL)}" target="_blank" rel="noopener" data-cta="test_optin" data-where="join">${esc(join.optin)}</a></p>` : ""}
       <p class="fine">${esc(join.fine)}</p>

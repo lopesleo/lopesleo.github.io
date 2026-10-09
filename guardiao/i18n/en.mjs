@@ -17,7 +17,7 @@ export default {
     scroll: "Scroll to explore",
   },
   stage: {
-    teste: { badge: "In closed testing · coming soon to Google Play", cta: "I want to test", ctaMail: "Request my invite" },
+    teste: { badge: "In closed testing · coming soon to Google Play", cta: "I want to test", ctaMail: "Request my invite", ios: "The test is Android only. The game won't install on an iPhone, but if you have an Android, request the invite with its Google account." },
     pre: { badge: "Pre-registration open on Google Play", cta: "Pre-register on Google Play" },
     loja: { badge: "Available on Google Play", cta: "Get it on Google Play" },
   },
@@ -110,7 +110,7 @@ export default {
       ],
       optin: "Already in the group? Accept the invitation here",
       mailSubject: "I want to test Forest Guardian",
-      mailBody: "Hi! I'd like to join the Forest Guardian closed test.\n\nThe Google account email on my Android phone is: ",
+      mailBody: "Hi! I'd like to join the Forest Guardian closed test.\n\nMy phone is an Android. If its Google account is this same email, just hit send. If it's a different one, write it here: ",
       fine: "Android 7 or newer. Your email is only used for the test invitation.",
     },
     pre: {

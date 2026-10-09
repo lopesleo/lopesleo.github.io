@@ -49,6 +49,14 @@
     if (lg) { store.lset("g_lang", lg.dataset.lang); track("guardiao_language_changed", { to: lg.dataset.lang }); }
   });
 
+  // iPhone/iPad: o jogo é só para Android; avisa antes de pedir o convite
+  var ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (ios) {
+    doc.classList.add("ios");
+    document.querySelectorAll(".ios-note").forEach(function (n) { n.hidden = false; });
+    track("guardiao_ios_seen");
+  }
+
   // ---------- barra do topo ----------
   var bar = document.querySelector(".topbar");
   var onScroll = function () { if (bar) bar.classList.toggle("solid", scrollY > 40); };

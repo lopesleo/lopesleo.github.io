@@ -17,7 +17,7 @@ export default {
     scroll: "Desliza para descubrir",
   },
   stage: {
-    teste: { badge: "En prueba cerrada · pronto en Google Play", cta: "Quiero probarlo", ctaMail: "Pedir mi invitación" },
+    teste: { badge: "En prueba cerrada · pronto en Google Play", cta: "Quiero probarlo", ctaMail: "Pedir mi invitación", ios: "La prueba es solo para Android. En iPhone el juego no se instala, pero si tienes un Android, pide la invitación con su cuenta de Google." },
     pre: { badge: "Prerregistro abierto en Google Play", cta: "Prerregistrarme en Google Play" },
     loja: { badge: "Disponible en Google Play", cta: "Descargar en Google Play" },
   },
@@ -110,7 +110,7 @@ export default {
       ],
       optin: "¿Ya estás en el grupo? Acepta la invitación aquí",
       mailSubject: "Quiero probar Guardián del Bosque",
-      mailBody: "¡Hola! Quiero unirme a la prueba cerrada de Guardián del Bosque.\n\nEl correo de la cuenta de Google de mi móvil Android es: ",
+      mailBody: "¡Hola! Quiero unirme a la prueba cerrada de Guardián del Bosque.\n\nMi móvil es Android. Si su cuenta de Google es este mismo correo, solo envía. Si es otra, escríbela aquí: ",
       fine: "Android 7 o más reciente. Tu correo solo se usa para la invitación de prueba.",
     },
     pre: {

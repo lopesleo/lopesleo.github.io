@@ -17,7 +17,7 @@ export default {
     scroll: "スクロールして見る",
   },
   stage: {
-    teste: { badge: "クローズドテスト中・Google Playで近日配信", cta: "テストに参加する", ctaMail: "招待をリクエスト" },
+    teste: { badge: "クローズドテスト中・Google Playで近日配信", cta: "テストに参加する", ctaMail: "招待をリクエスト", ios: "テストはAndroid専用です。iPhoneにはインストールできませんが、Android端末をお持ちなら、そのGoogleアカウントで招待をリクエストしてください。" },
     pre: { badge: "Google Playで事前登録受付中", cta: "Google Playで事前登録" },
     loja: { badge: "Google Playで配信中", cta: "Google Playで入手" },
   },
@@ -110,7 +110,7 @@ export default {
       ],
       optin: "グループに参加済み？ 招待の承認はこちら",
       mailSubject: "森の守護者のテストに参加したい",
-      mailBody: "こんにちは！森の守護者のクローズドテストに参加したいです。\n\nAndroidスマホのGoogleアカウントのメールアドレス：",
+      mailBody: "こんにちは！森の守護者のクローズドテストに参加したいです。\n\nスマホはAndroidです。そのGoogleアカウントがこのメールアドレスと同じなら、このまま送信してください。違う場合はここに書いてください：",
       fine: "Android 7以降。メールアドレスはテストの招待にのみ使います。",
     },
     pre: {

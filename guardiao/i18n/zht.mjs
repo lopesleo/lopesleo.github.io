@@ -17,7 +17,7 @@ export default {
     scroll: "向下捲動探索",
   },
   stage: {
-    teste: { badge: "封閉測試中 · 即將登上 Google Play", cta: "我要參加測試", ctaMail: "申請測試邀請" },
+    teste: { badge: "封閉測試中 · 即將登上 Google Play", cta: "我要參加測試", ctaMail: "申請測試邀請", ios: "測試僅限 Android。遊戲無法安裝在 iPhone 上；如果你有 Android 手機，請用它的 Google 帳戶申請邀請。" },
     pre: { badge: "Google Play 事前預約進行中", cta: "在 Google Play 事前預約" },
     loja: { badge: "已在 Google Play 上架", cta: "在 Google Play 下載" },
   },
@@ -110,7 +110,7 @@ export default {
       ],
       optin: "已經加入群組？在這裡接受邀請",
       mailSubject: "我想測試森林守護者",
-      mailBody: "你好！我想加入森林守護者的封閉測試。\n\n我 Android 手機上的 Google 帳戶電子郵件是：",
+      mailBody: "你好！我想加入森林守護者的封閉測試。\n\n我的手機是 Android。如果它的 Google 帳戶就是這個電子郵件，直接寄出即可；如果是別的，請寫在這裡：",
       fine: "需要 Android 7 或更新版本。你的電子郵件只用於寄送測試邀請。",
     },
     pre: {

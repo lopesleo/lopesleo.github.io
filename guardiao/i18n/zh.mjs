@@ -17,7 +17,7 @@ export default {
     scroll: "向下滚动探索",
   },
   stage: {
-    teste: { badge: "封闭测试中 · 即将登陆 Google Play", cta: "我要参加测试", ctaMail: "申请测试邀请" },
+    teste: { badge: "封闭测试中 · 即将登陆 Google Play", cta: "我要参加测试", ctaMail: "申请测试邀请", ios: "测试仅限安卓。游戏无法安装在 iPhone 上；如果你有安卓手机，请用它的 Google 账号申请邀请。" },
     pre: { badge: "Google Play 预注册进行中", cta: "在 Google Play 预注册" },
     loja: { badge: "已在 Google Play 上架", cta: "在 Google Play 下载" },
   },
@@ -110,7 +110,7 @@ export default {
       ],
       optin: "已经加入群组？在这里接受邀请",
       mailSubject: "我想测试森林守护者",
-      mailBody: "你好！我想加入森林守护者的封闭测试。\n\n我安卓手机上的 Google 账号邮箱是：",
+      mailBody: "你好！我想加入森林守护者的封闭测试。\n\n我的手机是安卓。如果它的 Google 账号就是这个邮箱，直接发送即可；如果是别的邮箱，请写在这里：",
       fine: "需要 Android 7 或更高版本。你的邮箱只用于发送测试邀请。",
     },
     pre: {

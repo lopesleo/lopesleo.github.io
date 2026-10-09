@@ -19,7 +19,7 @@ export default {
     scroll: "Role para descobrir",
   },
   stage: {
-    teste: { badge: "Em teste fechado · em breve na Google Play", cta: "Quero testar", ctaMail: "Pedir meu convite" },
+    teste: { badge: "Em teste fechado · em breve na Google Play", cta: "Quero testar", ctaMail: "Pedir meu convite", ios: "O teste é só para Android. No iPhone o jogo não instala, mas se você tiver um Android, peça o convite com a conta Google dele." },
     pre: { badge: "Pré-registro aberto na Google Play", cta: "Pré-registrar na Google Play" },
     loja: { badge: "Disponível na Google Play", cta: "Baixar na Google Play" },
   },
@@ -112,7 +112,7 @@ export default {
       ],
       optin: "Já entrou no grupo? Aceite o convite aqui",
       mailSubject: "Quero testar o Guardião da Floresta",
-      mailBody: "Oi! Quero entrar no teste fechado do Guardião da Floresta.\n\nO e-mail da conta Google do meu celular Android é: ",
+      mailBody: "Oi! Quero entrar no teste fechado do Guardião da Floresta.\n\nMeu celular é Android. Se a conta Google dele for este mesmo e-mail, é só enviar. Se for outra, escreva aqui: ",
       fine: "Android 7 ou mais novo. Seu e-mail só é usado para o convite de teste.",
     },
     pre: {
