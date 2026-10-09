@@ -1,6 +1,6 @@
 export default {
   meta: {
-    title: "Guardián del Bosque: las leyendas de Brasil contra la Podredumbre",
+    title: "Guardián del Bosque: las leyendas del folclore brasileño contra la Podredumbre",
     description:
       "Roguelite de supervivencia para Android con el folclore brasileño. Solo te mueves, tus armas atacan solas y Fuego + Hielo se vuelve Vapor. Gratis, sin energía y sin cajas de botín de pago.",
     ogAlt: "Guardián del Bosque: el Curupira enfrenta al Mapinguari, tomado por la Podredumbre",
@@ -48,7 +48,7 @@ export default {
     also: "Y más: armas que evolucionan, vínculos entre armas que combinan y Pactos de la Selva, cartas muy poderosas con un costo a la vista.",
   },
   legends: {
-    title: "7 LEYENDAS DE BRASIL",
+    title: "7 LEYENDAS DEL FOLCLORE BRASILEÑO",
     sub: "Cada una con su arma y su forma de luchar.",
     rule: "Aquí las leyendas son guardianas. El villano es la Podredumbre: el bosque enfermando.",
     origin: "La leyenda",

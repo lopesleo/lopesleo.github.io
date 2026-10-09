@@ -105,6 +105,9 @@ function treeline(seed, { color = PAL.g0, back = PAL.t1, h = 30 } = {}) {
   return `<svg class="treeline" viewBox="0 0 ${W} ${h}" preserveAspectRatio="xMidYMax slice" shape-rendering="crispEdges" aria-hidden="true" focusable="false">${body}</svg>`;
 }
 
+// Títulos de seção: "|" marca onde a linha PODE quebrar (cada pedaço fica inteiro). Útil em
+// japonês/chinês, que quebram entre quaisquer dois caracteres.
+
 // Título no estilo do gráfico da loja: linha grande dourada, linha pequena verde
 function logo(t, { tag = "h1", cls = "" } = {}) {
   const [a, b, order] = t.titleLines;
@@ -117,7 +120,7 @@ function logo(t, { tag = "h1", cls = "" } = {}) {
 
 function sectionHead(title, sub, { accent = PAL.g6, id = "" } = {}) {
   return `<header class="sec-head">
-  <h2 class="sec-title"${id ? ` id="${id}"` : ""}>${esc(title)}</h2>
+  <h2 class="sec-title"${id ? ` id="${id}"` : ""}>${title.includes("|") ? title.split("|").map((p) => `<span class="nobr">${esc(p)}</span>`).join("") : esc(title)}</h2>
   <span class="sec-bar" style="--accent:${accent}"></span>
   ${sub ? `<p class="sec-sub">${esc(sub)}</p>` : ""}
 </header>`;

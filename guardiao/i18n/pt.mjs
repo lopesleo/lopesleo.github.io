@@ -2,7 +2,7 @@
 // Termos do glossário do jogo (docs/IDIOMAS.md do repositório Guardiao-Game): Podridão, Clareira, Vapor…
 export default {
   meta: {
-    title: "Guardião da Floresta: as lendas do Brasil contra a Podridão",
+    title: "Guardião da Floresta: as lendas do folclore brasileiro contra a Podridão",
     description:
       "Roguelite de sobrevivência para Android com o folclore brasileiro. Você só se move, as armas atacam sozinhas e Fogo + Gelo vira Vapor. Grátis, sem energia e sem sorteio pago.",
     ogAlt: "Guardião da Floresta: o Curupira enfrenta o Mapinguari tomado pela Podridão",
@@ -50,7 +50,7 @@ export default {
     also: "E mais: armas que evoluem, laços entre armas que combinam e Tratos da Mata, cartas de muito poder com um custo à vista.",
   },
   legends: {
-    title: "7 LENDAS DO BRASIL",
+    title: "7 LENDAS DO FOLCLORE BRASILEIRO",
     sub: "Cada uma com sua arma e seu jeito de lutar.",
     rule: "Aqui as lendas são guardiãs. O vilão é a Podridão, a floresta adoecendo.",
     origin: "Da lenda",

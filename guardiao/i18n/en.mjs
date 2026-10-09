@@ -1,6 +1,6 @@
 export default {
   meta: {
-    title: "Forest Guardian: Brazil's legends against the Rot",
+    title: "Forest Guardian: legends of Brazilian folklore against the Rot",
     description:
       "A survival roguelite for Android steeped in Brazilian folklore. You only move, your weapons attack on their own, and Fire + Ice becomes Steam. Free, no energy, no paid loot boxes.",
     ogAlt: "Forest Guardian: the Curupira faces the Mapinguari, taken by the Rot",
@@ -48,7 +48,7 @@ export default {
     also: "Plus: weapons that evolve, links between weapons that match, and Forest Pacts: very strong cards with a visible cost.",
   },
   legends: {
-    title: "7 BRAZILIAN LEGENDS",
+    title: "7 LEGENDS OF BRAZILIAN FOLKLORE",
     sub: "Each with their own weapon and fighting style.",
     rule: "Here the legends are guardians. The villain is the Rot: the forest falling ill.",
     origin: "The legend",
