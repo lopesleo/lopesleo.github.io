@@ -20,6 +20,8 @@ export const TEST_OPTIN_URL = `https://play.google.com/apps/testing/${PACKAGE}`;
 export const SITE = "https://lopesleo.github.io";
 export const BASE = "/guardiao/";
 export const CONTACT = "lopesleo.dev@gmail.com";
+// servidor oficial no Discord (convite permanente; criado por tools/discord/setup.mjs no repositório do jogo)
+export const DISCORD = "https://discord.gg/TTYnNtQAes";
 export const STUDIO = "Komedy Games Studio";
 
 // Chave PÚBLICA de projeto do PostHog (a mesma dos CVs do portfólio; segura no cliente).

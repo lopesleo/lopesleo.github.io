@@ -87,6 +87,10 @@ const ICONS = {
     c: { c: PAL.cream },
     d: ["ccccccccccc", "cc.......cc", "c.c.....c.c", "c..c...c..c", "c...ccc...c", "c.........c", "ccccccccccc"],
   },
+  chat: {
+    c: { c: PAL.cream },
+    d: ["ccccccccccc", "c.........c", "c.c..c..c.c", "c.........c", "ccccccccccc", "..cc.......", ".cc........", "cc........."],
+  },
   globe: {
     c: { c: PAL.cream },
     d: ["..ccccc..", ".c..c..c.", "c..c.c..c", "ccccccccc", "c..c.c..c", "ccccccccc", "c..c.c..c", ".c..c..c.", "..ccccc.."],

@@ -460,6 +460,7 @@ ${head(t, L, {
       ${C.STAGE === "teste" ? `<p class="ios-note" hidden>${esc(t.stage.teste.ios)}</p>` : ""}
       <div class="cta-row center">${primaryCta(t, L, "join")}</div>
       ${C.STAGE === "teste" && C.TESTER_GROUP_URL ? `<p class="join-optin"><a href="${esc(C.TEST_OPTIN_URL)}" target="_blank" rel="noopener" data-cta="test_optin" data-where="join">${esc(join.optin)}</a></p>` : ""}
+      <p class="join-discord"><a href="${esc(C.DISCORD)}" target="_blank" rel="noopener" data-cta="discord" data-where="join">${icon("chat", { size: 3 })}<span>${esc(t.discord.join)}</span></a></p>
       <p class="fine">${esc(join.fine)}</p>
     </div>
   </div>
@@ -477,6 +478,7 @@ ${head(t, L, {
         <div class="downloads">
           <a class="dl" href="${A}guardiao-da-floresta-presskit.zip" download data-cta="presskit" data-where="press">${icon("download", { size: 3 })}<span><strong>${esc(t.press.kit)}</strong><small>${esc(fmt(t.press.kitMeta, mb("guardiao-da-floresta-presskit.zip")))}</small></span></a>
           <a class="dl" href="${A}media/trailer-720p.mp4" download="guardiao-da-floresta-trailer-720p.mp4" data-cta="trailer_download" data-where="press">${icon("download", { size: 3 })}<span><strong>${esc(t.press.trailer)}</strong><small>${esc(fmt(t.press.trailerMeta, mb("media/trailer-720p.mp4")))}</small></span></a>
+          <a class="dl" href="${esc(C.DISCORD)}" target="_blank" rel="noopener" data-cta="discord" data-where="press">${icon("chat", { size: 3 })}<span><strong>${esc(t.discord.press)}</strong><small>${esc(t.discord.meta)}</small></span></a>
           <a class="dl" href="mailto:${C.CONTACT}" data-cta="contact" data-where="press">${icon("mail", { size: 3 })}<span><strong>${esc(t.press.contact)}</strong><small>${esc(C.CONTACT)}</small></span></a>
         </div>
       </div>
@@ -492,6 +494,7 @@ ${head(t, L, {
     <div class="footer-links">
       <a href="${privacyHref}">${esc(t.footer.privacy)}</a>
       <a href="/privacy-${L.code === "pt" ? "pt" : "en"}.html">${esc(t.footer.sitePrivacy)}</a>
+      <a href="${esc(C.DISCORD)}" target="_blank" rel="noopener" data-cta="discord" data-where="footer">Discord</a>
       <a href="mailto:${C.CONTACT}">${esc(C.CONTACT)}</a>
       <a href="/">${esc(t.footer.dev)}</a>
     </div>
