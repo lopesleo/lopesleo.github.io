@@ -58,7 +58,7 @@ export default {
   },
   bosses: {
     title: "CHEFES DO FOLCLORE",
-    sub: "Todo golpe avisa antes: desvie só andando.",
+    sub: "Todo golpe avisa antes: desvie andando ou com o dash.",
     rule: "Vencer um chefe não o mata: liberta da Podridão.",
   },
   maps: {

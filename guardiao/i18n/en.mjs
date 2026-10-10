@@ -56,7 +56,7 @@ export default {
   },
   bosses: {
     title: "FOLKLORE BOSSES",
-    sub: "Every attack is telegraphed: dodge just by moving.",
+    sub: "Every attack is telegraphed: dodge by moving or with a dash.",
     rule: "Beating a boss doesn't kill it: it frees it from the Rot.",
   },
   maps: {

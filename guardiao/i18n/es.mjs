@@ -56,7 +56,7 @@ export default {
   },
   bosses: {
     title: "JEFES DEL FOLCLORE",
-    sub: "Cada golpe avisa antes: esquívalo solo moviéndote.",
+    sub: "Cada golpe avisa antes: esquívalo moviéndote o con el impulso.",
     rule: "Vencer a un jefe no lo mata: lo libera de la Podredumbre.",
   },
   maps: {
