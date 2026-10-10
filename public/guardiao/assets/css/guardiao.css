@@ -229,6 +229,8 @@ html.cjk .el { font-size: 24px; }
 .react-eq { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 24px 0 10px; min-height: 56px; font: 400 40px/1 var(--display); color: var(--cream-3); }
 .react-eq .slot { min-width: 40px; display: flex; justify-content: center; }
 .react-eq .slot .px-icon { width: 40px; height: 40px; }
+.react-eq .slot:empty::before { content: ""; box-sizing: border-box; width: 40px; height: 40px; border: 3px dashed var(--cream-3); animation: hop 0.6s steps(3) infinite alternate; }
+.react-eq .result.wait { color: var(--cream-3); }
 .react-eq .result { font-size: 44px; color: var(--rc, var(--goldhi)); text-shadow: var(--outline-sm); letter-spacing: 0.02em; }
 html.cjk .react-eq .result { font-size: 36px; }
 .react-eq .result.pop { animation: pop 0.45s steps(5); }
