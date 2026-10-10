@@ -102,9 +102,17 @@
   var cards = [].slice.call(document.querySelectorAll(".react-card"));
   var chips = [].slice.call(document.querySelectorAll(".chip"));
   var eq = document.querySelector(".react-eq");
+  // ordem de toque: o primeiro é o mais antigo, o que sai quando entra um novo
   var picked = ["fire", "ice"];
   var iconOf = function (id) { var b = document.querySelector('.el[data-el="' + id + '"] svg'); return b ? b.outerHTML : ""; };
-  function showReaction(id, user) {
+  function renderPick() {
+    els.forEach(function (b) { b.setAttribute("aria-pressed", picked.indexOf(b.dataset.el) >= 0 ? "true" : "false"); });
+    if (!eq) return;
+    eq.querySelector('[data-slot="0"]').innerHTML = iconOf(picked[0]);
+    eq.querySelector('[data-slot="1"]').innerHTML = picked[1] ? iconOf(picked[1]) : "";
+  }
+  // pair: ordem dos elementos a mostrar; sem ela (chips), usa a ordem da própria reação
+  function showReaction(id, user, pair) {
     var shown = null;
     cards.forEach(function (c) {
       var on = c.dataset.reaction === id;
@@ -112,14 +120,13 @@
     });
     chips.forEach(function (ch) { ch.setAttribute("aria-current", ch.dataset.show === id ? "true" : "false"); });
     if (shown) {
-      picked = shown.dataset.pair.split(",");
-      els.forEach(function (b) { b.setAttribute("aria-pressed", picked.indexOf(b.dataset.el) >= 0 ? "true" : "false"); });
+      picked = pair || shown.dataset.pair.split(",");
+      renderPick();
       var v = shown.querySelector("video"); if (v) { try { v.currentTime = 0; } catch (e) {} play(v); }
       if (eq) {
-        eq.querySelector('[data-slot="0"]').innerHTML = iconOf(picked[0]);
-        eq.querySelector('[data-slot="1"]').innerHTML = iconOf(picked[1]);
         var r = eq.querySelector(".result");
         r.textContent = (I.reactions || {})[id] || "";
+        r.classList.remove("wait");
         r.style.setProperty("--rc", getComputedStyle(shown).getPropertyValue("--rc"));
         r.classList.remove("pop"); void r.offsetWidth; r.classList.add("pop");
       }
@@ -135,11 +142,18 @@
   }
   els.forEach(function (b) {
     b.addEventListener("click", function () {
-      var id = b.dataset.el;
-      if (picked.indexOf(id) >= 0) return; // já está no par: o par sempre tem dois
-      picked = [picked[1], id];             // troca o mais antigo
-      var r = reactionFor(picked[0], picked[1]);
-      if (r) showReaction(r, true);
+      var id = b.dataset.el, at = picked.indexOf(id);
+      if (at >= 0) {
+        // tocar num escolhido o desmarca; a reação atual fica na tela até completar o par de novo
+        if (picked.length < 2) return;
+        picked = [picked[1 - at]];
+        renderPick();
+        if (eq) { var res = eq.querySelector(".result"); res.textContent = "?"; res.classList.add("wait"); res.classList.remove("pop"); }
+        return;
+      }
+      var pair = picked.length < 2 ? [picked[0], id] : [picked[1], id]; // completa o par ou troca o mais antigo
+      var r = reactionFor(pair[0], pair[1]);
+      if (r) showReaction(r, true, pair);
     });
   });
   chips.forEach(function (ch) { ch.addEventListener("click", function () { showReaction(ch.dataset.show, true); }); });
