@@ -1,6 +1,6 @@
 # Política de Privacidade — Guardião da Floresta
 
-*Última atualização: 9 de outubro de 2026*
+*Última atualização: 10 de outubro de 2026*
 
 **Guardião da Floresta** ("o jogo", `com.lopesleo.guardiao` na Google Play) é desenvolvido por
 Leonardo Lopes, que publica como **Komedy Games Studio**. Esta política explica quais dados o
@@ -37,6 +37,8 @@ anúncio foi exibido. Isso é tratado pelo Google conforme a política dele:
   na primeira abertura, uma **mensagem de consentimento** (plataforma de mensagens do
   usuário do Google). Você escolhe se aceita anúncios personalizados e pode mudar a
   escolha depois nas opções de privacidade do jogo.
+- Em **estados dos EUA com leis de privacidade** (como a Califórnia), você pode recusar a "venda ou
+  compartilhamento" dos seus dados para anúncios em **Opções › Privacidade › Rever**.
 - A compra **"Remover anúncios"** (quando disponível) retira os anúncios de tela cheia
   e libera as recompensas sem assistir.
 
