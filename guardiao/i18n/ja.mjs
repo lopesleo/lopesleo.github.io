@@ -153,5 +153,6 @@ export default {
     tm: "Google PlayはGoogle LLCの商標です。",
   },
   suggest: "このページは日本語でもご覧いただけます。",
+  discord: { join: "Discordで開発者やプレイヤーと話そう（主にポルトガル語）", press: "Discordサーバー", meta: "公式コミュニティ（主にポルトガル語）" },
   video: { play: "動画を再生", pause: "動画を一時停止" },
 };

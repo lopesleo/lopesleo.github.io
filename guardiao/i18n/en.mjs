@@ -153,5 +153,6 @@ export default {
     tm: "Google Play is a trademark of Google LLC.",
   },
   suggest: "This page is also available in English.",
+  discord: { join: "Talk with us and other players on Discord (mostly in Portuguese)", press: "Discord server", meta: "Official community, mostly in Portuguese" },
   video: { play: "Play video", pause: "Pause video" },
 };

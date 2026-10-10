@@ -153,5 +153,6 @@ export default {
     tm: "Google Play 是 Google LLC 的商標。",
   },
   suggest: "本頁面也提供繁體中文版。",
+  discord: { join: "在 Discord 上和我們及其他玩家聊天（主要使用葡萄牙語）", press: "Discord 伺服器", meta: "官方社群（主要使用葡萄牙語）" },
   video: { play: "播放影片", pause: "暫停影片" },
 };

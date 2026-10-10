@@ -387,3 +387,7 @@ html.cjk .dl strong { font-size: 22px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.join-discord { margin: 22px 0 0; }
+.join-discord a { display: inline-flex; align-items: center; gap: 12px; color: var(--cream); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.join-discord a:hover { color: var(--goldhi); }
+.join-discord .px-icon { width: 33px; height: 24px; flex: none; }

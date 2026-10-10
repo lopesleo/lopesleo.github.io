@@ -153,5 +153,6 @@ export default {
     tm: "Google Play es una marca de Google LLC.",
   },
   suggest: "Esta página también está en español.",
+  discord: { join: "Habla con nosotros y con otros jugadores en Discord (sobre todo en portugués)", press: "Servidor de Discord", meta: "Comunidad oficial, sobre todo en portugués" },
   video: { play: "Reproducir video", pause: "Pausar video" },
 };
