@@ -71,7 +71,7 @@ html.cjk .logo-sm .logo-small { font-size: 24px; }
 html.cjk .sec-title { font-size: clamp(36px, 6vw, 72px); line-height: 1.1; letter-spacing: 0.04em; }
 .nobr { white-space: nowrap; }
 .sec-bar { display: block; width: 120px; height: 9px; background: var(--accent); margin: 22px 0 18px 3px; box-shadow: 0 4px 0 var(--ink); }
-.sec-sub { margin: 0; font-size: clamp(19px, 2.2vw, 24px); font-weight: 700; color: var(--cream); max-width: 40ch; text-shadow: 0 3px 0 var(--ink); }
+.sec-sub { margin: 0; font-size: clamp(19px, 2.2vw, 24px); font-weight: 700; color: var(--cream); max-width: 40ch; text-wrap: pretty; text-shadow: 0 3px 0 var(--ink); }
 html.cjk .sec-sub { max-width: 30em; }
 
 /* ---------- painel do jogo: borda de 3 px, rebites nos cantos ---------- */
