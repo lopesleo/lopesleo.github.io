@@ -1,6 +1,6 @@
 # Privacy Policy — Forest Guardian (Guardião da Floresta)
 
-*Last updated: October 10, 2026*
+*Last updated: October 16, 2026*
 
 **Forest Guardian** ("the game", `com.lopesleo.guardiao` on Google Play) is developed by
 Leonardo Lopes, publishing as **Komedy Games Studio**. This policy explains what data the game
@@ -38,8 +38,8 @@ under its own policy: <https://policies.google.com/privacy>.
   the game's privacy options.
 - In **US states with privacy laws** (such as California), you can opt out of the "sale or
   sharing" of your data for ads in **Options › Privacy › Review**.
-- The **"Remove ads"** purchase (when available) removes full-screen ads and grants the
-  rewards without watching.
+- The **"No Ads"** purchase grants the ad rewards without watching (the game has no forced
+  ads, only rewarded ones).
 
 ## Usage and error analytics (Firebase)
 
@@ -52,8 +52,11 @@ person. You can turn it off at any time in
 
 ## Purchases
 
-The "Remove ads" purchase is processed by **Google Play**. We **do not** receive or store
-payment data; we only receive confirmation that the purchase was made.
+The one-time **"No Ads"** purchase is processed by **Google Play**. We **do not** receive or
+store payment data. The game only asks Google Play whether your Google account owns the
+purchase, to unlock it and restore it when you reinstall. Firebase Analytics records that a
+purchase happened (product, price and currency), without payment data; this is also turned off
+in **Options › Privacy › Usage and error data**.
 
 ## Network connections
 
