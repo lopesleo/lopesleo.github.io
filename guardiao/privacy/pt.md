@@ -1,6 +1,6 @@
 # Política de Privacidade — Guardião da Floresta
 
-*Última atualização: 10 de outubro de 2026*
+*Última atualização: 16 de outubro de 2026*
 
 **Guardião da Floresta** ("o jogo", `com.lopesleo.guardiao` na Google Play) é desenvolvido por
 Leonardo Lopes, que publica como **Komedy Games Studio**. Esta política explica quais dados o
@@ -39,8 +39,8 @@ anúncio foi exibido. Isso é tratado pelo Google conforme a política dele:
   escolha depois nas opções de privacidade do jogo.
 - Em **estados dos EUA com leis de privacidade** (como a Califórnia), você pode recusar a "venda ou
   compartilhamento" dos seus dados para anúncios em **Opções › Privacidade › Rever**.
-- A compra **"Remover anúncios"** (quando disponível) retira os anúncios de tela cheia
-  e libera as recompensas sem assistir.
+- A compra **"Sem anúncios"** libera as recompensas dos anúncios sem assistir (o jogo não tem
+  anúncio obrigatório, só os premiados).
 
 ## Análise de uso e erros (Firebase)
 
@@ -53,8 +53,11 @@ Não ligamos esses dados a nenhuma pessoa. Você pode desligar o envio quando qu
 
 ## Compras
 
-A compra "Remover anúncios" é processada pelo **Google Play**. Nós **não** recebemos nem
-guardamos dados de pagamento; recebemos apenas a confirmação de que a compra foi feita.
+A compra única **"Sem anúncios"** é processada pelo **Google Play**. Nós **não** recebemos nem
+guardamos dados de pagamento. O jogo só pergunta ao Google Play se a sua conta Google tem a compra,
+para liberá-la e recuperá-la quando você reinstala. O Firebase Analytics registra que houve uma
+compra (produto, preço e moeda), sem dados de pagamento; esse registro também é desligado em
+**Opções › Privacidade › Dados de uso e erros**.
 
 ## Conexões de rede
 
