@@ -1,6 +1,6 @@
 # Privacy Policy — Forest Guardian (Guardião da Floresta)
 
-*Last updated: October 16, 2026*
+*Last updated: October 19, 2026*
 
 **Forest Guardian** ("the game", `com.lopesleo.guardiao` on Google Play) is developed by
 Leonardo Lopes, publishing as **Komedy Games Studio**. This policy explains what data the game
@@ -50,6 +50,16 @@ model, app version, game events and error reports). We don't link this data to a
 person. You can turn it off at any time in
 **Options › Privacy › Usage and error data**.
 
+## News notifications (Firebase Cloud Messaging)
+
+If you accept notifications, the game may tell you about **news** (a new version, events) a few times a month
+through **Firebase Cloud Messaging**. For that, your device joins the news channel for the game's language,
+and Firebase uses a **technical installation identifier** (token) to deliver the message. We send the same
+message to everyone who plays in a language: we do not send individual messages or link the token to a person.
+Without your acceptance, the game does not even create the token. Turning off **Options › Game › News** leaves
+the channel and deletes the token; on Android, you can also turn off just the "News" channel in the app's
+notification settings.
+
 ## Purchases
 
 The one-time **"No Ads"** purchase is processed by **Google Play**. We **do not** receive or
@@ -60,7 +70,7 @@ in **Options › Privacy › Usage and error data**.
 
 ## Network connections
 
-- **Ads and analytics:** described above.
+- **Ads, analytics and news:** described above.
 - **Time check:** when online, the app makes a simple request to a Google address
   (`clients3.google.com/generate_204`, the same one Android uses to test the connection)
   only to read the correct date and time and prevent cheating in real-time activities
@@ -68,11 +78,12 @@ in **Options › Privacy › Usage and error data**.
 
 ## Permissions
 
-- **Internet:** for ads, analytics and the time check.
+- **Internet:** for ads, analytics, news and the time check.
 - **Advertising ID:** used by AdMob (see above); can be turned off in Android.
 - **Vibration:** haptic feedback on taps and events (can be turned off in Options).
 - **Notifications (optional):** only if you accept, to let you know the daily chest or
-  the harvest is ready. Can be turned off in Options.
+  the harvest is ready and to tell you the game's news. Reminders and news are turned off
+  separately in Options.
 
 ## Children
 

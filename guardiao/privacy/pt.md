@@ -1,6 +1,6 @@
 # Política de Privacidade — Guardião da Floresta
 
-*Última atualização: 16 de outubro de 2026*
+*Última atualização: 19 de outubro de 2026*
 
 **Guardião da Floresta** ("o jogo", `com.lopesleo.guardiao` na Google Play) é desenvolvido por
 Leonardo Lopes, que publica como **Komedy Games Studio**. Esta política explica quais dados o
@@ -51,6 +51,15 @@ instalação, modelo do aparelho, versão do app, eventos de jogo e relatórios 
 Não ligamos esses dados a nenhuma pessoa. Você pode desligar o envio quando quiser em
 **Opções › Privacidade › Dados de uso e erros**.
 
+## Novidades por notificação (Firebase Cloud Messaging)
+
+Se você aceitar notificações, o jogo pode contar **novidades** (versão nova, eventos), poucas vezes por mês,
+pelo **Firebase Cloud Messaging**. Para isso o aparelho se inscreve no canal de novidades do idioma do jogo, e
+o Firebase usa um **identificador técnico da instalação** (token) para entregar a mensagem. Mandamos a mesma
+mensagem para todos de um idioma: não enviamos mensagens individuais nem ligamos o token a uma pessoa. Sem o
+seu aceite, o jogo nem cria o token. Desligar **Opções › Jogo › Novidades** tira a inscrição e apaga o token;
+no Android, também dá para desligar só o canal "Novidades" nas configurações de notificação do app.
+
 ## Compras
 
 A compra única **"Sem anúncios"** é processada pelo **Google Play**. Nós **não** recebemos nem
@@ -61,7 +70,7 @@ compra (produto, preço e moeda), sem dados de pagamento; esse registro também 
 
 ## Conexões de rede
 
-- **Anúncios e análise:** descritos acima.
+- **Anúncios, análise e novidades:** descritos acima.
 - **Conferência da hora:** com internet, o app faz uma requisição simples a um endereço
   do Google (`clients3.google.com/generate_204`, o mesmo que o Android usa para testar a
   conexão) só para ler a data e a hora certas e evitar trapaça nas atividades com tempo
@@ -69,11 +78,12 @@ compra (produto, preço e moeda), sem dados de pagamento; esse registro também 
 
 ## Permissões
 
-- **Internet:** para anúncios, análise e a conferência da hora.
+- **Internet:** para anúncios, análise, novidades e a conferência da hora.
 - **ID de publicidade:** usado pelo AdMob (veja acima); pode ser desativado no Android.
 - **Vibração:** resposta tátil aos toques e eventos (pode ser desligada em Opções).
 - **Notificações (opcional):** só se você aceitar, para avisar que o baú do dia ou a
-  colheita estão prontos. Dá para desligar em Opções.
+  colheita estão prontos e contar as novidades do jogo. Lembretes e novidades se desligam
+  separadamente em Opções.
 
 ## Crianças
 
