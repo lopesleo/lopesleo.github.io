@@ -12,7 +12,8 @@ jogo usa, para quê e quais escolhas você tem. Versão em inglês:
 - O jogo é **gratuito** e tem **anúncios opcionais** (você escolhe assistir para ganhar
   uma recompensa). Nunca há anúncio durante a ação.
 - Não pedimos conta, nome, e-mail, telefone nem localização.
-- Seu progresso fica **no seu aparelho**.
+- Seu progresso fica **no seu aparelho**. Se você entrar no **Google Play Games**, uma cópia também fica
+  guardada na sua conta Google, para voltar ao reinstalar ou trocar de celular.
 - Usamos serviços do Google (AdMob, Firebase e Google Play) que tratam alguns dados
   técnicos, descritos abaixo.
 
@@ -22,6 +23,24 @@ O progresso (moedas, desbloqueios, conquistas, recordes) e as opções (volume,
 vibração, idioma) ficam salvos **apenas no armazenamento local do seu aparelho**. Eles
 não são enviados a servidores nossos e são apagados ao desinstalar o jogo ou pela
 opção "Apagar progresso" no menu Opções.
+
+## Cópia do progresso na nuvem (Google Play Games)
+
+Se você estiver conectado ao **Google Play Games**, o jogo guarda uma cópia do progresso com o recurso
+**Jogos salvos** do Google. A cópia fica no espaço do jogo na sua conta Google (uma pasta oculta, que só este
+jogo acessa), **não em servidores nossos**, e serve para recuperar o progresso ao reinstalar ou trocar de
+aparelho. As opções (volume, idioma etc.) não vão para a nuvem. O Google Play Games trata a sua conta e o seu
+perfil de jogador conforme a política do Google: <https://policies.google.com/privacy>. Para não
+usar a nuvem, basta não entrar no Play Games. "Apagar progresso" apaga também a cópia na nuvem, e você pode
+excluir os dados do jogo no app ou nas configurações do Google Play Games.
+
+## Rankings (Google Play Games)
+
+Se você estiver conectado ao **Google Play Games**, a pontuação das suas partidas solo e o maior Perigo que você
+venceu vão para os rankings do jogo no Google Play Games. Outros jogadores veem o seu **apelido** e a sua
+**posição** conforme a visibilidade do seu perfil de jogador (configurável no app Google Play Games). Não
+recebemos dados pessoais: o ranking é guardado e mostrado pelo Google, conforme a política dele:
+<https://policies.google.com/privacy>. Para não aparecer, basta não entrar no Play Games.
 
 ## Anúncios (Google AdMob)
 
@@ -70,7 +89,7 @@ compra (produto, preço e moeda), sem dados de pagamento; esse registro também 
 
 ## Conexões de rede
 
-- **Anúncios, análise e novidades:** descritos acima.
+- **Play Games (nuvem e rankings), anúncios, análise e novidades:** descritos acima.
 - **Conferência da hora:** com internet, o app faz uma requisição simples a um endereço
   do Google (`clients3.google.com/generate_204`, o mesmo que o Android usa para testar a
   conexão) só para ler a data e a hora certas e evitar trapaça nas atividades com tempo
@@ -78,7 +97,7 @@ compra (produto, preço e moeda), sem dados de pagamento; esse registro também 
 
 ## Permissões
 
-- **Internet:** para anúncios, análise, novidades e a conferência da hora.
+- **Internet:** para o Play Games, anúncios, análise, novidades e a conferência da hora.
 - **ID de publicidade:** usado pelo AdMob (veja acima); pode ser desativado no Android.
 - **Vibração:** resposta tátil aos toques e eventos (pode ser desligada em Opções).
 - **Notificações (opcional):** só se você aceitar, para avisar que o baú do dia ou a
@@ -95,7 +114,7 @@ coletamos intencionalmente dados de crianças.
 Você pode pedir informações sobre os dados tratados, a correção ou a exclusão deles e
 retirar o consentimento a qualquer momento. Como não mantemos conta nem dados pessoais
 em servidores próprios, grande parte já está sob seu controle no aparelho (apagar o
-progresso, redefinir o ID de publicidade, desativar notificações).
+progresso, inclusive a cópia no Play Games; redefinir o ID de publicidade; desativar notificações).
 
 ## Mudanças nesta política
 
