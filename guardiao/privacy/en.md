@@ -12,7 +12,8 @@ reference: <https://lopesleo.github.io/guardiao/privacidade/>.
 - The game is **free** and has **optional ads** (you choose to watch one to earn a
   reward). There are never ads during the action.
 - We don't ask for an account, name, email, phone number or location.
-- Your progress stays **on your device**.
+- Your progress stays **on your device**. If you sign in to **Google Play Games**, a copy is also kept in
+  your Google account, so it comes back when you reinstall or switch phones.
 - We use Google services (AdMob, Firebase and Google Play) that process some technical
   data, described below.
 
@@ -22,6 +23,24 @@ Your progress (coins, unlocks, achievements, records) and settings (volume, vibr
 language) are saved **only in your device's local storage**. They are not sent to our
 servers and are deleted when you uninstall the game or use the "Erase progress" option in
 the Options menu.
+
+## Cloud copy of your progress (Google Play Games)
+
+If you are signed in to **Google Play Games**, the game keeps a copy of your progress using Google's **Saved
+games** feature. The copy lives in the game's space in your Google account (a hidden folder that only this game
+can access), **not on our servers**, and is used to recover your progress when you reinstall or switch devices.
+Settings (volume, language, etc.) are not uploaded. Google Play Games handles your account and player profile
+under Google's policy: <https://policies.google.com/privacy>. To not use the cloud, just don't sign in to
+Play Games. "Erase progress" also erases the cloud copy, and you can delete the game's data in the Google Play
+Games app or settings.
+
+## Leaderboards (Google Play Games)
+
+If you are signed in to **Google Play Games**, the score of your solo runs and the highest Danger you have cleared
+go to the game's leaderboards on Google Play Games. Other players see your **gamer name** and your **rank**
+according to the visibility of your player profile (set in the Google Play Games app). We don't receive personal
+data: the leaderboard is stored and shown by Google, under Google's policy:
+<https://policies.google.com/privacy>. To stay off the leaderboards, just don't sign in to Play Games.
 
 ## Ads (Google AdMob)
 
@@ -70,7 +89,7 @@ in **Options › Privacy › Usage and error data**.
 
 ## Network connections
 
-- **Ads, analytics and news:** described above.
+- **Play Games (cloud and leaderboards), ads, analytics and news:** described above.
 - **Time check:** when online, the app makes a simple request to a Google address
   (`clients3.google.com/generate_204`, the same one Android uses to test the connection)
   only to read the correct date and time and prevent cheating in real-time activities
@@ -78,7 +97,7 @@ in **Options › Privacy › Usage and error data**.
 
 ## Permissions
 
-- **Internet:** for ads, analytics, news and the time check.
+- **Internet:** for Play Games, ads, analytics, news and the time check.
 - **Advertising ID:** used by AdMob (see above); can be turned off in Android.
 - **Vibration:** haptic feedback on taps and events (can be turned off in Options).
 - **Notifications (optional):** only if you accept, to let you know the daily chest or
@@ -94,8 +113,8 @@ knowingly collect data from children.
 
 You can request information about the data processed, its correction or deletion, and
 withdraw consent at any time. Since we don't keep accounts or personal data on our own
-servers, most of it is already under your control on the device (erase progress, reset the
-advertising ID, turn off notifications).
+servers, most of it is already under your control on the device (erase progress, including the copy on
+Play Games; reset the advertising ID; turn off notifications).
 
 ## Changes to this policy
 
