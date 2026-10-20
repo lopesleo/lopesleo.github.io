@@ -1,4 +1,6 @@
-// Página oficial do Guardião da Floresta (https://lopesleo.github.io/guardiao/).
+// Página oficial do Guardião da Floresta (https://komedygames.com/guardiao/; desde 20/10/2026 no domínio do estúdio,
+// publicado pelo repositório lopesleo/komedygames na Cloudflare Pages; a cópia em lopesleo.github.io/guardiao/ segue no ar
+// com os endereços canônicos apontando para o domínio).
 // O que muda com a fase do lançamento fica TODO aqui. Depois de editar: `node guardiao/build.mjs`
 // (o `npm run build` do site já roda o gerador antes).
 
@@ -17,7 +19,7 @@ export const PLAY_URL = `https://play.google.com/store/apps/details?id=${PACKAGE
 // Página de aceite do teste fechado (só funciona para quem está na lista ou no grupo)
 export const TEST_OPTIN_URL = `https://play.google.com/apps/testing/${PACKAGE}`;
 
-export const SITE = "https://lopesleo.github.io";
+export const SITE = "https://komedygames.com";
 export const BASE = "/guardiao/";
 export const CONTACT = "lopesleo.dev@gmail.com";
 // servidor oficial no Discord (convite permanente; criado por tools/discord/setup.mjs no repositório do jogo)
