@@ -1,6 +1,6 @@
 # Privacy Policy — Forest Guardian (Guardião da Floresta)
 
-*Last updated: October 19, 2026*
+*Last updated: October 23, 2026*
 
 **Forest Guardian** ("the game", `com.lopesleo.guardiao` on Google Play) is developed by
 Leonardo Lopes, publishing as **Komedy Games Studio**. This policy explains what data the game
@@ -63,9 +63,11 @@ under its own policy: <https://policies.google.com/privacy>.
 ## Usage and error analytics (Firebase)
 
 We use **Firebase Analytics** and **Firebase Crashlytics** to understand how the game is
-played (for example, run length, level reached, which rewards are viewed) and to fix
-crashes. The data is **technical and anonymous to us** (installation identifier, device
-model, app version, game events and error reports). We don't link this data to any
+played (for example, run length, level reached, which rewards are viewed), to see how it
+runs on each device and to fix crashes. The data is **technical and anonymous to us**
+(installation identifier, device model, app version, game events, error reports and the
+**performance of each run**: frames per second, the graphics quality used, memory and the
+number of processor cores). We don't link this data to any
 person. You can turn it off at any time in
 **Options › Privacy › Usage and error data**.
 
