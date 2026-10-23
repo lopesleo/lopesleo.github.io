@@ -1,6 +1,6 @@
 # Política de Privacidade — Guardião da Floresta
 
-*Última atualização: 19 de outubro de 2026*
+*Última atualização: 23 de outubro de 2026*
 
 **Guardião da Floresta** ("o jogo", `com.lopesleo.guardiao` na Google Play) é desenvolvido por
 Leonardo Lopes, que publica como **Komedy Games Studio**. Esta política explica quais dados o
@@ -64,9 +64,11 @@ anúncio foi exibido. Isso é tratado pelo Google conforme a política dele:
 ## Análise de uso e erros (Firebase)
 
 Usamos o **Firebase Analytics** e o **Firebase Crashlytics** para entender como o jogo é
-usado (por exemplo, duração das partidas, nível alcançado, quais recompensas são vistas)
-e para corrigir falhas. Os dados são **técnicos e anônimos para nós** (identificador de
-instalação, modelo do aparelho, versão do app, eventos de jogo e relatórios de erro).
+usado (por exemplo, duração das partidas, nível alcançado, quais recompensas são vistas),
+para saber como ele roda em cada aparelho e para corrigir falhas. Os dados são **técnicos e
+anônimos para nós** (identificador de instalação, modelo do aparelho, versão do app, eventos de
+jogo, relatórios de erro e o **desempenho de cada partida**: quadros por segundo, a qualidade
+gráfica usada, a memória e o número de núcleos do processador).
 Não ligamos esses dados a nenhuma pessoa. Você pode desligar o envio quando quiser em
 **Opções › Privacidade › Dados de uso e erros**.
 
