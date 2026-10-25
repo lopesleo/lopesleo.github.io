@@ -2,6 +2,67 @@
   "source": "docs/PLAY_STORE.md (repositório do jogo)",
   "versions": [
     {
+      "version": "1.0.24",
+      "code": 25,
+      "date": "2026-10-25",
+      "notes": {
+        "pt": [
+          "Dia do Saci, até 7/11: pegue o redemoinho na Clareira e ganhe a Carapuça do Saci, grátis.",
+          "Catalisadores: 6 evoluções novas, feitas com uma passiva no lugar da 2ª arma.",
+          "Horta nova: arraste o dedo para colher e cuidar; o feijão de vara dá três vezes.",
+          "O casal de João-de-barro faz duas obras ao mesmo tempo.",
+          "Cada lugar da Clareira desperta com cena e música próprias.",
+          "Rankings por Perigo, com o guardião de cada partida.",
+          "O presente do dia não zera se você pular um dia."
+        ],
+        "en": [
+          "Saci Day, until Nov 7: catch the whirlwind in the Clearing and get the Saci's Cap for free.",
+          "Catalysts: 6 new evolutions, made with a passive instead of a 2nd weapon.",
+          "New garden: swipe to harvest and tend; pole beans give three harvests.",
+          "The Hornero pair builds two upgrades at once.",
+          "Every place in the Clearing awakens with its own scene and music.",
+          "Leaderboards by Danger, showing each run's guardian.",
+          "The daily gift no longer resets if you skip a day."
+        ],
+        "es": [
+          "Día del Saci, hasta el 7/11: atrapa el remolino en el Claro y gana el Gorro del Saci gratis.",
+          "Catalizadores: 6 evoluciones nuevas, con una pasiva en lugar de la 2.ª arma.",
+          "Huerto nuevo: desliza el dedo para cosechar y cuidar; el frijol de vara da tres cosechas.",
+          "La pareja de Horneros hace dos obras a la vez.",
+          "Cada lugar del Claro despierta con su propia escena y música.",
+          "Clasificaciones por Peligro, con el guardián de cada partida.",
+          "El regalo del día ya no se reinicia si faltas un día."
+        ],
+        "ja": [
+          "サシの日（11月7日まで）：広場でつむじ風をつかまえて、サシの帽子を無料でゲット。",
+          "触媒：2つ目の武器の代わりにパッシブで進化する、新しい進化が6種。",
+          "新しい畑：指でなぞって収穫と手入れ。つる豆は3回収穫できる。",
+          "つがいのカマドドリが、2つの建設を同時に進めます。",
+          "広場の各場所が専用の演出と音楽で目覚めます。",
+          "危険度別ランキング：各プレイの守護者を表示。",
+          "1日休んでも日替わりの贈り物はリセットされません。"
+        ],
+        "zh": [
+          "萨西节（至11月7日）：在空地抓住旋风，免费获得萨西的红帽。",
+          "催化剂：6种新进化，用被动代替第二把武器。",
+          "全新菜园：滑动手指即可收获与照料；架豆能收三次。",
+          "一对灶鸟可以同时进行两项建设。",
+          "空地的每个地方都有专属的苏醒场景与音乐。",
+          "按危险度的排行榜，显示每局的守护者。",
+          "漏掉一天，每日礼物也不会重置。"
+        ],
+        "zht": [
+          "薩西節（至11月7日）：在空地抓住旋風，免費獲得薩西的紅帽。",
+          "催化劑：6種新進化，用被動代替第二把武器。",
+          "全新菜園：滑動手指即可收成與照料；架豆能收三次。",
+          "一對灶鳥可以同時進行兩項建設。",
+          "空地的每個地方都有專屬的甦醒場景與音樂。",
+          "依危險度的排行榜，顯示每局的守護者。",
+          "漏掉一天，每日禮物也不會重置。"
+        ]
+      }
+    },
+    {
       "version": "1.0.22",
       "code": 23,
       "date": "2026-10-23",
