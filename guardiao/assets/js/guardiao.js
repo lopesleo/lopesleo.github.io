@@ -59,12 +59,50 @@
 
   // ---------- barra do topo ----------
   var bar = document.querySelector(".topbar");
-  var onScroll = function () { if (bar) bar.classList.toggle("solid", scrollY > 40); };
+  var inner = bar && bar.querySelector(".topbar-inner");
+  var mbtn = bar && bar.querySelector(".menu-btn");
+  var menu = document.getElementById("site-menu");
+  var isOpen = function () { return !!bar && bar.classList.contains("open"); };
+  var onScroll = function () { if (bar) bar.classList.toggle("solid", scrollY > 40 || bar.dataset.solid === "1" || isOpen()); };
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
-  // fecha o menu de idioma ao clicar fora
+
+  // menu recolhido: botão com aria-expanded; fecha com Esc, toque fora, ao escolher um item ou se o foco sair da barra
+  function setMenu(on, refocus) {
+    if (!mbtn || !menu) return;
+    mbtn.setAttribute("aria-expanded", on ? "true" : "false");
+    bar.classList.toggle("open", on);
+    onScroll();
+    if (!on && refocus) mbtn.focus();
+  }
+  if (mbtn && menu) {
+    mbtn.addEventListener("click", function () { setMenu(!isOpen()); if (isOpen()) track("guardiao_menu_opened"); });
+    menu.addEventListener("click", function (ev) { if (ev.target.closest && ev.target.closest("a")) setMenu(false); });
+    bar.addEventListener("focusout", function (ev) { if (isOpen() && ev.relatedTarget && !bar.contains(ev.relatedTarget)) setMenu(false); });
+  }
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Escape") return;
+    if (isOpen()) { setMenu(false, true); return; }
+    document.querySelectorAll("details.lang[open]").forEach(function (d) { d.removeAttribute("open"); var s = d.querySelector("summary"); if (s) s.focus(); });
+  });
+  // fecha o menu e o seletor de idioma ao tocar fora
   document.addEventListener("click", function (ev) {
     document.querySelectorAll("details.lang[open]").forEach(function (d) { if (!d.contains(ev.target)) d.removeAttribute("open"); });
+    if (isOpen() && !menu.contains(ev.target) && !mbtn.contains(ev.target)) setMenu(false);
   });
+
+  // Tudo cabe? Se o logo + itens + idioma + botão não couberem (fonte do sistema, zoom de texto),
+  // recolhe o menu; se nem assim couber, esconde o nome ao lado do ícone. Nada fica por cima de nada.
+  function fit() {
+    if (!inner) return;
+    doc.classList.remove("nav-collapse", "brand-tight");
+    if (inner.scrollWidth > inner.clientWidth + 1) doc.classList.add("nav-collapse");
+    if (inner.scrollWidth > inner.clientWidth + 1) doc.classList.add("brand-tight");
+    if (isOpen() && mbtn && getComputedStyle(mbtn).display === "none") setMenu(false);
+  }
+  var fitQueued = false;
+  addEventListener("resize", function () { if (fitQueued) return; fitQueued = true; requestAnimationFrame(function () { fitQueued = false; fit(); }); });
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 
   // ---------- vídeos em laço: carregam e tocam só quando aparecem ----------
   function load(v) {
@@ -94,6 +132,13 @@
     if (!reduce && !saveData) {
       var start = function () { hv.src = tall ? hv.dataset.tall : hv.dataset.wide; var p = hv.play(); if (p && p.catch) p.catch(function () {}); };
       if (document.readyState === "complete") setTimeout(start, 150); else addEventListener("load", function () { setTimeout(start, 150); });
+      // fora da tela, o vídeo do topo para (menos bateria e CPU enquanto se lê o resto)
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (en) {
+          if (!hv.getAttribute("src")) return;
+          if (en[0].isIntersecting) { var p = hv.play(); if (p && p.catch) p.catch(function () {}); } else hv.pause();
+        }).observe(hv);
+      }
     }
   }
 
