@@ -7,7 +7,7 @@ export default {
     ogAlt: "Forest Guardian: the Curupira by a campfire in a forest clearing at night",
   },
   skip: "Skip to content",
-  nav: { play: "How to play", reactions: "Reactions", legends: "Legends", bosses: "Bosses", clearing: "Clearing", press: "Press", news: "Patch notes", lang: "Language" },
+  nav: { play: "How to play", reactions: "Reactions", legends: "Legends", bosses: "Bosses", clearing: "Clearing", press: "Press", news: "Patch notes", lang: "Language", menu: "Menu" },
   titleLines: ["FOREST", "GUARDIAN", "small-first"],
   hero: {
     kicker: "Survival roguelite · Brazilian folklore",

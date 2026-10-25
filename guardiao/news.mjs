@@ -1,6 +1,6 @@
 // Página "Novidades" (notas de versão), uma por idioma. Mesmo cabeçalho, rodapé, paleta e CSS da página principal.
 import * as C from "./config.mjs";
-import { esc, head, footerHtml, langMenu, primaryCta, newsHref, studioOrg } from "./page.mjs";
+import { esc, head, footerHtml, primaryCta, newsHref, studioOrg, topbar, brandName, ver } from "./page.mjs";
 import { PAL } from "./palette.mjs";
 import { visible } from "./patchnotes.mjs";
 
@@ -29,9 +29,6 @@ html.cjk .news-ver{font-size:32px}
 .news-cta{margin-top:40px;max-width:820px;padding:24px 22px;text-align:center}
 .news-cta p{margin:0 0 16px;font:400 clamp(24px,3.4vw,32px)/1.15 var(--display);color:var(--cream);text-shadow:var(--outline-sm)}
 html.cjk .news-cta p{font-size:clamp(20px,3vw,26px);line-height:1.4}
-.topbar .nav{display:flex;margin-left:auto}
-.topbar .lang{margin-left:0}
-@media (max-width:520px){.topbar .nav a{font-size:17px}}
 @media (min-width:640px){.news-card{padding:28px 32px 26px}.news-ver{font-size:46px}}
 `;
 
@@ -43,7 +40,7 @@ export function renderNews(t, L, list) {
     `\n<link rel="alternate" hreflang="x-default" href="${C.SITE}${newsHref("pt")}">`;
   const versions = visible(list).filter((v) => v.notes[L.code]?.length);
   const home = `${C.BASE}${L.dir}`;
-  const brand = t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`;
+  const brand = brandName(t, L);
   const crumb = (i, name, item) => ({ "@type": "ListItem", position: i, name, item });
   const ld = {
     "@context": "https://schema.org",
@@ -73,19 +70,11 @@ export function renderNews(t, L, list) {
     )
     .join("\n");
   return `<!doctype html>
-<html lang="${L.html}" data-lang="${L.code}" data-stage="${C.STAGE}" class="${CJK[L.code] ? "cjk" : "latin"}">
+<html lang="${L.html}" data-lang="${L.code}" data-stage="${C.STAGE}" class="${CJK[L.code] ? "cjk" : "latin"} no-js">
 ${head(t, L, { title: n.metaTitle, description: n.metaDesc, canonical: url, alternates, ogImage: `${A}img/social-${L.code}.jpg`, ogAlt: t.meta.ogAlt, extra: `${ldTag}<style>${CSS.replace(/\s*\n\s*/g, "")}</style>` })}
 <body>
 <a class="skip" href="#main">${esc(t.skip)}</a>
-<header class="topbar solid">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="${home}"><img src="${A}img/icon-192.png" width="36" height="36" alt=""><span>${esc(brand)}</span></a>
-    <nav class="nav" aria-label="${esc(n.title)}">
-      <a href="${home}">${esc(n.back)}</a>
-    </nav>
-    ${langMenu(t, L, (o) => C.NEWS_PATH[o.code])}
-  </div>
-</header>
+${topbar(t, L, { home, onNews: true, pagePath: (o) => C.NEWS_PATH[o.code] })}
 
 <main id="main" class="news-main">
   <div class="wrap">
@@ -106,6 +95,7 @@ ${cards}
 </main>
 
 ${footerHtml(t, L, (o) => C.NEWS_PATH[o.code])}
+<script src="${ver("js/guardiao.js")}" defer></script>
 </body>
 </html>
 `;

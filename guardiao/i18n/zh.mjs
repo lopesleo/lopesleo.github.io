@@ -7,7 +7,7 @@ export default {
     ogAlt: "森林守护者：夜晚空地的篝火旁，库鲁皮拉静立",
   },
   skip: "跳到正文",
-  nav: { play: "玩法", reactions: "元素反应", legends: "传说", bosses: "头目", clearing: "空地", press: "媒体", news: "更新内容", lang: "语言" },
+  nav: { play: "玩法", reactions: "元素反应", legends: "传说", bosses: "头目", clearing: "空地", press: "媒体", news: "更新内容", lang: "语言", menu: "菜单" },
   titleLines: ["森林", "守护者", "small-first"],
   hero: {
     kicker: "生存类肉鸽 · 巴西民间传说",

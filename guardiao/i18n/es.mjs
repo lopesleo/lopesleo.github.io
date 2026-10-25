@@ -7,7 +7,7 @@ export default {
     ogAlt: "Guardián del Bosque: el Curupira junto a una fogata en un claro del bosque, de noche",
   },
   skip: "Saltar al contenido",
-  nav: { play: "Cómo se juega", reactions: "Reacciones", legends: "Leyendas", bosses: "Jefes", clearing: "El Claro", press: "Prensa", news: "Novedades", lang: "Idioma" },
+  nav: { play: "Cómo se juega", reactions: "Reacciones", legends: "Leyendas", bosses: "Jefes", clearing: "El Claro", press: "Prensa", news: "Novedades", lang: "Idioma", menu: "Menú" },
   titleLines: ["GUARDIÁN", "DEL BOSQUE", "big-first"],
   hero: {
     kicker: "Roguelite de supervivencia · folclore brasileño",

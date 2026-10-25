@@ -15,7 +15,7 @@ const A = `${C.BASE}assets/`;
 
 // Cache-busting pelo CONTEÚDO (a data do arquivo muda a cada checkout e quebraria o cache à toa)
 const hashes = new Map();
-const ver = (rel) => {
+export const ver = (rel) => {
   if (!hashes.has(rel)) {
     try {
       hashes.set(rel, createHash("sha1").update(fs.readFileSync(path.join(PUB, "assets", rel))).digest("hex").slice(0, 8));
@@ -160,12 +160,49 @@ export function primaryCta(t, L, where) {
 export function langMenu(t, L, pagePath = "") {
   const items = C.LANGS.map(
     (o) =>
-      `<li><a href="${C.BASE}${o.dir}${typeof pagePath === "function" ? pagePath(o) : pagePath}" hreflang="${o.hreflang}" lang="${o.html}"${o.code === L.code ? ' aria-current="page"' : ""} data-lang="${o.code}">${esc(o.label)}</a></li>`,
+      `<li><a href="${langHref(o, pagePath)}" hreflang="${o.hreflang}" lang="${o.html}"${o.code === L.code ? ' aria-current="page"' : ""} data-lang="${o.code}">${esc(o.label)}</a></li>`,
   ).join("");
   return `<details class="lang">
-  <summary aria-label="${esc(t.nav.lang)}">${icon("globe", { size: 2 })}<span>${esc(L.label)}</span></summary>
+  <summary aria-label="${esc(t.nav.lang)}">${icon("globe", { size: 2 })}<span class="lang-full">${esc(L.label)}</span><span class="lang-short">${esc(L.short)}</span></summary>
   <ul>${items}</ul>
 </details>`;
+}
+
+const langHref = (o, pagePath) => `${C.BASE}${o.dir}${typeof pagePath === "function" ? pagePath(o) : pagePath}`;
+export const brandName = (t, L) =>
+  t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`;
+
+// Barra do topo, a mesma na página principal e nas Novidades.
+// Larga: logo + 7 itens + idioma + botão. Estreita (abaixo de NAV_BP[idioma]): logo + MENU + botão;
+// o MENU abre um painel com os itens e os idiomas (guardiao.js: aria-expanded, Esc, toque fora).
+export function topbar(t, L, { home, onNews = false, pagePath = "" } = {}) {
+  const st = t.stage[C.STAGE];
+  const at = (id) => (onNews ? `${home}#${id}` : `#${id}`);
+  const items = [
+    [at("play"), t.nav.play], [at("reactions"), t.nav.reactions], [at("legends"), t.nav.legends], [at("bosses"), t.nav.bosses],
+    [at("clearing"), t.nav.clearing], [at("press"), t.nav.press],
+  ].map(([h, l]) => `<a href="${h}">${esc(l)}</a>`);
+  items.push(`<a href="${newsHref(L.code)}"${onNews ? ' aria-current="page"' : ""}>${esc(t.nav.news)}</a>`);
+  const langs = C.LANGS.map(
+    (o) => `<li><a href="${langHref(o, pagePath)}" hreflang="${o.hreflang}" lang="${o.html}"${o.code === L.code ? ' aria-current="page"' : ""} data-lang="${o.code}">${esc(o.label)}</a></li>`,
+  ).join("");
+  return `<header class="topbar${onNews ? " solid" : ""}"${onNews ? ' data-solid="1"' : ""}>
+  <div class="wrap topbar-inner">
+    <a class="brand" href="${onNews ? home : `${home}#top`}"><img src="${A}img/icon-192.png" width="36" height="36" alt=""><span class="brand-name">${esc(brandName(t, L))}</span></a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-menu">${icon("menu", { size: 2, cls: "i-open" })}${icon("close", { size: 2, cls: "i-close" })}<span class="menu-label">${esc(t.nav.menu)}</span></button>
+    <div class="menu" id="site-menu">
+      <nav class="nav" aria-label="${esc(t.nav.menu)}">
+        ${items.join("\n        ")}
+      </nav>
+      <div class="menu-langs">
+        <p class="menu-langs-title" id="menu-langs-t">${icon("globe", { size: 2 })}<span>${esc(t.nav.lang)}</span></p>
+        <ul aria-labelledby="menu-langs-t">${langs}</ul>
+      </div>
+    </div>
+    ${langMenu(t, L, pagePath)}
+    <a class="btn btn-small" href="${at("join")}" data-cta="topbar_join" data-where="${onNews ? "news_topbar" : "topbar"}">${esc(st.cta)}</a>
+  </div>
+</header>`;
 }
 
 export function head(t, L, { title, description, canonical, alternates, ogImage, ogAlt, extra = "" }) {
@@ -204,6 +241,8 @@ ${C.LANGS.filter((o) => o.code !== L.code).map((o) => `<meta property="og:locale
 <link rel="preload" href="${A}fonts/Jersey15.woff2" as="font" type="font/woff2" crossorigin>
 ${cjkFont}
 <link rel="stylesheet" href="${ver("css/guardiao.css")}">
+<style>:root{--wrap-bar:${C.NAV_WRAP[L.code]}px}@media (min-width:${C.NAV_BP[L.code]}px){html:not(.nav-collapse) .menu-btn{display:none}html:not(.nav-collapse) .menu{display:contents}html:not(.nav-collapse) .topbar .lang{display:block}}</style>
+<script>document.documentElement.classList.remove("no-js")</script>
 ${extra}
 </head>`;
 }
@@ -337,7 +376,7 @@ ${head(t, L, {
   ogAlt: t.meta.ogAlt,
   extra: `<link rel="preload" as="image" href="${ver("media/hero-wide.webp")}" media="(min-aspect-ratio: 4/5)" fetchpriority="high">
 <link rel="preload" as="image" href="${ver("media/hero-tall.webp")}" media="(max-aspect-ratio: 4/5)" fetchpriority="high">
-` + jsonLd(t, L, url) + `<script>document.documentElement.classList.remove("no-js")</script>`,
+` + jsonLd(t, L, url),
 })}
 <body>
 <a class="skip" href="#main">${esc(t.skip)}</a>
@@ -346,22 +385,7 @@ ${head(t, L, {
   <button type="button" class="suggest-close" aria-label="OK">×</button>
 </div>
 
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="${C.BASE}${L.dir}#top"><img src="${A}img/icon-192.png" width="36" height="36" alt=""><span>${esc(t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`)}</span></a>
-    <nav class="nav" aria-label="${esc(t.nav.play)}">
-      <a href="#play">${esc(t.nav.play)}</a>
-      <a href="#reactions">${esc(t.nav.reactions)}</a>
-      <a href="#legends">${esc(t.nav.legends)}</a>
-      <a href="#bosses">${esc(t.nav.bosses)}</a>
-      <a href="#clearing">${esc(t.nav.clearing)}</a>
-      <a href="#press">${esc(t.nav.press)}</a>
-      <a href="${newsHref(L.code)}">${esc(t.nav.news)}</a>
-    </nav>
-    ${langMenu(t, L)}
-    <a class="btn btn-small" href="#join" data-cta="topbar_join" data-where="topbar">${esc(C.STAGE === "teste" ? st.cta : st.cta)}</a>
-  </div>
-</header>
+${topbar(t, L, { home: `${C.BASE}${L.dir}` })}
 
 <main id="main">
 <section class="hero" id="top">
@@ -372,7 +396,7 @@ ${head(t, L, {
       data-wide="${ver("media/hero-wide.mp4")}" data-tall="${ver("media/hero-tall.mp4")}"></video>
   </div>
   <div class="hero-scrim"></div>
-  <div class="wrap hero-inner">
+  <div class="wrap hero-inner"><div class="hero-copy">
     <p class="kicker">${esc(t.hero.kicker)}</p>
     ${logo(t)}
     <p class="lead">${esc(t.hero.lead)}</p>
@@ -384,7 +408,7 @@ ${head(t, L, {
     ${C.STAGE === "teste" ? `<p class="ios-note" hidden>${esc(st.ios)}</p>` : ""}
     <p class="stage-badge"><span class="dot" aria-hidden="true"></span>${esc(st.badge)}</p>
     <ul class="facts">${t.hero.facts.map((f) => `<li>${icon("spark", { size: 2 })}<span>${esc(f)}</span></li>`).join("")}</ul>
-  </div>
+  </div></div>
   <a class="scroll-hint" href="#play" aria-label="${esc(t.hero.scroll)}">${icon("down", { size: 3 })}</a>
   ${treeline(7, { color: PAL.t0, back: PAL.t1, h: 34 })}
 </section>

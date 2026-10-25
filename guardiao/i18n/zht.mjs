@@ -7,7 +7,7 @@ export default {
     ogAlt: "森林守護者：夜晚空地的營火旁，庫魯皮拉靜立",
   },
   skip: "跳到主要內容",
-  nav: { play: "玩法", reactions: "元素反應", legends: "傳說", bosses: "頭目", clearing: "空地", press: "媒體", news: "更新內容", lang: "語言" },
+  nav: { play: "玩法", reactions: "元素反應", legends: "傳說", bosses: "頭目", clearing: "空地", press: "媒體", news: "更新內容", lang: "語言", menu: "選單" },
   titleLines: ["森林", "守護者", "small-first"],
   hero: {
     kicker: "生存類 Roguelite · 巴西民間傳說",

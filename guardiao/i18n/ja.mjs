@@ -7,7 +7,7 @@ export default {
     ogAlt: "森の守護者：夜の森の広場、焚き火のそばに立つクルピラ",
   },
   skip: "本文へスキップ",
-  nav: { play: "遊び方", reactions: "属性反応", legends: "伝説", bosses: "ボス", clearing: "広場", press: "プレス", news: "更新情報", lang: "言語" },
+  nav: { play: "遊び方", reactions: "属性反応", legends: "伝説", bosses: "ボス", clearing: "広場", press: "プレス", news: "更新情報", lang: "言語", menu: "メニュー" },
   titleLines: ["森の", "守護者", "small-first"],
   hero: {
     kicker: "サバイバル・ローグライト・ブラジルの民間伝承",

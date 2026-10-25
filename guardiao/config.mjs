@@ -33,13 +33,22 @@ export const POSTHOG_HOST = "https://us.i.posthog.com";
 
 // Idiomas: código da página → pasta, atributo lang, hreflang e catálogo
 export const LANGS = [
-  { code: "pt", dir: "", html: "pt-BR", hreflang: "pt-BR", label: "Português", og: "pt_BR" },
-  { code: "en", dir: "en/", html: "en", hreflang: "en", label: "English", og: "en_US" },
-  { code: "es", dir: "es/", html: "es", hreflang: "es", label: "Español", og: "es_LA" },
-  { code: "ja", dir: "ja/", html: "ja", hreflang: "ja", label: "日本語", og: "ja_JP" },
-  { code: "zh", dir: "zh/", html: "zh-Hans", hreflang: "zh-Hans", label: "简体中文", og: "zh_CN" },
-  { code: "zht", dir: "zh-hant/", html: "zh-Hant", hreflang: "zh-Hant", label: "繁體中文", og: "zh_TW" },
+  { code: "pt", dir: "", html: "pt-BR", hreflang: "pt-BR", label: "Português", short: "PT", og: "pt_BR" },
+  { code: "en", dir: "en/", html: "en", hreflang: "en", label: "English", short: "EN", og: "en_US" },
+  { code: "es", dir: "es/", html: "es", hreflang: "es", label: "Español", short: "ES", og: "es_LA" },
+  { code: "ja", dir: "ja/", html: "ja", hreflang: "ja", label: "日本語", short: "日本語", og: "ja_JP" },
+  { code: "zh", dir: "zh/", html: "zh-Hans", hreflang: "zh-Hans", label: "简体中文", short: "简体", og: "zh_CN" },
+  { code: "zht", dir: "zh-hant/", html: "zh-Hant", hreflang: "zh-Hant", label: "繁體中文", short: "繁體", og: "zh_TW" },
 ];
+
+// Menu do topo: largura MEDIDA (não chutada, 25/10/2026) de logo + 7 itens + idioma + botão + margens, em px,
+// com as fontes do site. Mudou um texto do menu ou do botão? Meça de novo (script na revisão de 25/10).
+// Daí saem: a largura de tela a partir da qual os itens aparecem (+17 px da barra de rolagem do Windows e
+// 24 px de folga) e a largura da barra (a mesma coluna do conteúdo, 1180 px, quando cabe). O guardiao.js ainda
+// confere na hora e recolhe o menu se algo não couber (fonte do sistema, zoom de texto).
+export const NAV_W = { pt: 1170, en: 1136, es: 1211, ja: 1003, zh: 912, zht: 912 };
+export const NAV_BP = Object.fromEntries(Object.entries(NAV_W).map(([k, w]) => [k, Math.ceil((w + 41) / 10) * 10]));
+export const NAV_WRAP = Object.fromEntries(Object.entries(NAV_W).map(([k, w]) => [k, Math.max(1180, w + 8)]));
 
 // Política de privacidade do JOGO (o app). PT é a versão de referência.
 export const PRIVACY = [

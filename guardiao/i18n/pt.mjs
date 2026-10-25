@@ -9,7 +9,7 @@ export default {
     ogAlt: "Guardião da Floresta: o Curupira à beira da fogueira numa clareira à noite",
   },
   skip: "Pular para o conteúdo",
-  nav: { play: "Como se joga", reactions: "Reações", legends: "Lendas", bosses: "Chefes", clearing: "Clareira", press: "Imprensa", news: "Novidades", lang: "Idioma" },
+  nav: { play: "Como se joga", reactions: "Reações", legends: "Lendas", bosses: "Chefes", clearing: "Clareira", press: "Imprensa", news: "Novidades", lang: "Idioma", menu: "Menu" },
   titleLines: ["GUARDIÃO", "DA FLORESTA", "big-first"],
   hero: {
     kicker: "Roguelite de sobrevivência · folclore brasileiro",

@@ -99,6 +99,15 @@ const ICONS = {
     c: { d: PAL.g4, l: PAL.g6 },
     d: ["......ll", "....llll", "..lllldl", ".llldll.", ".lldll..", ".ldll...", "d.ll....", "d......."],
   },
+  // menu recolhido do topo: três barras e o "x" de fechar (desenhados para size 2)
+  menu: {
+    c: { c: PAL.cream },
+    d: ["ccccccccc", "ccccccccc", ".........", ".........", "ccccccccc", "ccccccccc", ".........", ".........", "ccccccccc", "ccccccccc"],
+  },
+  close: {
+    c: { c: PAL.cream },
+    d: ["cc......cc", "ccc....ccc", ".ccc..ccc.", "..cccccc..", "...cccc...", "...cccc...", "..cccccc..", ".ccc..ccc.", "ccc....ccc", "cc......cc"],
+  },
   spark: {
     c: { y: PAL.yel3, w: PAL.white },
     d: ["...y...", "...y...", "..yyy..", "yyywyyy", "..yyy..", "...y...", "...y..."],
