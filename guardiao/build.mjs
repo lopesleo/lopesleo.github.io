@@ -12,6 +12,7 @@ import { renderPage } from "./page.mjs";
 import { renderPrivacy } from "./privacy.mjs";
 import { renderNews } from "./news.mjs";
 import { loadAll } from "./patchnotes.mjs";
+import { renderLlms, renderLlmsFull } from "./llms.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(HERE, "../public/guardiao");
@@ -101,6 +102,10 @@ fs.writeFileSync(
   [`<?xml version="1.0" encoding="UTF-8"?>`, `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`, ...urls, "</urlset>", ""].join(NL),
 );
 fs.writeFileSync(LM_FILE, JSON.stringify(lm, null, 1) + NL);
+
+// 3c) llms.txt / llms-full.txt (o build.sh do komedygames copia para a raiz do domínio)
+fs.writeFileSync(path.join(OUT, "llms.txt"), renderLlms(T) + NL);
+fs.writeFileSync(path.join(OUT, "llms-full.txt"), renderLlmsFull(T) + NL);
 
 console.log(`✓ página do Guardião: ${C.LANGS.length} idiomas + política (${C.PRIVACY.length}) + novidades (até ${C.PATCH_NOTES_MAX}, notas lidas da ${notes.from}) · fase "${C.STAGE}"`);
 
