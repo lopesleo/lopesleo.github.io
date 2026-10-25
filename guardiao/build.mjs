@@ -4,6 +4,7 @@
 //                                             (lopesleo.github.io/Guardiao-Game/, branch "pages")
 // Roda sozinho no `npm run build` do site. Só usa Node (nada de Python no CI).
 import fs from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import * as C from "./config.mjs";
@@ -47,7 +48,9 @@ for (const code of ["ja", "zh", "zht"]) {
 }
 
 // 3) Páginas
+const written = new Map();
 const write = (rel, html) => {
+  written.set(rel, html);
   const f = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
   fs.writeFileSync(f, html);
@@ -61,6 +64,43 @@ for (const L of C.LANGS) write(`${L.dir}${C.NEWS_PATH[L.code]}index.html`, rende
 const privUrl = (code) => `${C.SITE}${C.BASE}${C.PRIVACY.find((p) => p.code === code).path}`;
 const privAlt = C.PRIVACY.map((p) => `<link rel="alternate" hreflang="${p.html}" href="${privUrl(p.code)}">`).join("\n");
 for (const p of C.PRIVACY) write(`${p.path}index.html`, renderPrivacy(p.code, { canonical: privUrl(p.code), alternate: privAlt }));
+
+// 3b) Sitemap das páginas do Guardião (public/guardiao/sitemap.xml), com hreflang alternados.
+// lastmod honesto: só muda quando o HTML da página muda (hash guardado em data/lastmod.json).
+const LM_FILE = path.join(HERE, "data/lastmod.json");
+let lm = {};
+try { lm = JSON.parse(fs.readFileSync(LM_FILE, "utf8")); } catch {}
+const today = new Date().toISOString().slice(0, 10);
+const lastmod = (rel) => {
+  const h = createHash("sha1").update(written.get(rel)).digest("hex").slice(0, 12);
+  if (!lm[rel] || lm[rel].hash !== h) lm[rel] = { hash: h, date: today };
+  return lm[rel].date;
+};
+const abs = (rel) => `${C.SITE}${C.BASE}${rel.replace(/index\.html$/, "")}`;
+const groups = [
+  C.LANGS.map((L) => ({ rel: `${L.dir}index.html`, hreflang: L.hreflang })),
+  C.LANGS.map((L) => ({ rel: `${L.dir}${C.NEWS_PATH[L.code]}index.html`, hreflang: L.hreflang })),
+  C.PRIVACY.map((p) => ({ rel: `${p.path}index.html`, hreflang: p.html })),
+];
+const NL = "\n";
+const urls = groups.flatMap((g) =>
+  g.map((u) => {
+    const links = g.map((o) => `    <xhtml:link rel="alternate" hreflang="${o.hreflang}" href="${abs(o.rel)}"/>`).join(NL);
+    return [
+      "  <url>",
+      `    <loc>${abs(u.rel)}</loc>`,
+      `    <lastmod>${lastmod(u.rel)}</lastmod>`,
+      links,
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${abs(g[0].rel)}"/>`,
+      "  </url>",
+    ].join(NL);
+  }),
+);
+fs.writeFileSync(
+  path.join(OUT, "sitemap.xml"),
+  [`<?xml version="1.0" encoding="UTF-8"?>`, `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`, ...urls, "</urlset>", ""].join(NL),
+);
+fs.writeFileSync(LM_FILE, JSON.stringify(lm, null, 1) + NL);
 
 console.log(`✓ página do Guardião: ${C.LANGS.length} idiomas + política (${C.PRIVACY.length}) + novidades (até ${C.PATCH_NOTES_MAX}, notas lidas da ${notes.from}) · fase "${C.STAGE}"`);
 

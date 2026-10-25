@@ -1,0 +1,58 @@
+{
+ "index.html": {
+  "hash": "c092de3dce7a",
+  "date": "2026-10-25"
+ },
+ "en/index.html": {
+  "hash": "6b1478239661",
+  "date": "2026-10-25"
+ },
+ "es/index.html": {
+  "hash": "02fb34592a22",
+  "date": "2026-10-25"
+ },
+ "ja/index.html": {
+  "hash": "558fbda9c87c",
+  "date": "2026-10-25"
+ },
+ "zh/index.html": {
+  "hash": "c1d519130ea1",
+  "date": "2026-10-25"
+ },
+ "zh-hant/index.html": {
+  "hash": "c0c16e3c5115",
+  "date": "2026-10-25"
+ },
+ "novidades/index.html": {
+  "hash": "1ef4a20015af",
+  "date": "2026-10-25"
+ },
+ "en/patch-notes/index.html": {
+  "hash": "4e5ece9f87a1",
+  "date": "2026-10-25"
+ },
+ "es/novedades/index.html": {
+  "hash": "aeb37cd23590",
+  "date": "2026-10-25"
+ },
+ "ja/updates/index.html": {
+  "hash": "3d494bb67c60",
+  "date": "2026-10-25"
+ },
+ "zh/updates/index.html": {
+  "hash": "e413a865672e",
+  "date": "2026-10-25"
+ },
+ "zh-hant/updates/index.html": {
+  "hash": "88c49e3409b0",
+  "date": "2026-10-25"
+ },
+ "privacidade/index.html": {
+  "hash": "834310592165",
+  "date": "2026-10-25"
+ },
+ "en/privacy/index.html": {
+  "hash": "f077c22fb844",
+  "date": "2026-10-25"
+ }
+}
