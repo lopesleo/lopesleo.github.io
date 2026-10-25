@@ -5,7 +5,7 @@
 **Forest Guardian** ("the game", `com.lopesleo.guardiao` on Google Play) is developed by
 Leonardo Lopes, publishing as **Komedy Games Studio**. This policy explains what data the game
 uses, why, and what choices you have. This is a translation; the Portuguese version is the
-reference: <https://lopesleo.github.io/guardiao/privacidade/>.
+reference: <https://komedygames.com/guardiao/privacidade/>.
 
 ## Summary
 

@@ -2,6 +2,43 @@
   "source": "docs/PLAY_STORE.md (repositório do jogo)",
   "versions": [
     {
+      "version": "1.0.25",
+      "code": 26,
+      "date": "2026-10-25",
+      "notes": {
+        "pt": [
+          "Horta: os nomes das sementes não se cortam mais, e o tempo de cada planta ficou mais fácil de ler.",
+          "Dia do Saci, até 7/11: pegue o redemoinho na Clareira e ganhe a Carapuça do Saci, grátis.",
+          "Catalisadores: 6 evoluções novas, feitas com uma passiva no lugar da 2ª arma."
+        ],
+        "en": [
+          "Garden: seed names no longer get cut off, and each plant's growing time is easier to read.",
+          "Saci Day, until Nov 7: catch the whirlwind in the Clearing and get the Saci's Cap for free.",
+          "Catalysts: 6 new evolutions, made with a passive instead of a 2nd weapon."
+        ],
+        "es": [
+          "Huerto: los nombres de las semillas ya no se cortan y el tiempo de cada planta se lee mejor.",
+          "Día del Saci, hasta el 7/11: atrapa el remolino en el Claro y gana el Gorro del Saci gratis.",
+          "Catalizadores: 6 evoluciones nuevas, con una pasiva en lugar de la 2.ª arma."
+        ],
+        "ja": [
+          "畑：種の名前が途中で切れなくなり、育つ時間も読みやすくなりました。",
+          "サシの日（11月7日まで）：広場でつむじ風をつかまえて、サシの帽子を無料でゲット。",
+          "触媒：2つ目の武器の代わりにパッシブで進化する、新しい進化が6種。"
+        ],
+        "zh": [
+          "菜园：种子名称不再被截断，每种作物的生长时间也更易读。",
+          "萨西节（至11月7日）：在空地抓住旋风，免费获得萨西的红帽。",
+          "催化剂：6种新进化，用被动代替第二把武器。"
+        ],
+        "zht": [
+          "菜園：種子名稱不再被截斷，每種作物的生長時間也更易讀。",
+          "薩西節（至11月7日）：在空地抓住旋風，免費獲得薩西的紅帽。",
+          "催化劑：6種新進化，用被動代替第二把武器。"
+        ]
+      }
+    },
+    {
       "version": "1.0.24",
       "code": 25,
       "date": "2026-10-25",

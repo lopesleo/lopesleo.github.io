@@ -5,7 +5,7 @@
 **Guardião da Floresta** ("o jogo", `com.lopesleo.guardiao` na Google Play) é desenvolvido por
 Leonardo Lopes, que publica como **Komedy Games Studio**. Esta política explica quais dados o
 jogo usa, para quê e quais escolhas você tem. Versão em inglês:
-<https://lopesleo.github.io/guardiao/en/privacy/>.
+<https://komedygames.com/guardiao/en/privacy/>.
 
 ## Resumo
 
