@@ -48,11 +48,11 @@ const CSS = `
 html{background:${PAL.t0};color-scheme:dark}
 body{margin:0;background:${PAL.t0};color:${PAL.cream};font:400 17px/1.65 "Atkinson Hyperlegible",system-ui,sans-serif;-webkit-text-size-adjust:100%}
 .page{max-width:760px;margin:0 auto;padding:28px 16px 64px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:28px}
-.back{display:inline-flex;align-items:center;gap:10px;color:${PAL.cream};text-decoration:none;font:400 22px/1 "Jersey 15",monospace;letter-spacing:.02em;text-transform:uppercase}
+.top{display:flex;align-items:center;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;margin-bottom:24px}
+.back{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:${PAL.cream};text-decoration:none;font:400 22px/1 "Jersey 15",monospace;letter-spacing:.02em;text-transform:uppercase}
 .back img{image-rendering:pixelated}
-.alt{font-size:15px;color:${PAL.g6}}
-.doc{background:${PAL.g0};border:3px solid ${PAL.g3};padding:28px 22px;position:relative}
+.alt{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:${PAL.g6}}
+.doc{background:${PAL.g0};border:3px solid ${PAL.g3};padding:28px 22px;position:relative;overflow-wrap:break-word}
 h1{font:400 40px/1.02 "Jersey 15",monospace;color:${PAL.goldhi};margin:0 0 6px;text-shadow:0 3px 0 ${PAL.ink};letter-spacing:.01em}
 h2{font:400 26px/1.1 "Jersey 15",monospace;color:${PAL.g6};margin:30px 0 8px;letter-spacing:.02em;text-transform:uppercase}
 p,li{color:rgba(244,236,214,.9)}
@@ -61,7 +61,8 @@ ul{padding-left:20px}
 li{margin:6px 0}
 li::marker{color:${PAL.g6}}
 strong{color:${PAL.cream}}
-a{color:${PAL.wnd2};text-underline-offset:3px}
+a{color:${PAL.wnd2};text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{color:${PAL.wnd3}}
 a:focus-visible{outline:3px solid ${PAL.yel2};outline-offset:2px}
 code{font-size:.88em;background:${PAL.t1};padding:1px 5px;color:${PAL.wnd3};word-break:break-all}
 .foot{margin-top:24px;font-size:14px;color:rgba(244,236,214,.6)}
