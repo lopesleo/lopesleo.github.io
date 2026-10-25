@@ -9,6 +9,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import * as C from "./config.mjs";
 import { renderPage } from "./page.mjs";
 import { renderPrivacy } from "./privacy.mjs";
+import { renderNews } from "./news.mjs";
+import { loadAll } from "./patchnotes.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(HERE, "../public/guardiao");
@@ -52,11 +54,15 @@ const write = (rel, html) => {
 };
 for (const L of C.LANGS) write(`${L.dir}index.html`, renderPage(T[L.code], L, all));
 
+// Novidades (notas de versão): lê o PLAY_STORE.md do jogo; sem ele, usa data/patchnotes.json
+const notes = loadAll();
+for (const L of C.LANGS) write(`${L.dir}${C.NEWS_PATH[L.code]}index.html`, renderNews(T[L.code], L, notes.list));
+
 const privUrl = (code) => `${C.SITE}${C.BASE}${C.PRIVACY.find((p) => p.code === code).path}`;
 const privAlt = C.PRIVACY.map((p) => `<link rel="alternate" hreflang="${p.html}" href="${privUrl(p.code)}">`).join("\n");
 for (const p of C.PRIVACY) write(`${p.path}index.html`, renderPrivacy(p.code, { canonical: privUrl(p.code), alternate: privAlt }));
 
-console.log(`✓ página do Guardião: ${C.LANGS.length} idiomas + política (${C.PRIVACY.length}) · fase "${C.STAGE}"`);
+console.log(`✓ página do Guardião: ${C.LANGS.length} idiomas + política (${C.PRIVACY.length}) + novidades (até ${C.PATCH_NOTES_MAX}, notas lidas da ${notes.from}) · fase "${C.STAGE}"`);
 
 // 4) Endereço antigo (opcional): o jogo saiu do ar; fica um aviso que leva à página nova,
 //    a política no MESMO endereço declarado no Play Console e um service worker que se

@@ -31,6 +31,7 @@ const mb = (rel) => {
   return `${(b / 1048576).toFixed(1).replace(".0", "")} MB`;
 };
 
+export const newsHref = (code) => `${C.BASE}${C.LANGS.find((o) => o.code === code).dir}${C.NEWS_PATH[code]}`;
 export const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const fmt = (s, ...v) => String(s).replace(/\{(\d)\}/g, (_, i) => v[i]);
@@ -68,7 +69,7 @@ function loop(clip, { alt = "", cls = "", eager = false } = {}) {
 }
 
 // Silhueta de mata em pixel (determinística) para separar seções
-function treeline(seed, { color = PAL.g0, back = PAL.t1, h = 30 } = {}) {
+export function treeline(seed, { color = PAL.g0, back = PAL.t1, h = 30 } = {}) {
   let s = seed >>> 0;
   const rnd = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296);
   const W = 320;
@@ -109,7 +110,7 @@ function treeline(seed, { color = PAL.g0, back = PAL.t1, h = 30 } = {}) {
 // japonês/chinês, que quebram entre quaisquer dois caracteres.
 
 // Título no estilo do gráfico da loja: linha grande dourada, linha pequena verde
-function logo(t, { tag = "h1", cls = "" } = {}) {
+export function logo(t, { tag = "h1", cls = "" } = {}) {
   const [a, b, order] = t.titleLines;
   const big = order === "big-first" ? a : b;
   const small = order === "big-first" ? b : a;
@@ -127,7 +128,7 @@ function sectionHead(title, sub, { accent = PAL.g6, id = "" } = {}) {
 }
 
 // Botão principal conforme a fase (teste / pré-registro / loja)
-function primaryCta(t, L, where) {
+export function primaryCta(t, L, where) {
   const st = t.stage[C.STAGE];
   if (C.STAGE === "teste") {
     if (C.TESTER_GROUP_URL) {
@@ -140,10 +141,10 @@ function primaryCta(t, L, where) {
   return `<a class="btn btn-primary" href="${esc(C.PLAY_URL)}&amp;hl=${L.hreflang}" target="_blank" rel="noopener" data-cta="${C.STAGE === "pre" ? "preregister" : "play_store"}" data-play="1" data-where="${where}">${icon("play", { size: 3 })}<span>${esc(st.cta)}</span></a>`;
 }
 
-function langMenu(t, L, pagePath = "") {
+export function langMenu(t, L, pagePath = "") {
   const items = C.LANGS.map(
     (o) =>
-      `<li><a href="${C.BASE}${o.dir}${pagePath}" hreflang="${o.hreflang}" lang="${o.html}"${o.code === L.code ? ' aria-current="page"' : ""} data-lang="${o.code}">${esc(o.label)}</a></li>`,
+      `<li><a href="${C.BASE}${o.dir}${typeof pagePath === "function" ? pagePath(o) : pagePath}" hreflang="${o.hreflang}" lang="${o.html}"${o.code === L.code ? ' aria-current="page"' : ""} data-lang="${o.code}">${esc(o.label)}</a></li>`,
   ).join("");
   return `<details class="lang">
   <summary aria-label="${esc(t.nav.lang)}">${icon("globe", { size: 2 })}<span>${esc(L.label)}</span></summary>
@@ -151,7 +152,7 @@ function langMenu(t, L, pagePath = "") {
 </details>`;
 }
 
-function head(t, L, { title, description, canonical, alternates, ogImage, ogAlt, extra = "" }) {
+export function head(t, L, { title, description, canonical, alternates, ogImage, ogAlt, extra = "" }) {
   const cjkFont = CJK[L.code] ? `<link rel="preload" href="${ver(`fonts/FusionPixel-${L.code}.woff2`)}" as="font" type="font/woff2" crossorigin>` : "";
   return `<head>
 <meta charset="utf-8">
@@ -207,6 +208,26 @@ function jsonLd(t, L, url) {
   return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
 }
 
+export function footerHtml(t, L, pagePath = "") {
+  const privacyHref = L.code === "pt" ? `${C.BASE}privacidade/` : `${C.BASE}en/privacy/`;
+  return `<footer class="footer">
+  ${treeline(91, { color: PAL.t0, back: PAL.g0, h: 30 })}
+  <div class="wrap footer-inner">
+    <div class="footer-brand">${logo(t, { tag: "p", cls: "logo-sm" })}<p>${esc(t.footer.rights)}</p></div>
+    <div class="footer-links">
+      <a href="${newsHref(L.code)}">${esc(t.footer.news)}</a>
+      <a href="${privacyHref}">${esc(t.footer.privacy)}</a>
+      <a href="/privacy-${L.code === "pt" ? "pt" : "en"}.html">${esc(t.footer.sitePrivacy)}</a>
+      <a href="${esc(C.DISCORD)}" target="_blank" rel="noopener" data-cta="discord" data-where="footer">Discord</a>
+      <a href="mailto:${C.CONTACT}">${esc(C.CONTACT)}</a>
+      <a href="/">${esc(t.footer.dev)}</a>
+    </div>
+    <div class="footer-langs">${langMenu(t, L, pagePath)}</div>
+    <p class="footer-small">${esc(t.footer.made)} ${esc(t.footer.tm)}</p>
+  </div>
+</footer>`;
+}
+
 export function renderPage(t, L, all = []) {
   const url = `${C.SITE}${C.BASE}${L.dir}`;
   const alternates =
@@ -251,6 +272,7 @@ ${head(t, L, {
       <a href="#bosses">${esc(t.nav.bosses)}</a>
       <a href="#clearing">${esc(t.nav.clearing)}</a>
       <a href="#press">${esc(t.nav.press)}</a>
+      <a href="${newsHref(L.code)}">${esc(t.nav.news)}</a>
     </nav>
     ${langMenu(t, L)}
     <a class="btn btn-small" href="#join" data-cta="topbar_join" data-where="topbar">${esc(C.STAGE === "teste" ? st.cta : st.cta)}</a>
@@ -487,21 +509,7 @@ ${head(t, L, {
 </section>
 </main>
 
-<footer class="footer">
-  ${treeline(91, { color: PAL.t0, back: PAL.g0, h: 30 })}
-  <div class="wrap footer-inner">
-    <div class="footer-brand">${logo(t, { tag: "p", cls: "logo-sm" })}<p>${esc(t.footer.rights)}</p></div>
-    <div class="footer-links">
-      <a href="${privacyHref}">${esc(t.footer.privacy)}</a>
-      <a href="/privacy-${L.code === "pt" ? "pt" : "en"}.html">${esc(t.footer.sitePrivacy)}</a>
-      <a href="${esc(C.DISCORD)}" target="_blank" rel="noopener" data-cta="discord" data-where="footer">Discord</a>
-      <a href="mailto:${C.CONTACT}">${esc(C.CONTACT)}</a>
-      <a href="/">${esc(t.footer.dev)}</a>
-    </div>
-    <div class="footer-langs">${langMenu(t, L)}</div>
-    <p class="footer-small">${esc(t.footer.made)} ${esc(t.footer.tm)}</p>
-  </div>
-</footer>
+${footerHtml(t, L)}
 <script type="application/json" id="g-i18n">${JSON.stringify({
     reactions: Object.fromEntries(REACTIONS.map((r) => [r.id, t.reactions.list[r.id].name])),
     elements: t.reactions.elements,
