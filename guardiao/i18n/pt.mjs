@@ -2,10 +2,11 @@
 // Termos do glossário do jogo (docs/IDIOMAS.md do repositório Guardiao-Game): Podridão, Clareira, Vapor…
 export default {
   meta: {
-    title: "Guardião da Floresta: as lendas do folclore brasileiro contra a Podridão",
+    title: "Guardião da Floresta: jogo indie brasileiro de sobrevivência para Android",
     description:
-      "Roguelite de sobrevivência para Android com o folclore brasileiro. Você só se move, as armas atacam sozinhas e Fogo + Gelo vira Vapor. Grátis, sem energia e sem sorteio pago.",
-    ogAlt: "Guardião da Floresta: o Curupira enfrenta o Mapinguari tomado pela Podridão",
+      "Roguelite de sobrevivência para Android com Curupira, Saci e Mapinguari. Combine elementos e liberte as lendas. Grátis. Jogue antes do lançamento: peça seu convite.",
+    keywords: "jogo de sobrevivência, roguelite, folclore brasileiro, jogo brasileiro, jogo indie brasileiro, jogo Android, survivor-like, parecido com Vampire Survivors, Curupira, Saci, Mapinguari",
+    ogAlt: "Guardião da Floresta: o Curupira à beira da fogueira numa clareira à noite",
   },
   skip: "Pular para o conteúdo",
   nav: { play: "Como se joga", reactions: "Reações", legends: "Lendas", bosses: "Chefes", clearing: "Clareira", press: "Imprensa", news: "Novidades", lang: "Idioma" },
@@ -13,7 +14,7 @@ export default {
   hero: {
     kicker: "Roguelite de sobrevivência · folclore brasileiro",
     lead: "A Podridão tomou a floresta. Você é o último Guardião.",
-    sub: "Só ande: as armas atacam sozinhas. Combine elementos, evolua seu arsenal e liberte as lendas da mata.",
+    sub: "Fuja da horda, combine elementos, evolua seu arsenal e liberte as lendas da mata.",
     trailer: "Ver o trailer",
     facts: ["Grátis", "Joga offline", "Partidas de 7 min", "6 idiomas"],
     scroll: "Role para descobrir",
@@ -25,10 +26,10 @@ export default {
   },
   howto: {
     title: "SOBREVIVA À HORDA",
-    sub: "Você só se move. As armas atacam sozinhas.",
+    sub: "Um polegar na tela, uma escolha a cada nível.",
     steps: [
-      { t: "Só ande", d: "Um polegar na tela. Fuja da horda e dos golpes dos chefes; mirar e atirar é com as armas." },
-      { t: "As armas atacam sozinhas", d: "Cajado, Aura Gélida, Vara Encantada, Redemoinho: 18 armas disparam por conta própria, cada uma com seu elemento." },
+      { t: "Um polegar basta", d: "Deslize o dedo na tela para fugir da horda e desviar dos golpes dos chefes." },
+      { t: "18 armas, cada uma com seu elemento", d: "Cajado, Aura Gélida, Vara Encantada, Redemoinho: cada arma tem seu jeito de lutar e seu elemento." },
       { t: "Cada nível, uma escolha", d: "Três cartas: arma nova, melhoria ou evolução. Monte seu arsenal carta por carta." },
     ],
     cardsAlt: "Tela de nível com três cartas: Boleadeira, Tempestade de Vapor e Raio Concentrado",
@@ -101,6 +102,19 @@ export default {
     meta: "1:31 · com som",
     note: "",
   },
+  faq: {
+    title: "PERGUNTAS FREQUENTES",
+    sub: "O que as pessoas mais perguntam sobre o jogo.",
+    items: [
+      { q: "Guardião da Floresta é grátis?", a: "Sim. O jogo é grátis, sem energia e sem sorteio pago. Os anúncios são opcionais: você só vê um se quiser um prêmio, e nunca durante a ação. Existem compras opcionais, como remover os anúncios e itens visuais, mas poder não se compra." },
+      { q: "Quando lança e onde posso jogar?", a: "O jogo está em teste fechado para Android e o lançamento na Google Play está previsto para dezembro de 2026. Antes disso, você pode jogar pedindo o seu convite nesta página." },
+      { q: "Que tipo de jogo é? É parecido com Vampire Survivors?", a: "É um roguelite de sobrevivência no estilo survivor-like (também chamado de bullet heaven), como Vampire Survivors: partidas curtas contra hordas, uma carta a cada nível e armas que evoluem. A diferença está no folclore brasileiro, nas reações elementais (Fogo + Gelo = Vapor) e na Clareira, com horta, pesca e cozinha." },
+      { q: "Quais lendas do folclore brasileiro aparecem?", a: "Curupira, Caipora, Iara e Saci são guardiões que você escolhe. Chefes como o Mapinguari e o Caboclo d'Água foram tomados pela Podridão e são libertados ao serem vencidos." },
+      { q: "Preciso de internet para jogar?", a: "Não. O jogo funciona offline e cada partida dura cerca de 7 minutos." },
+      { q: "Em quais idiomas o jogo está disponível?", a: "Em português, inglês, espanhol, japonês, chinês simplificado e chinês tradicional." },
+      { q: "Posso jogar no iPhone?", a: "Por enquanto o jogo é só para Android. Se você tem um Android, peça o convite com a conta Google dele." },
+    ],
+  },
   join: {
     teste: {
       title: "AJUDE A LENDA A CHEGAR À LOJA",
@@ -139,7 +153,7 @@ export default {
       ["Gênero", "Roguelite de sobrevivência (survivor-like)"],
       ["Idiomas", "Português, inglês, espanhol, japonês, chinês simplificado e tradicional"],
     ],
-    about: "Guardião da Floresta é um roguelite de sobrevivência inspirado no folclore brasileiro. O jogador só se move; as armas atacam sozinhas e cada nível traz uma carta que muda a partida. Fogo, Gelo, Raio e Vento se combinam em seis reações elementais. Curupira, Iara, Saci e outras lendas são os heróis; os chefes, como o Mapinguari, foram tomados pela Podridão e são libertados ao ser vencidos. Toda a arte e a música são geradas por código, com uma paleta própria.",
+    about: "Guardião da Floresta é um roguelite de sobrevivência inspirado no folclore brasileiro. A cada nível o jogador escolhe uma carta que muda a partida. Fogo, Gelo, Raio e Vento se combinam em seis reações elementais. Curupira, Iara, Saci e outras lendas são os heróis; os chefes, como o Mapinguari, foram tomados pela Podridão e são libertados ao ser vencidos. Toda a arte e a música são próprias, com uma paleta única.",
     kit: "Kit de imprensa",
     kitMeta: ".zip · {0} · logotipos, ícone, capturas e gráficos de destaque",
     trailer: "Trailer em MP4",
@@ -149,7 +163,7 @@ export default {
   footer: {
     news: "Novidades (patch notes)",
     rights: "© 2026 Komedy Games Studio",
-    made: "Arte e música geradas por código. Fontes Jersey 15, Atkinson Hyperlegible e Fusion Pixel (licença OFL).",
+    made: "Arte e música próprias. Fontes Jersey 15, Atkinson Hyperlegible e Fusion Pixel (licença OFL).",
     privacy: "Política de privacidade do jogo",
     sitePrivacy: "Privacidade deste site",
     dev: "Portfólio do desenvolvedor",

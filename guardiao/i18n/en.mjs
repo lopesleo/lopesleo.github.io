@@ -1,9 +1,10 @@
 export default {
   meta: {
-    title: "Forest Guardian: legends of Brazilian folklore against the Rot",
+    title: "Forest Guardian: Brazilian folklore survival roguelite for Android",
     description:
-      "A survival roguelite for Android steeped in Brazilian folklore. You only move, your weapons attack on their own, and Fire + Ice becomes Steam. Free, no energy, no paid loot boxes.",
-    ogAlt: "Forest Guardian: the Curupira faces the Mapinguari, taken by the Rot",
+      "Free survivor-like roguelite for Android with Brazilian folklore: Curupira, Saci, Iara and Mapinguari. Play before launch: request your invite.",
+    keywords: "survivor-like, bullet heaven, roguelite, Android game, Brazilian folklore, indie game, like Vampire Survivors, Curupira, Saci, Mapinguari",
+    ogAlt: "Forest Guardian: the Curupira by a campfire in a forest clearing at night",
   },
   skip: "Skip to content",
   nav: { play: "How to play", reactions: "Reactions", legends: "Legends", bosses: "Bosses", clearing: "Clearing", press: "Press", news: "Patch notes", lang: "Language" },
@@ -11,7 +12,7 @@ export default {
   hero: {
     kicker: "Survival roguelite · Brazilian folklore",
     lead: "The Rot has taken the forest. You are the last Guardian.",
-    sub: "Just move: your weapons attack on their own. Combine elements, evolve your arsenal and free the legends of the forest.",
+    sub: "Escape the horde, combine elements, evolve your arsenal and free the legends of the forest.",
     trailer: "Watch the trailer",
     facts: ["Free", "Plays offline", "7-minute runs", "6 languages"],
     scroll: "Scroll to explore",
@@ -23,10 +24,10 @@ export default {
   },
   howto: {
     title: "SURVIVE THE HORDE",
-    sub: "You just move. Your weapons attack on their own.",
+    sub: "One thumb on the screen, one choice every level.",
     steps: [
-      { t: "Just move", d: "One thumb on the screen. Escape the horde and the bosses' attacks; aiming and shooting is up to your weapons." },
-      { t: "Weapons fire on their own", d: "Staff, Frost Aura, Enchanted Rod, Whirlwind: 18 weapons fire by themselves, each with its own element." },
+      { t: "One thumb is enough", d: "Slide your finger on the screen to escape the horde and dodge the bosses' attacks." },
+      { t: "18 weapons, each with its own element", d: "Staff, Frost Aura, Enchanted Rod, Whirlwind: every weapon has its own way of fighting and its own element." },
       { t: "Every level, a choice", d: "Three cards: a new weapon, an upgrade or an evolution. Build your arsenal one card at a time." },
     ],
     cardsAlt: "Level-up screen with three cards: Bolas, Steam Storm and Focused Lightning",
@@ -99,6 +100,19 @@ export default {
     meta: "1:31 · with sound",
     note: "On-screen text in Portuguese.",
   },
+  faq: {
+    title: "FREQUENTLY ASKED QUESTIONS",
+    sub: "What people ask most about the game.",
+    items: [
+      { q: "Is Forest Guardian free?", a: "Yes. The game is free, with no energy limits and no paid loot boxes. Ads are optional: you only watch one if you want a reward, and never during the action. There are optional purchases, such as removing ads and cosmetic items, but power is never for sale." },
+      { q: "When does it launch and where can I play?", a: "The game is in closed testing for Android and the Google Play launch is planned for December 2026. Until then, you can play early by requesting your invite on this page." },
+      { q: "What kind of game is it? Is it like Vampire Survivors?", a: "It is a survival roguelite in the survivor-like style (also called bullet heaven), like Vampire Survivors: short runs against hordes, a card every level and weapons that evolve. What sets it apart is Brazilian folklore, elemental reactions (Fire + Ice = Steam) and the Clearing, with gardening, fishing and cooking." },
+      { q: "Which Brazilian folklore legends are in the game?", a: "The Curupira, Caipora, Iara and Saci are guardians you can choose. Bosses like the Mapinguari and the Caboclo d'Água have been taken by the Rot and are set free when defeated." },
+      { q: "Do I need internet to play?", a: "No. The game works offline and each run lasts about 7 minutes." },
+      { q: "Which languages does the game support?", a: "Portuguese, English, Spanish, Japanese, Simplified Chinese and Traditional Chinese." },
+      { q: "Can I play on iPhone?", a: "For now the game is Android only. If you have an Android phone, request the invite with its Google account." },
+    ],
+  },
   join: {
     teste: {
       title: "HELP THE LEGEND REACH THE STORE",
@@ -137,7 +151,7 @@ export default {
       ["Genre", "Survival roguelite (survivor-like)"],
       ["Languages", "Portuguese, English, Spanish, Japanese, Simplified and Traditional Chinese"],
     ],
-    about: "Forest Guardian is a survival roguelite inspired by Brazilian folklore. Players only move; weapons attack on their own and every level brings a card that changes the run. Fire, Ice, Lightning and Wind combine into six elemental reactions. The Curupira, the Iara, the Saci and other legends are the heroes; the bosses, like the Mapinguari, have been taken by the Rot and are set free when defeated. All the art and music are generated by code, with a single in-house palette.",
+    about: "Forest Guardian is a survival roguelite inspired by Brazilian folklore. Every level, the player picks a card that changes the run. Fire, Ice, Lightning and Wind combine into six elemental reactions. The Curupira, the Iara, the Saci and other legends are the heroes; the bosses, like the Mapinguari, have been taken by the Rot and are set free when defeated. All the art and music are original, with a single in-house palette.",
     kit: "Press kit",
     kitMeta: ".zip · {0} · logos, icon, screenshots and feature graphics",
     trailer: "Trailer (MP4)",
@@ -147,7 +161,7 @@ export default {
   footer: {
     news: "Patch notes",
     rights: "© 2026 Komedy Games Studio",
-    made: "Art and music generated by code. Fonts: Jersey 15, Atkinson Hyperlegible and Fusion Pixel (OFL license).",
+    made: "Original art and music. Fonts: Jersey 15, Atkinson Hyperlegible and Fusion Pixel (OFL license).",
     privacy: "Game privacy policy",
     sitePrivacy: "Website privacy",
     dev: "Developer's portfolio",

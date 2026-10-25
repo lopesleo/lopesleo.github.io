@@ -1,9 +1,10 @@
 export default {
   meta: {
-    title: "Guardián del Bosque: las leyendas del folclore brasileño contra la Podredumbre",
+    title: "Guardián del Bosque: roguelite de supervivencia con folclore brasileño",
     description:
-      "Roguelite de supervivencia para Android con el folclore brasileño. Solo te mueves, tus armas atacan solas y Fuego + Hielo se vuelve Vapor. Gratis, sin energía y sin cajas de botín de pago.",
-    ogAlt: "Guardián del Bosque: el Curupira enfrenta al Mapinguari, tomado por la Podredumbre",
+      "Roguelite de supervivencia gratis para Android con Curupira, Saci, Iara y Mapinguari. Combina elementos y libera las leyendas. Juega antes del lanzamiento: pide tu invitación.",
+    keywords: "roguelite Android, juego de supervivencia, folclore brasileño, juego indie, survivor-like, parecido a Vampire Survivors, Curupira, Saci, Mapinguari",
+    ogAlt: "Guardián del Bosque: el Curupira junto a una fogata en un claro del bosque, de noche",
   },
   skip: "Saltar al contenido",
   nav: { play: "Cómo se juega", reactions: "Reacciones", legends: "Leyendas", bosses: "Jefes", clearing: "El Claro", press: "Prensa", news: "Novedades", lang: "Idioma" },
@@ -11,7 +12,7 @@ export default {
   hero: {
     kicker: "Roguelite de supervivencia · folclore brasileño",
     lead: "La Podredumbre tomó el bosque. Eres el último Guardián.",
-    sub: "Solo muévete: tus armas atacan solas. Combina elementos, haz evolucionar tu arsenal y libera a las leyendas de la selva.",
+    sub: "Escapa de la horda, combina elementos, haz evolucionar tu arsenal y libera a las leyendas de la selva.",
     trailer: "Ver el tráiler",
     facts: ["Gratis", "Juega sin conexión", "Partidas de 7 min", "6 idiomas"],
     scroll: "Desliza para descubrir",
@@ -23,10 +24,10 @@ export default {
   },
   howto: {
     title: "SOBREVIVE A LA HORDA",
-    sub: "Solo te mueves. Las armas atacan solas.",
+    sub: "Un pulgar en la pantalla, una elección en cada nivel.",
     steps: [
-      { t: "Solo muévete", d: "Un pulgar en la pantalla. Escapa de la horda y de los golpes de los jefes; apuntar y disparar es cosa de tus armas." },
-      { t: "Las armas atacan solas", d: "Bastón, Aura Gélida, Vara Encantada, Remolino: 18 armas disparan por su cuenta, cada una con su elemento." },
+      { t: "Un pulgar basta", d: "Desliza el dedo por la pantalla para escapar de la horda y esquivar los golpes de los jefes." },
+      { t: "18 armas, cada una con su elemento", d: "Bastón, Aura Gélida, Vara Encantada, Remolino: cada arma tiene su forma de luchar y su elemento." },
       { t: "Cada nivel, una elección", d: "Tres cartas: arma nueva, mejora o evolución. Arma tu arsenal carta a carta." },
     ],
     cardsAlt: "Pantalla de nivel con tres cartas: Boleadora, Tormenta de Vapor y Rayo Concentrado",
@@ -99,6 +100,19 @@ export default {
     meta: "1:31 · con sonido",
     note: "Textos en pantalla en portugués.",
   },
+  faq: {
+    title: "PREGUNTAS FRECUENTES",
+    sub: "Lo que más preguntan sobre el juego.",
+    items: [
+      { q: "¿Guardián del Bosque es gratis?", a: "Sí. El juego es gratis, sin energía y sin cajas de botín de pago. Los anuncios son opcionales: solo ves uno si quieres un premio, y nunca durante la acción. Hay compras opcionales, como quitar los anuncios y objetos visuales, pero el poder no se vende." },
+      { q: "¿Cuándo sale y dónde puedo jugar?", a: "El juego está en prueba cerrada para Android y el lanzamiento en Google Play está previsto para diciembre de 2026. Antes puedes jugar pidiendo tu invitación en esta página." },
+      { q: "¿Qué tipo de juego es? ¿Se parece a Vampire Survivors?", a: "Es un roguelite de supervivencia al estilo survivor-like (también llamado bullet heaven), como Vampire Survivors: partidas cortas contra hordas, una carta en cada nivel y armas que evolucionan. Lo distinto es el folclore brasileño, las reacciones elementales (Fuego + Hielo = Vapor) y el Claro, con huerto, pesca y cocina." },
+      { q: "¿Qué leyendas del folclore brasileño aparecen?", a: "El Curupira, la Caipora, la Iara y el Saci son guardianes que puedes elegir. Jefes como el Mapinguari y el Caboclo d'Água fueron tomados por la Podredumbre y quedan libres al ser vencidos." },
+      { q: "¿Necesito internet para jugar?", a: "No. El juego funciona sin conexión y cada partida dura unos 7 minutos." },
+      { q: "¿En qué idiomas está el juego?", a: "En portugués, inglés, español, japonés, chino simplificado y chino tradicional." },
+      { q: "¿Puedo jugar en iPhone?", a: "Por ahora el juego es solo para Android. Si tienes un Android, pide la invitación con su cuenta de Google." },
+    ],
+  },
   join: {
     teste: {
       title: "AYUDA A LA LEYENDA A LLEGAR A LA TIENDA",
@@ -137,7 +151,7 @@ export default {
       ["Género", "Roguelite de supervivencia (survivor-like)"],
       ["Idiomas", "Portugués, inglés, español, japonés, chino simplificado y tradicional"],
     ],
-    about: "Guardián del Bosque es un roguelite de supervivencia inspirado en el folclore brasileño. El jugador solo se mueve; las armas atacan solas y cada nivel trae una carta que cambia la partida. Fuego, Hielo, Rayo y Viento se combinan en seis reacciones elementales. El Curupira, la Iara, el Saci y otras leyendas son los héroes; los jefes, como el Mapinguari, fueron tomados por la Podredumbre y quedan libres al ser vencidos. Todo el arte y la música se generan con código, con una paleta propia.",
+    about: "Guardián del Bosque es un roguelite de supervivencia inspirado en el folclore brasileño. En cada nivel el jugador elige una carta que cambia la partida. Fuego, Hielo, Rayo y Viento se combinan en seis reacciones elementales. El Curupira, la Iara, el Saci y otras leyendas son los héroes; los jefes, como el Mapinguari, fueron tomados por la Podredumbre y quedan libres al ser vencidos. Todo el arte y la música son propios, con una paleta única.",
     kit: "Kit de prensa",
     kitMeta: ".zip · {0} · logotipos, ícono, capturas y gráficos destacados",
     trailer: "Tráiler en MP4",
@@ -147,7 +161,7 @@ export default {
   footer: {
     news: "Novedades (notas de versión)",
     rights: "© 2026 Komedy Games Studio",
-    made: "Arte y música generadas con código. Fuentes Jersey 15, Atkinson Hyperlegible y Fusion Pixel (licencia OFL).",
+    made: "Arte y música propios. Fuentes Jersey 15, Atkinson Hyperlegible y Fusion Pixel (licencia OFL).",
     privacy: "Política de privacidad del juego",
     sitePrivacy: "Privacidad de este sitio",
     dev: "Portafolio del desarrollador",
