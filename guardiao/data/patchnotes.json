@@ -1,0 +1,775 @@
+{
+  "source": "docs/PLAY_STORE.md (repositório do jogo)",
+  "versions": [
+    {
+      "version": "1.0.23",
+      "code": 24,
+      "date": "2026-10-25",
+      "notes": {
+        "pt": [
+          "Dia do Saci, até 7/11: pegue o redemoinho na Clareira e ganhe a Carapuça do Saci, grátis.",
+          "Horta nova: arraste o dedo para colher e cuidar; cuidar nunca atrasa a planta e o feijão de vara dá três vezes.",
+          "O casal de João-de-barro faz duas obras ao mesmo tempo.",
+          "Cada lugar da Clareira desperta com cena e música próprias.",
+          "Rankings por Perigo, com o guardião de cada partida.",
+          "O presente do dia não zera se você pular um dia; menos ofertas de anúncio nas cartas."
+        ],
+        "en": [
+          "Saci Day, until Nov 7: catch the whirlwind in the Clearing and get the Saci's Cap for free.",
+          "New garden: swipe to harvest and tend; care never slows a plant, and pole beans give three harvests.",
+          "The Hornero pair builds two upgrades at once.",
+          "Every place in the Clearing awakens with its own scene and music.",
+          "Leaderboards by Danger, showing each run's guardian.",
+          "The daily gift no longer resets if you skip a day; fewer ad offers on the cards."
+        ],
+        "es": [
+          "Día del Saci, hasta el 7/11: atrapa el remolino en el Claro y gana el Gorro del Saci gratis.",
+          "Huerto nuevo: desliza el dedo para cosechar y cuidar; cuidar nunca atrasa la planta y el frijol de vara da tres cosechas.",
+          "La pareja de Horneros hace dos obras a la vez.",
+          "Cada lugar del Claro despierta con su propia escena y música.",
+          "Clasificaciones por Peligro, con el guardián de cada partida.",
+          "El regalo del día no se reinicia si faltas un día; menos ofertas de anuncios en las cartas."
+        ],
+        "ja": [
+          "サシの日（11月7日まで）：広場でつむじ風をつかまえて、サシの帽子を無料でゲット。",
+          "新しい畑：指でなぞって収穫と手入れ。手入れを忘れても育ちは遅れず、つる豆は3回収穫できる。",
+          "つがいのカマドドリが、2つの建設を同時に進めます。",
+          "広場の各場所が専用の演出と音楽で目覚めます。",
+          "危険度別ランキング：各プレイの守護者を表示。",
+          "1日休んでも日替わりの贈り物はリセットされず、カードの広告の提案も減りました。"
+        ],
+        "zh": [
+          "萨西节（至11月7日）：在空地抓住旋风，免费获得萨西的红帽。",
+          "全新菜园：滑动手指即可收获与照料；不照料也不会拖慢生长，架豆能收三次。",
+          "一对灶鸟可以同时进行两项建设。",
+          "空地的每个地方都有专属的苏醒场景与音乐。",
+          "按危险度的排行榜，显示每局的守护者。",
+          "漏掉一天，每日礼物也不会重置；卡牌上的广告提示也减少了。"
+        ],
+        "zht": [
+          "薩西節（至11月7日）：在空地抓住旋風，免費獲得薩西的紅帽。",
+          "全新菜園：滑動手指即可收成與照料；不照料也不會拖慢生長，架豆能收三次。",
+          "一對灶鳥可以同時進行兩項建設。",
+          "空地的每個地方都有專屬的甦醒場景與音樂。",
+          "依危險度的排行榜，顯示每局的守護者。",
+          "漏掉一天，每日禮物也不會重置；卡牌上的廣告提示也減少了。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.22",
+      "code": 23,
+      "date": "2026-10-23",
+      "notes": {
+        "pt": [
+          "Nova Clareira da Caatinga: vença no Perigo Pesadelo na Caatinga e leve o sertão para o acampamento.",
+          "Música da partida que cresce com a luta e sons da mata na Clareira conforme a hora do dia.",
+          "O jogo abre mais rápido e ajusta a qualidade gráfica sozinho quando o celular pesa (Opções › Qualidade gráfica).",
+          "Na saída da Clareira, a trilha lembra de levar um prato da cozinha.",
+          "Correção: os botões não tocam mais dois sons de uma vez."
+        ],
+        "en": [
+          "New Caatinga Clearing: win on Nightmare Danger in the Caatinga and bring the backlands to your camp.",
+          "Run music that builds with the fight, and forest sounds in the Clearing that follow the time of day.",
+          "The game opens faster and adjusts graphics quality on its own when your phone struggles (Options › Graphics quality).",
+          "On your way out of the Clearing, the trail reminds you to bring a dish from the kitchen.",
+          "Fix: buttons no longer play two sounds at once."
+        ],
+        "es": [
+          "Nuevo Claro de la Caatinga: gana en Peligro Pesadilla en la Caatinga y lleva el sertón a tu campamento.",
+          "Música de partida que crece con la pelea y sonidos del bosque en el Claro según la hora del día.",
+          "El juego abre más rápido y ajusta la calidad gráfica solo cuando el teléfono no da más (Opciones › Calidad gráfica).",
+          "Al salir del Claro, el sendero te recuerda llevar un plato de la cocina.",
+          "Corrección: los botones ya no suenan dos veces a la vez."
+        ],
+        "ja": [
+          "新しい「カアチンガの広場」：カアチンガで危険度・悪夢をクリアすると、キャンプが乾燥地帯の姿に。",
+          "戦いの激しさで盛り上がるプレイ中の音楽と、時間帯で変わる広場の森の音。",
+          "起動が速くなり、端末が重いときは画質を自動で調整（オプション › 画質）。",
+          "広場を出る小道で、台所の料理を持っていくよう声をかけます。",
+          "修正：ボタンの音が二重に鳴らなくなりました。"
+        ],
+        "zh": [
+          "全新卡廷加空地：在卡廷加以梦魇危险度获胜，把干旱腹地带进营地。",
+          "随战斗激烈程度增强的局内音乐，以及随时间变化的空地森林音效。",
+          "游戏启动更快，手机吃力时会自动调整画质（选项 › 画质）。",
+          "离开空地时，小路会提醒你带上一道厨房的菜。",
+          "修复：按钮不再同时发出两次声音。"
+        ],
+        "zht": [
+          "全新卡廷加空地：在卡廷加以夢魘危險度獲勝，把乾旱腹地帶進營地。",
+          "隨戰鬥激烈程度增強的局內音樂，以及隨時間變化的空地森林音效。",
+          "遊戲啟動更快，手機吃力時會自動調整畫質（選項 › 畫質）。",
+          "離開空地時，小路會提醒你帶上一道廚房的菜。",
+          "修復：按鈕不再同時發出兩次聲音。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.21",
+      "code": 22,
+      "date": "2026-10-23",
+      "notes": {
+        "pt": [
+          "Correção: o jogo não trava mais quando a evolução Inferno queima o chão.",
+          "Som remixado: a música do chefe entra no compasso e o coração bate quando a vida está baixa.",
+          "Golpes com mais peso, efeitos dos elementos mais fáceis de ver e o chefe que surge de uma poça da Podridão.",
+          "A mata ganhou cogumelos que brilham à noite, e o jogo ficou mais leve.",
+          "Compartilhe o cartão da sua partida e chame amigos para jogar.",
+          "Tela cheia ajustada para o Android 15."
+        ],
+        "en": [
+          "Fix: the game no longer freezes when the Inferno evolution burns the ground.",
+          "Remixed sound: the boss music comes in on the beat, and a heartbeat warns you when health is low.",
+          "Heavier hits, clearer elemental effects, and the boss now rises from a pool of the Rot.",
+          "The forest has mushrooms that glow at night, and the game runs lighter.",
+          "Share your run card and invite friends to play.",
+          "Full-screen display adjusted for Android 15."
+        ],
+        "es": [
+          "Corrección: el juego ya no se congela cuando la evolución Infierno quema el suelo.",
+          "Sonido remezclado: la música del jefe entra a compás y un latido avisa cuando tienes poca vida.",
+          "Golpes con más peso, efectos de los elementos más claros y el jefe que surge de un charco de la Podredumbre.",
+          "El bosque tiene hongos que brillan de noche, y el juego va más ligero.",
+          "Comparte la tarjeta de tu partida e invita a tus amigos a jugar.",
+          "Pantalla completa ajustada para Android 15."
+        ],
+        "ja": [
+          "修正：進化武器「業火」が地面を焼くとゲームが止まる不具合を直しました。",
+          "サウンドを再ミックス：ボスの曲は小節の頭で切り替わり、体力が少ないと心音が鳴ります。",
+          "攻撃の手応えを強化し、属性の効果も見やすく。ボスは腐敗の沼からせり上がって現れます。",
+          "夜の森に光るキノコが登場し、動作も軽くなりました。",
+          "リザルトカードをシェアして、友だちを誘えます。",
+          "Android 15 の全画面表示に対応しました。"
+        ],
+        "zh": [
+          "修复：进化武器“炼狱”灼烧地面时游戏卡住的问题。",
+          "音效重新混音：头目音乐踩着节拍切入，生命值低时会响起心跳声。",
+          "打击更有分量，元素效果更清楚，头目会从腐朽的泥潭中升起。",
+          "森林里多了夜晚会发光的蘑菇，游戏也更流畅。",
+          "分享本局战绩卡，邀请朋友一起玩。",
+          "适配 Android 15 的全屏显示。"
+        ],
+        "zht": [
+          "修復：進化武器「煉獄」灼燒地面時遊戲卡住的問題。",
+          "音效重新混音：頭目音樂踩著節拍切入，生命值低時會響起心跳聲。",
+          "打擊更有分量，元素效果更清楚，頭目會從腐朽的泥潭中升起。",
+          "森林裡多了夜晚會發光的蘑菇，遊戲也更流暢。",
+          "分享本局戰績卡，邀請朋友一起玩。",
+          "適配 Android 15 的全螢幕顯示。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.19",
+      "code": 20,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Tela inicial nova e tela de fim de partida redesenhada, com a parte do dano de cada arma.",
+          "Rankings no Google Play Games com pódio dos 3 primeiros: pontuação e maior Perigo, da semana e de sempre.",
+          "Progresso na nuvem: entre no Play Games e o seu progresso volta ao reinstalar ou trocar de celular.",
+          "Novidades por notificação. Se o Android bloquear, Opções mostra e um toque libera.",
+          "Clareira Ancestral com animações refeitas e horta nova."
+        ],
+        "en": [
+          "New title screen and a redesigned end-of-run screen showing each weapon's share of damage.",
+          "Leaderboards on Google Play Games with a top-3 podium: score and highest Danger, weekly and all-time.",
+          "Cloud progress: sign in to Play Games and your progress comes back when you reinstall or switch phones.",
+          "News notifications. If Android blocks them, Options shows it and one tap fixes it.",
+          "Ancestral Clearing with redone animations and a new garden."
+        ],
+        "es": [
+          "Nueva pantalla de inicio y pantalla de fin de partida rediseñada, con la parte del daño de cada arma.",
+          "Clasificaciones en Google Play Juegos con podio: puntuación y mayor Peligro, de la semana y de siempre.",
+          "Progreso en la nube: entra en Play Juegos y tu progreso vuelve al reinstalar o cambiar de teléfono.",
+          "Novedades por notificación. Si Android las bloquea, Opciones lo muestra y un toque lo arregla.",
+          "Claro Ancestral con animaciones renovadas y un huerto nuevo."
+        ],
+        "ja": [
+          "タイトル画面を一新し、リザルト画面も作り直し：武器ごとのダメージの割合を表示。",
+          "Google Play ゲームのランキングに上位3人の表彰台：スコアと最高危険度（今週・歴代）。",
+          "クラウドに保存：Play ゲームにログインすると、再インストールや機種変更のときに進行状況が戻ります。",
+          "最新情報のお知らせ。Android でオフになっているとオプションに表示され、タップで許可できます。",
+          "いにしえの広場のアニメーションを作り直し、新しい畑を追加。"
+        ],
+        "zh": [
+          "全新标题画面，结算画面也全面重做：显示每件武器的伤害占比。",
+          "Google Play 游戏排行榜新增前三名领奖台：得分与最高危险度，分本周和总榜。",
+          "云端进度：登录 Play 游戏后，重装或换手机时进度都能找回。",
+          "最新消息通知。若被 Android 关闭，选项中会显示，点击即可开启。",
+          "远古空地的动画全面重做，并新增菜园。"
+        ],
+        "zht": [
+          "全新標題畫面，結算畫面也全面重做：顯示每件武器的傷害占比。",
+          "Google Play 遊戲排行榜新增前三名頒獎台：得分與最高危險度，分本週和總榜。",
+          "雲端進度：登入 Play 遊戲後，重裝或換手機時進度都能找回。",
+          "最新消息通知。若被 Android 關閉，選項中會顯示，點擊即可開啟。",
+          "遠古空地的動畫全面重做，並新增菜園。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.18",
+      "code": 19,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Tela inicial nova: a clareira à noite, com lua, serra e mata, e a fogueira acesa.",
+          "Rankings no Google Play Games: pontuação e maior Perigo, da semana e de sempre.",
+          "Progresso na nuvem: entre no Play Games e o seu progresso volta ao reinstalar ou trocar de celular.",
+          "Novidades por notificação. Se o Android bloquear, Opções mostra e um toque libera.",
+          "Clareira Ancestral com animações refeitas e horta nova."
+        ],
+        "en": [
+          "New title screen: the clearing at night, with the moon, hills and forest, and a crackling campfire.",
+          "Leaderboards on Google Play Games: score and highest Danger, weekly and all-time.",
+          "Cloud progress: sign in to Play Games and your progress comes back when you reinstall or switch phones.",
+          "News notifications. If Android blocks them, Options shows it and one tap fixes it.",
+          "Ancestral Clearing with redone animations and a new garden."
+        ],
+        "es": [
+          "Nueva pantalla de inicio: el claro de noche, con luna, sierra y bosque, y la fogata encendida.",
+          "Clasificaciones en Google Play Juegos: puntuación y mayor Peligro, de la semana y de siempre.",
+          "Progreso en la nube: entra en Play Juegos y tu progreso vuelve al reinstalar o cambiar de teléfono.",
+          "Novedades por notificación. Si Android las bloquea, Opciones lo muestra y un toque lo arregla.",
+          "Claro Ancestral con animaciones renovadas y un huerto nuevo."
+        ],
+        "ja": [
+          "タイトル画面を一新：月と山並み、森に囲まれた夜の広場と、燃えるたき火。",
+          "Google Play ゲームのランキング：スコアと最高危険度（今週・歴代）。",
+          "クラウドに保存：Play ゲームにログインすると、再インストールや機種変更のときに進行状況が戻ります。",
+          "最新情報のお知らせ。Android でオフになっているとオプションに表示され、タップで許可できます。",
+          "いにしえの広場のアニメーションを作り直し、新しい畑を追加。"
+        ],
+        "zh": [
+          "全新标题画面：月光下的山峦与森林，以及燃烧的篝火。",
+          "Google Play 游戏排行榜：得分与最高危险度，分本周和总榜。",
+          "云端进度：登录 Play 游戏后，重装或换手机时进度都能找回。",
+          "最新消息通知。若被 Android 关闭，选项中会显示，点击即可开启。",
+          "远古空地的动画全面重做，并新增菜园。"
+        ],
+        "zht": [
+          "全新標題畫面：月光下的山巒與森林，以及燃燒的篝火。",
+          "Google Play 遊戲排行榜：得分與最高危險度，分本週和總榜。",
+          "雲端進度：登入 Play 遊戲後，重裝或換手機時進度都能找回。",
+          "最新消息通知。若被 Android 關閉，選項中會顯示，點擊即可開啟。",
+          "遠古空地的動畫全面重做，並新增菜園。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.17",
+      "code": 18,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Tela inicial nova: a clareira à noite, com lua, serra e mata, e a fogueira acesa.",
+          "Rankings no Google Play Games: pontuação e maior Perigo, da semana e de sempre.",
+          "Progresso na nuvem: entre no Play Games e o seu progresso volta ao reinstalar ou trocar de celular.",
+          "Novidades por notificação (dá para desligar em Opções).",
+          "Clareira Ancestral com animações refeitas e horta nova."
+        ],
+        "en": [
+          "New title screen: the clearing at night, with the moon, hills and forest, and a crackling campfire.",
+          "Leaderboards on Google Play Games: score and highest Danger, weekly and all-time.",
+          "Cloud progress: sign in to Play Games and your progress comes back when you reinstall or switch phones.",
+          "News notifications (you can turn them off in Options).",
+          "Ancestral Clearing with redone animations and a new garden."
+        ],
+        "es": [
+          "Nueva pantalla de inicio: el claro de noche, con luna, sierra y bosque, y la fogata encendida.",
+          "Clasificaciones en Google Play Juegos: puntuación y mayor Peligro, de la semana y de siempre.",
+          "Progreso en la nube: entra en Play Juegos y tu progreso vuelve al reinstalar o cambiar de teléfono.",
+          "Novedades por notificación (puedes desactivarlas en Opciones).",
+          "Claro Ancestral con animaciones renovadas y un huerto nuevo."
+        ],
+        "ja": [
+          "タイトル画面を一新：月と山並み、森に囲まれた夜の広場と、燃えるたき火。",
+          "Google Play ゲームのランキング：スコアと最高危険度（今週・歴代）。",
+          "クラウドに保存：Play ゲームにログインすると、再インストールや機種変更のときに進行状況が戻ります。",
+          "最新情報のお知らせ（オプションでオフにできます）。",
+          "いにしえの広場のアニメーションを作り直し、新しい畑を追加。"
+        ],
+        "zh": [
+          "全新标题画面：月光下的山峦与森林，以及燃烧的篝火。",
+          "Google Play 游戏排行榜：得分与最高危险度，分本周和总榜。",
+          "云端进度：登录 Play 游戏后，重装或换手机时进度都能找回。",
+          "最新消息通知（可在选项中关闭）。",
+          "远古空地的动画全面重做，并新增菜园。"
+        ],
+        "zht": [
+          "全新標題畫面：月光下的山巒與森林，以及燃燒的篝火。",
+          "Google Play 遊戲排行榜：得分與最高危險度，分本週和總榜。",
+          "雲端進度：登入 Play 遊戲後，重裝或換手機時進度都能找回。",
+          "最新消息通知（可在選項中關閉）。",
+          "遠古空地的動畫全面重做，並新增菜園。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.16",
+      "code": 17,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Rankings no Google Play Games: pontuação e maior Perigo, da semana e de sempre.",
+          "Progresso na nuvem: entre no Play Games e o seu progresso volta ao reinstalar ou trocar de celular.",
+          "Novidades por notificação (dá para desligar em Opções).",
+          "Clareira Ancestral com animações refeitas e horta nova."
+        ],
+        "en": [
+          "Leaderboards on Google Play Games: score and highest Danger, weekly and all-time.",
+          "Cloud progress: sign in to Play Games and your progress comes back when you reinstall or switch phones.",
+          "News notifications (you can turn them off in Options).",
+          "Ancestral Clearing with redone animations and a new garden."
+        ],
+        "es": [
+          "Clasificaciones en Google Play Juegos: puntuación y mayor Peligro, de la semana y de siempre.",
+          "Progreso en la nube: entra en Play Juegos y tu progreso vuelve al reinstalar o cambiar de teléfono.",
+          "Novedades por notificación (puedes desactivarlas en Opciones).",
+          "Claro Ancestral con animaciones renovadas y un huerto nuevo."
+        ],
+        "ja": [
+          "Google Play ゲームのランキング：スコアと最高危険度（今週・歴代）。",
+          "クラウドに保存：Play ゲームにログインすると、再インストールや機種変更のときに進行状況が戻ります。",
+          "最新情報のお知らせ（オプションでオフにできます）。",
+          "いにしえの広場のアニメーションを作り直し、新しい畑を追加。"
+        ],
+        "zh": [
+          "Google Play 游戏排行榜：得分与最高危险度，分本周和总榜。",
+          "云端进度：登录 Play 游戏后，重装或换手机时进度都能找回。",
+          "最新消息通知（可在选项中关闭）。",
+          "远古空地的动画全面重做，并新增菜园。"
+        ],
+        "zht": [
+          "Google Play 遊戲排行榜：得分與最高危險度，分本週和總榜。",
+          "雲端進度：登入 Play 遊戲後，重裝或換手機時進度都能找回。",
+          "最新消息通知（可在選項中關閉）。",
+          "遠古空地的動畫全面重做，並新增菜園。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.15",
+      "code": 16,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Ranking: se o seu perfil do Play Games estiver privado, o jogo avisa que só você vê a sua pontuação e como aparecer para todos.",
+          "Pequena correção de texto no ranking."
+        ],
+        "en": [
+          "Leaderboard: if your Play Games profile is private, the game tells you that only you can see your score and how to appear for everyone.",
+          "Small text fix on the leaderboard."
+        ],
+        "es": [
+          "Clasificación: si tu perfil de Play Juegos es privado, el juego te avisa que solo tú ves tu puntuación y cómo aparecer para todos.",
+          "Pequeña corrección de texto en la clasificación."
+        ],
+        "ja": [
+          "ランキング：Play ゲームのプロフィールが非公開のときは、スコアが自分にしか見えないことと、全員に表示する方法をお知らせします。",
+          "ランキングの表記を少し修正しました。"
+        ],
+        "zh": [
+          "排行榜：如果你的 Play 游戏个人资料设为不公开，游戏会提示只有你能看到自己的得分，以及如何让所有人看到。",
+          "排行榜文字小修正。"
+        ],
+        "zht": [
+          "排行榜：如果你的 Play 遊戲個人資料設為不公開，遊戲會提示只有你能看到自己的得分，以及如何讓所有人看到。",
+          "排行榜文字小修正。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.14",
+      "code": 15,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Correção: as pontuações agora chegam ao ranking do Play Games. A sua melhor partida que estava esperando sobe sozinha ao abrir o jogo."
+        ],
+        "en": [
+          "Fix: scores now reach the Play Games leaderboard. Your best run that was waiting is sent automatically when you open the game."
+        ],
+        "es": [
+          "Corrección: las puntuaciones ahora llegan a la clasificación de Play Juegos. Tu mejor partida que estaba esperando se envía sola al abrir el juego."
+        ],
+        "ja": [
+          "修正：スコアが Play ゲームのランキングに届くようになりました。送信待ちだった最高のプレイは、ゲームを開くと自動で送信されます。"
+        ],
+        "zh": [
+          "修复：得分现在会上传到 Play 游戏排行榜。之前等待上传的最佳对局会在打开游戏时自动上传。"
+        ],
+        "zht": [
+          "修正：得分現在會上傳到 Play 遊戲排行榜。之前等待上傳的最佳對局會在開啟遊戲時自動上傳。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.13",
+      "code": 14,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Correção: o ranking agora mostra sempre a lista atualizada, com a sua partida mais recente.",
+          "Se a partida não conseguir subir para o Play Games, o ranking avisa e deixa tentar de novo."
+        ],
+        "en": [
+          "Fix: the leaderboard now always shows the up-to-date list, including your latest run.",
+          "If a run can't reach Play Games, the leaderboard tells you and lets you try again."
+        ],
+        "es": [
+          "Corrección: la clasificación ahora muestra siempre la lista actualizada, con tu partida más reciente.",
+          "Si una partida no logra llegar a Play Juegos, la clasificación te avisa y te deja intentarlo de nuevo."
+        ],
+        "ja": [
+          "修正：ランキングは常に最新のリストを表示し、直近のプレイも反映されます。",
+          "プレイを Play ゲームに送信できなかったときは、ランキングでお知らせし、再送信できます。"
+        ],
+        "zh": [
+          "修复：排行榜现在总是显示最新列表，包含你最近的一局。",
+          "如果对局没能上传到 Play 游戏，排行榜会提示你，并可以重试。"
+        ],
+        "zht": [
+          "修正：排行榜現在總是顯示最新列表，包含你最近的一局。",
+          "如果對局沒能上傳到 Play 遊戲，排行榜會提示你，並可以重試。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.12",
+      "code": 13,
+      "date": "2026-10-20",
+      "notes": {
+        "pt": [
+          "Play Games: se ele não entrar sozinho, o jogo pede para entrar uma vez ao abrir. Entrando por qualquer lugar, o progresso na nuvem e os rankings já valem.",
+          "Correção: a partida feita antes de entrar no Play Games agora aparece no ranking assim que você entra."
+        ],
+        "en": [
+          "Play Games: if it doesn't sign you in automatically, the game asks once when it opens. Signing in from anywhere turns on cloud progress and leaderboards right away.",
+          "Fix: a run played before signing in to Play Games now shows up on the leaderboard as soon as you sign in."
+        ],
+        "es": [
+          "Play Games: si no entra solo, el juego te lo pide una vez al abrir. Al entrar desde cualquier lugar, el progreso en la nube y las clasificaciones funcionan al instante.",
+          "Corrección: la partida jugada antes de entrar en Play Games ahora aparece en la clasificación en cuanto entras."
+        ],
+        "ja": [
+          "Play ゲーム：自動でログインできなかったときは、起動時に一度だけログインを求めます。どこからログインしても、クラウドに保存とランキングがすぐ有効になります。",
+          "修正：Play ゲームにログインする前のプレイも、ログインするとすぐランキングに反映されます。"
+        ],
+        "zh": [
+          "Play 游戏：如果没有自动登录，游戏会在启动时请你登录一次。从任何地方登录后，云端进度和排行榜立即生效。",
+          "修复：登录 Play 游戏之前完成的对局，登录后会立即出现在排行榜上。"
+        ],
+        "zht": [
+          "Play 遊戲：如果沒有自動登入，遊戲會在啟動時請你登入一次。從任何地方登入後，雲端進度和排行榜立即生效。",
+          "修正：登入 Play 遊戲之前完成的對局，登入後會立即出現在排行榜上。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.11",
+      "code": 12,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Rankings do Google Play Games: Pontuação e Maior Perigo vencido, da semana e de sempre. Abra pelo troféu na Clareira ou tocando nos pontos no fim da partida (só partidas solo).",
+          "Progresso na nuvem: entrando no Play Games, seu progresso volta ao reinstalar ou trocar de celular.",
+          "Correção: com texto grande, a frase da vitória não invade mais o título."
+        ],
+        "en": [
+          "Google Play Games leaderboards: Score and Highest Danger cleared, weekly and all time. Open them from the trophy in the Clearing or by tapping your points at the end of a run (solo runs only).",
+          "Cloud progress: sign in to Play Games and your progress comes back when you reinstall or switch phones.",
+          "Fix: with large text, the victory line no longer overlaps the title."
+        ],
+        "es": [
+          "Clasificaciones de Google Play Games: Puntuación y Mayor Peligro vencido, de la semana y de siempre. Ábrelas desde el trofeo en el Claro o tocando tus puntos al final de la partida (solo partidas en solitario).",
+          "Progreso en la nube: si entras en Play Games, tu progreso vuelve al reinstalar o cambiar de teléfono.",
+          "Corrección: con texto grande, la frase de la victoria ya no tapa el título."
+        ],
+        "ja": [
+          "Google Play ゲームのランキング：スコアとクリアした最高危険度（今週・歴代）。広場のトロフィーか、プレイ終了時のスコアをタップして開けます（ソロのみ）。",
+          "クラウドに保存：Play ゲームにログインすると、再インストールや機種変更のときに進行状況が戻ります。",
+          "修正：文字サイズが大きいとき、勝利のメッセージがタイトルに重ならなくなりました。"
+        ],
+        "zh": [
+          "Google Play 游戏排行榜：得分和通关的最高危险度，分本周和总榜。在空地点奖杯，或在对局结束时点你的分数即可打开（仅限单人对局）。",
+          "云端进度：登录 Play 游戏后，重装或换手机时进度会回来。",
+          "修复：大字体时，胜利的文字不再盖住标题。"
+        ],
+        "zht": [
+          "Google Play 遊戲排行榜：得分和通關的最高危險度，分本週和總榜。在空地點獎盃，或在對局結束時點你的分數即可開啟（僅限單人對局）。",
+          "雲端進度：登入 Play 遊戲後，重新安裝或換手機時進度會回來。",
+          "修正：大字體時，勝利的文字不再蓋住標題。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.10",
+      "code": 11,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Novidades por notificação (opcional): em Opções › Jogo › Novidades, receba avisos de versões novas e eventos, poucas vezes por mês. Os lembretes do baú e da colheita continuam à parte.",
+          "As notificações ganharam o ícone do broto do jogo."
+        ],
+        "en": [
+          "News notifications (optional): turn on Options › Game › News to hear about new versions and events, a few times a month. Chest and harvest reminders stay separate.",
+          "Notifications now use the game's sprout icon."
+        ],
+        "es": [
+          "Novedades por notificación (opcional): en Opciones › Juego › Novedades, recibe avisos de versiones nuevas y eventos, pocas veces al mes. Los avisos del cofre y de la cosecha siguen aparte.",
+          "Las notificaciones ahora usan el ícono del brote del juego."
+        ],
+        "ja": [
+          "最新情報の通知（任意）：オプション › ゲーム › 最新情報 をオンにすると、新しいバージョンやイベントを月に数回お知らせします。宝箱と収穫のリマインダーは別です。",
+          "通知のアイコンがゲームの新芽になりました。"
+        ],
+        "zh": [
+          "最新消息通知（可选）：在 选项 › 游戏 › 最新消息 中开启，每月几次告诉你新版本和活动。宝箱和收获的提醒仍然分开。",
+          "通知图标换成了游戏的嫩芽。"
+        ],
+        "zht": [
+          "最新消息通知（可選）：在 選項 › 遊戲 › 最新消息 中開啟，每月幾次告訴你新版本和活動。寶箱和收成的提醒仍然分開。",
+          "通知圖示換成了遊戲的嫩芽。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.9",
+      "code": 10,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Horta da Clareira Ancestral (Pacote Fundador): cerca de estacas entalhadas com trançado de palha, portal com ponteiras de cobre, placa do broto e lamparinas balançando ao vento, e um espantalho novo de poncho tecido, com pena azul no chapéu e lamparina no braço."
+        ],
+        "en": [
+          "Ancestral Clearing garden (Founder Pack): a fence of carved stakes woven with straw, a gate with copper finials, a sprout sign and lanterns swaying in the wind, and a new scarecrow in a woven poncho, with a blue feather in its hat and a lantern on its arm."
+        ],
+        "es": [
+          "Huerta del Claro Ancestral (Pack Fundador): cerca de estacas talladas con trenzado de paja, portal con remates de cobre, cartel del brote y faroles que se mecen con el viento, y un espantapájaros nuevo con poncho tejido, pluma azul en el sombrero y farol en el brazo."
+        ],
+        "ja": [
+          "いにしえの広場（創設者パック）の畑：わらを編み込んだ彫刻の杭の柵、銅飾りの門、新芽の看板と風に揺れるランプ。新しいかかしは織りのポンチョ姿で、帽子に青い羽、腕にランプ。"
+        ],
+        "zh": [
+          "远古空地（创始者礼包）的菜园：编草的雕花木桩围栏、铜饰尖顶的门、嫩芽招牌和随风摇曳的灯笼；新的稻草人身穿编织斗篷，帽上插着蓝色羽毛，手臂上挂着灯笼。"
+        ],
+        "zht": [
+          "遠古空地（創始者禮包）的菜園：編草的雕花木樁圍欄、銅飾尖頂的門、嫩芽招牌和隨風搖曳的燈籠；新的稻草人身穿編織斗篷，帽上插著藍色羽毛，手臂上掛著燈籠。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.8",
+      "code": 9,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Clareira Ancestral (Pacote Fundador) com animações refeitas: borboletas-azuis com voo de verdade e sombra, pousando nos canteiros; tucano mais vivo; estandarte ao vento; lamparinas balançando com o vento; cogumelos que respiram à noite."
+        ],
+        "en": [
+          "Ancestral Clearing (Founder Pack) with redone animations: blue morpho butterflies with real flight and shadows, landing on the flowerbeds; a livelier toucan; a banner in the wind; lanterns swaying in the breeze; mushrooms that breathe at night."
+        ],
+        "es": [
+          "Claro Ancestral (Pack Fundador) con animaciones rehechas: mariposas morfo azules con vuelo de verdad y sombra, posándose en los canteros; un tucán más vivo; estandarte al viento; faroles que se mecen con la brisa; hongos que respiran de noche."
+        ],
+        "ja": [
+          "いにしえの広場（創設者パック）のアニメーションを作り直し：影を落として本当に飛び、花壇にとまる青いモルフォチョウ、もっと生き生きしたオオハシ、風になびく旗、そよ風に揺れるランプ、夜に呼吸するように光るキノコ。"
+        ],
+        "zh": [
+          "远古空地（创始者礼包）动画全面重做：蓝色大闪蝶真正飞舞、投下影子、停在花圃上；巨嘴鸟更加生动；旗帜随风飘扬；灯笼随微风摇曳；蘑菇在夜里像呼吸一样发光。"
+        ],
+        "zht": [
+          "遠古空地（創始者禮包）動畫全面重做：藍色大閃蝶真正飛舞、投下影子、停在花圃上；巨嘴鳥更加生動；旗幟隨風飄揚；燈籠隨微風搖曳；蘑菇在夜裡像呼吸一樣發光。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.7",
+      "code": 8,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Novo: Guarda-roupa na Clareira (efeitos de libertação, rastro e Despertar; peças grátis e kits) e Loja com o Pacote Fundador por tempo limitado.",
+          "Clareira Ancestral do Fundador: esteios entalhados, lamparinas que acendem à noite, tucano, borboletas-azuis e cogumelos que brilham.",
+          "Joystick: anda logo depois de escolher a carta e em toda a metade da tela."
+        ],
+        "en": [
+          "New: Wardrobe in the Clearing (freeing, trail and Awakening effects; free pieces and kits) and a Shop with the limited-time Founder Pack.",
+          "Founder's Ancestral Clearing: carved posts, lanterns that light up at night, a toucan, blue morpho butterflies and glowing mushrooms.",
+          "Joystick: move right after picking a card, anywhere on your half of the screen."
+        ],
+        "es": [
+          "Nuevo: Vestuario en el Claro (efectos de liberación, estela y Despertar; piezas gratis y kits) y Tienda con el Pack Fundador por tiempo limitado.",
+          "Claro Ancestral del Fundador: postes tallados, faroles que se encienden de noche, un tucán, mariposas morfo azules y hongos que brillan.",
+          "Joystick: te mueves justo después de elegir la carta, en toda tu mitad de la pantalla."
+        ],
+        "ja": [
+          "新機能：広場に衣装箱（解放・軌跡・覚醒のエフェクト。無料アイテムとセット）、期間限定の創設者パックがあるショップ。",
+          "創設者の「いにしえの広場」：彫刻の柱、夜に灯るランプ、オオハシ、青いモルフォチョウ、光るキノコ。",
+          "ジョイスティック：カードを選んだ直後から、片側半分のどこでも操作できるように。"
+        ],
+        "zh": [
+          "新内容：空地新增衣橱（解放、拖尾和觉醒特效，含免费物品与套装），以及推出限时创始者礼包的商店。",
+          "创始者的远古空地：雕花木柱、夜里点亮的灯、巨嘴鸟、蓝色大闪蝶和会发光的蘑菇。",
+          "摇杆：选完卡牌后立刻就能移动，屏幕一侧任意位置都能操作。"
+        ],
+        "zht": [
+          "新內容：空地新增衣櫥（解放、拖尾和覺醒特效，含免費物品與套裝），以及推出限時創始者禮包的商店。",
+          "創始者的遠古空地：雕花木柱、夜裡點亮的燈、巨嘴鳥、藍色大閃蝶和會發光的蘑菇。",
+          "搖桿：選完卡牌後立刻就能移動，螢幕一側任意位置都能操作。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.6",
+      "code": 7,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Novo: Guarda-roupa na Clareira — efeitos de libertação, rastro e Despertar, com peças grátis e kits (Ipê-rosa, Paineira, Coruja-buraqueira, Festa Junina). Só aparência.",
+          "Novo: Loja com o Pacote Fundador por tempo limitado: Sem anúncios, os 4 kits e a Clareira Ancestral exclusiva.",
+          "Joystick: agora começa em toda a metade da tela, não só embaixo."
+        ],
+        "en": [
+          "New: Wardrobe in the Clearing — freeing, trail and Awakening effects, with free pieces and kits (Pink Ipê, Silk Floss Tree, Burrowing Owl, Festa Junina). Looks only.",
+          "New: Shop with the limited-time Founder Pack: No Ads, all 4 kits and the exclusive Ancestral Clearing.",
+          "Joystick: now starts anywhere on your half of the screen, not just at the bottom."
+        ],
+        "es": [
+          "Nuevo: Vestuario en el Claro — efectos de liberación, estela y Despertar, con piezas gratis y kits (Ipê rosa, Palo borracho, Lechucita vizcachera, Fiesta Junina). Solo apariencia.",
+          "Nuevo: Tienda con el Pack Fundador por tiempo limitado: Sin anuncios, los 4 kits y el Claro Ancestral exclusivo.",
+          "Joystick: ahora empieza en toda tu mitad de la pantalla, no solo abajo."
+        ],
+        "ja": [
+          "新機能：広場に衣装箱 — 解放・軌跡・覚醒のエフェクト。無料アイテムとセット（ピンクのイペー、トックリキワタ、アナホリフクロウ、フェスタ・ジュニーナ）。見た目だけのアイテムです。",
+          "新機能：ショップに期間限定の創設者パック — 「広告なし」、セット4つ、限定の「いにしえの広場」。",
+          "ジョイスティック：画面の下だけでなく、片側半分のどこからでも操作できるように。"
+        ],
+        "zh": [
+          "新内容：空地新增衣橱——解放、拖尾和觉醒特效，含免费物品与套装（粉色风铃木、美丽异木棉、穴鸮、六月节）。仅外观。",
+          "新内容：商店推出限时创始者礼包：免广告、全部 4 个套装和独家的远古空地。",
+          "摇杆：现在在屏幕一侧的任意位置都能开始操作，不再只限下方。"
+        ],
+        "zht": [
+          "新內容：空地新增衣櫥——解放、拖尾和覺醒特效，含免費物品與套裝（粉紅風鈴木、美人樹、穴鴞、六月節）。僅外觀。",
+          "新內容：商店推出限時創始者禮包：免廣告、全部 4 個套裝和獨家的遠古空地。",
+          "搖桿：現在在螢幕一側的任意位置都能開始操作，不再只限下方。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.5",
+      "code": 6,
+      "date": "2026-10-19",
+      "notes": {
+        "pt": [
+          "Correção: o joystick parava de funcionar depois de escolher uma carta, pausar ou reviver.",
+          "Compra \"Sem anúncios\": o jogo agora avisa quando o pagamento é aprovado e quando a compra é estornada.",
+          "Clareira: botão da loja \"Sem anúncios\" no topo, e o quadro do canto se ajusta ao texto grande."
+        ],
+        "en": [
+          "Fix: the joystick stopped working after picking a card, pausing or reviving.",
+          "\"No Ads\" purchase: the game now tells you when your payment is approved and when a purchase is refunded.",
+          "Clearing: \"No Ads\" shop button at the top, and the corner panel now fits large text."
+        ],
+        "es": [
+          "Corrección: el joystick dejaba de funcionar después de elegir una carta, pausar o revivir.",
+          "Compra \"Sin anuncios\": el juego ahora avisa cuando el pago se aprueba y cuando la compra se reembolsa.",
+          "Claro: botón de la tienda \"Sin anuncios\" arriba, y el panel de la esquina se ajusta al texto grande."
+        ],
+        "ja": [
+          "修正：カードを選んだ後・一時停止後・復活後にジョイスティックが動かなくなる問題を修正。",
+          "購入「広告なし」：支払いが完了したときと、購入が返金されたときにお知らせするように。",
+          "広場：上部に「広告なし」ショップボタンを追加。隅のパネルが大きい文字に合わせて広がるように。"
+        ],
+        "zh": [
+          "修复：选择卡牌、暂停或复活后摇杆失灵的问题。",
+          "“免广告”购买：付款确认和购买退款时，游戏现在会提示你。",
+          "空地：顶部新增“免广告”商店按钮，角落面板会随大字号自动调整。"
+        ],
+        "zht": [
+          "修正：選擇卡牌、暫停或復活後搖桿失靈的問題。",
+          "「免廣告」購買：付款確認和購買退款時，遊戲現在會提示你。",
+          "空地：頂部新增「免廣告」商店按鈕，角落面板會隨大字級自動調整。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.4",
+      "code": 5,
+      "date": "2026-10-16",
+      "notes": {
+        "pt": [
+          "Novo: compra opcional \"Sem anúncios\" — os prêmios dos anúncios saem na hora, sem assistir.",
+          "Acessibilidade nas Opções: clarões suaves, joystick fixo, para canhotos e maior, pesca assistida e avisos de perigo mais fáceis de ver para daltônicos.",
+          "Zoom também na Clareira e pesca um pouco mais fácil.",
+          "Correção: o botão das Opções não vira mais um traço ao ser tocado."
+        ],
+        "en": [
+          "New: optional \"No Ads\" purchase — ad rewards are yours instantly, no watching.",
+          "Accessibility in Options: softer flashes, fixed, left-handed and larger joystick, assisted fishing, and danger warnings easier to see for colorblind players.",
+          "Zoom now works in the Clearing too, and fishing is a little easier.",
+          "Fix: the Options button no longer turns into a line when tapped."
+        ],
+        "es": [
+          "Nuevo: compra opcional \"Sin anuncios\": las recompensas de los anuncios son tuyas al instante, sin verlos.",
+          "Accesibilidad en Opciones: destellos suaves, joystick fijo, para zurdos y más grande, pesca asistida y avisos de peligro más fáciles de ver para daltónicos.",
+          "Zoom también en el Claro y pesca un poco más fácil.",
+          "Corrección: el botón de Opciones ya no se convierte en una raya al tocarlo."
+        ],
+        "ja": [
+          "新機能：任意の購入「広告なし」— 広告の報酬を、見ずにすぐ受け取れます。",
+          "オプションにアクセシビリティを追加：フラッシュ軽減、固定・左利き用・大きいジョイスティック、釣りアシスト、色覚多様性に配慮した見やすい危険表示。",
+          "ズームが広場でも使えるように。釣りが少し簡単に。",
+          "修正：オプションボタンをタップすると線になる問題を修正。"
+        ],
+        "zh": [
+          "新增：可选购买“免广告”——广告奖励立即到手，无需观看。",
+          "选项中新增无障碍功能：柔和闪光、固定/左手/更大的摇杆、钓鱼辅助，以及色觉障碍玩家更易辨认的危险提示。",
+          "空地也能使用缩放；钓鱼稍微变简单。",
+          "修复：点击选项按钮时不再变成一条线。"
+        ],
+        "zht": [
+          "新增：可選購買「免廣告」——廣告獎勵立即到手，無需觀看。",
+          "選項中新增無障礙功能：柔和閃光、固定／左手／更大的搖桿、釣魚輔助，以及色覺障礙玩家更易辨認的危險提示。",
+          "空地也能使用縮放；釣魚稍微變簡單。",
+          "修正：點擊選項按鈕時不再變成一條線。"
+        ]
+      }
+    },
+    {
+      "version": "1.0.3",
+      "code": 4,
+      "date": "2026-10-15",
+      "notes": {
+        "pt": [
+          "Novo: Zoom nas Opções (acessibilidade) — o mundo fica maior na tela, a interface continua do mesmo tamanho.",
+          "Pesca: o toque agora vale na tela inteira."
+        ],
+        "en": [
+          "New: Zoom in Options (accessibility) — the world looks bigger on screen while the interface keeps its size.",
+          "Fishing: taps now work anywhere on the screen."
+        ],
+        "es": [
+          "Nuevo: Zoom en Opciones (accesibilidad): el mundo se ve más grande y la interfaz mantiene su tamaño.",
+          "Pesca: ahora el toque funciona en toda la pantalla."
+        ],
+        "ja": [
+          "新機能：オプションに「ズーム」を追加（アクセシビリティ）。画面の世界が大きく見え、UIのサイズはそのままです。",
+          "釣り：画面のどこをタップしても反応するようになりました。"
+        ],
+        "zh": [
+          "新增：选项中的“缩放”（无障碍）——游戏画面放大，界面大小不变。",
+          "钓鱼：现在点击屏幕任何位置都有效。"
+        ],
+        "zht": [
+          "新增：選項中的「縮放」（無障礙）——遊戲畫面放大，介面大小不變。",
+          "釣魚：現在點擊螢幕任何位置都有效。"
+        ]
+      }
+    }
+  ]
+}

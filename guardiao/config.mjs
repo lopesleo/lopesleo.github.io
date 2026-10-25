@@ -46,3 +46,12 @@ export const PRIVACY = [
   { code: "pt", path: "privacidade/", html: "pt-BR" },
   { code: "en", path: "en/privacy/", html: "en" },
 ];
+
+// Página "Novidades" (notas de versão). As notas vêm do PLAY_STORE.md do repositório do jogo (só leitura);
+// sem esse arquivo (build na nuvem) vale a cópia guardiao/data/patchnotes.json, regravada a cada build local.
+export const PATCH_NOTES_SOURCE = "D:/dev/Dalmo-game/p2/guardiao/docs/PLAY_STORE.md";
+// Última versão já publicada para os testadores. Versões acima dela não aparecem no site.
+// Ao publicar uma versão nova na Play, suba este número e rode o build.
+export const PATCH_NOTES_MAX = "1.0.22";
+// Endereço da página por idioma (depois de BASE + dir do idioma)
+export const NEWS_PATH = { pt: "novidades/", en: "patch-notes/", es: "novedades/", ja: "updates/", zh: "updates/", zht: "updates/" };
