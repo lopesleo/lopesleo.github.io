@@ -391,3 +391,14 @@ html.cjk .dl strong { font-size: 22px; }
 .join-discord a { display: inline-flex; align-items: center; gap: 12px; color: var(--cream); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 .join-discord a:hover { color: var(--goldhi); }
 .join-discord .px-icon { width: 33px; height: 24px; flex: none; }
+
+/* ---------- perguntas frequentes (visíveis; as mesmas do JSON-LD FAQPage) ---------- */
+.sec-faq { background: var(--t0); }
+.faq { display: grid; gap: 16px; max-width: 860px; }
+.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 18px 20px; position: relative; z-index: 3; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; margin-left: auto; flex: none; width: 28px; height: 28px; display: grid; place-items: center; font: 400 28px/1 var(--display); color: var(--ink); background: var(--accent); box-shadow: 0 3px 0 var(--ink); }
+.faq-item[open] summary::after { content: "-"; }
+.faq-item h3 { margin: 0; font: 700 clamp(18px, 2.2vw, 21px)/1.3 var(--body); color: var(--goldhi); text-wrap: balance; }
+.faq-item p { margin: 0; padding: 0 20px 20px; color: var(--cream-2); font-size: 17px; line-height: 1.6; max-width: 70ch; position: relative; z-index: 3; }
+.faq-item summary:focus-visible { outline: 3px solid var(--goldhi); outline-offset: 2px; }
