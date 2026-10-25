@@ -55,3 +55,20 @@ export const PATCH_NOTES_SOURCE = "D:/dev/Dalmo-game/p2/guardiao/docs/PLAY_STORE
 export const PATCH_NOTES_MAX = "1.0.22";
 // Endereço da página por idioma (depois de BASE + dir do idioma)
 export const NEWS_PATH = { pt: "novidades/", en: "patch-notes/", es: "novedades/", ja: "updates/", zh: "updates/", zht: "updates/" };
+
+// --- GEO: fatos citáveis (conferidos com src/config.js do jogo em 25/10/2026) ---
+// Armas-base = BASE_WEAPON_KEYS (18); evoluções = EVOLUTION_KEYS (24 = 18 com 2ª arma + 6 Catalisadores);
+// guardiões = CHARACTERS (7); mapas = BIOMES (amazonia, caatinga); Perigos = DIFFICULTY (5); conquistas = ACHIEVEMENTS (33);
+// reações = REACTION (Vapor, Cristal, Sobrecarga, Labareda, Geada, Temporal). Mudou o jogo? Atualize aqui e a data abaixo.
+export const FACTS = { weapons: 18, evolutions: 24, guardians: 7, reactions: 6, maps: 2, dangers: 5, achievements: 33, runMinutes: 7 };
+// Data da última conferência dos fatos (mostrada na ficha e usada como dateModified)
+export const FACTS_UPDATED = "2026-10-25";
+export const TIKTOK = "https://www.tiktok.com/@guardiaodaflorestaofc";
+export const INSTAGRAM = "https://www.instagram.com/guardiaodaflorestaofc/";
+export const X_PROFILE = "https://x.com/guardiao_game";
+// Mesmos perfis em todo lugar (JSON-LD do estúdio, do jogo e llms.txt); só perfis que existem
+export const SAME_AS = [DISCORD, INSTAGRAM, TIKTOK, X_PROFILE];
+// Descrição única do estúdio (a mesma no JSON-LD de todas as páginas e no llms.txt)
+export const STUDIO_DESC = "Independent game studio from Nova Friburgo, Rio de Janeiro, Brazil. Maker of Guardião da Floresta (Forest Guardian), a free survival roguelite for Android inspired by Brazilian folklore.";
+// Nome do jogo em cada idioma, em maiúsculas e minúsculas normais (JSON-LD, og:site_name, llms.txt)
+export const GAME_NAME = { pt: "Guardião da Floresta", en: "Forest Guardian", es: "Guardián del Bosque", ja: "森の守護者", zh: "森林守护者", zht: "森林守護者" };

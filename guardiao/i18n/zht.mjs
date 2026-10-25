@@ -91,8 +91,25 @@ export default {
       { t: "一般手機也能順暢執行", d: "畫質會依裝置自動調整。" },
     ],
   },
+  about: {
+    title: "什麼是|《森林守護者》？",
+    def: "《森林守護者》（葡萄牙語原名 Guardião da Floresta）是巴西 Komedy Games Studio 開發的 Android 生存類 Roguelite 遊戲，取材於巴西民間傳說。每局約{runMinutes}分鐘，玩家與庫魯皮拉、伊亞拉、薩西等傳說人物並肩，對抗腐朽的獸群；每次升級選一張卡牌，並把火、冰、雷、風組合成{reactions}種元素反應。遊戲免費，可離線遊玩，只有你願意時才會看到廣告。喜歡 Vampire Survivors 的玩家會覺得很熟悉。",
+    facts: [
+      ["名稱","森林守護者（英文名 Forest Guardian，葡萄牙語原名 Guardião da Floresta）"],
+      ["類型","生存類 Roguelite（類倖存者），單人遊戲"],
+      ["平台","Android 7 以上"],
+      ["價格","免費，無體力限制，無付費抽獎。廣告可選，僅用於換取獎勵。實力無法購買。另有可選購買，如移除廣告和外觀物品。"],
+      ["狀態","封閉測試中。Google Play 上線預計在 2026 年 12 月。上線前可申請邀請搶先玩。"],
+      ["開發者","Komedy Games Studio，來自巴西里約熱內盧州新弗里堡的獨立工作室"],
+      ["單局時長","約{runMinutes}分鐘；可離線遊玩"],
+      ["語言","葡萄牙語、英語、西班牙語、日語、簡體中文、繁體中文"],
+      ["內容","{guardians}位守護者，{weapons}種武器和{evolutions}種進化，{reactions}種元素反應，{maps}張地圖（亞馬孫和卡廷加），{dangers}個危險度等級，{achievements}項成就"],
+      ["傳說人物","守護者：{legends}。頭目：{bosses}。小頭目：{minibosses}。"],
+    ],
+    updated: "資料更新於 {date}",
+  },
   numbers: [
-    ["18", "種武器"], ["18", "種進化"], ["7", "位守護者"], ["6", "種反應"], ["2", "張地圖"], ["32", "項成就"],
+    ["{weapons}", "種武器"], ["{evolutions}", "種進化"], ["{guardians}", "位守護者"], ["{reactions}", "種反應"], ["{maps}", "張地圖"], ["{achievements}", "項成就"],
   ],
   trailer: {
     title: "預告片",

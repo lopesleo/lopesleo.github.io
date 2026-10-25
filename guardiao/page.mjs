@@ -36,6 +36,22 @@ export const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const fmt = (s, ...v) => String(s).replace(/\{(\d)\}/g, (_, i) => v[i]);
 const CJK = { ja: true, zh: true, zht: true };
+const LOCALE = { pt: "pt-BR", en: "en-US", es: "es", ja: "ja-JP", zh: "zh-CN", zht: "zh-TW" };
+
+// Fatos citáveis (GEO): textos com fichas {weapons}, {legends}… trocadas pelos números de config.mjs e pelos nomes do idioma
+export function factVars(L) {
+  const pick = (list, ids) => ids.map((id) => { const x = list.find((o) => o.id === id); return (x[L.code] ?? x.pt).name ?? x.pt.name; });
+  const sep = CJK[L.code] ? "、" : ", ";
+  const date = new Intl.DateTimeFormat(LOCALE[L.code], { dateStyle: "long", timeZone: "UTC" }).format(new Date(`${C.FACTS_UPDATED}T12:00:00Z`));
+  return {
+    ...C.FACTS,
+    legends: pick(LEGENDS, ["guardian", "huntress", "druid", "shaman", "fulozinha", "maedoouro", "anhanga"]).join(sep),
+    bosses: pick(BOSSES, ["mapinguari", "caboclo"]).join(sep),
+    minibosses: pick(BOSSES, ["mula", "corposeco", "cabra"]).join(sep),
+    date,
+  };
+}
+export const tok = (str, vars) => String(str).replace(/\{([A-Za-z]\w*)\}/g, (m, k) => (k in vars ? vars[k] : m));
 
 // Elementos e reações (pares → reação). Cores da paleta do jogo.
 export const ELEMENTS = [
@@ -168,7 +184,7 @@ ${alternates}
 <link rel="icon" type="image/png" sizes="192x192" href="${A}img/icon-192.png">
 <link rel="apple-touch-icon" href="${A}img/icon-192.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="${esc(t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`)}">
+<meta property="og:site_name" content="${esc(C.GAME_NAME[L.code])}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${canonical}">
@@ -198,16 +214,19 @@ export const studioOrg = () => ({
   "@type": "Organization",
   "@id": ORG_ID,
   name: C.STUDIO,
+  alternateName: "Komedy Games",
   url: `${C.SITE}/`,
   logo: `${C.SITE}/assets/favicon.svg`,
   email: C.CONTACT,
-  sameAs: ["https://discord.gg/TTYnNtQAes", "https://www.instagram.com/guardiaodaflorestaofc/", "https://x.com/guardiao_game"],
+  description: C.STUDIO_DESC,
+  foundingLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Nova Friburgo", addressRegion: "RJ", addressCountry: "BR" } },
+  sameAs: C.SAME_AS,
 });
 
 // Dados estruturados da página principal: o jogo (com o trailer), o estúdio e as perguntas frequentes.
 // Nada de nota, avaliação ou número de downloads: só o que é verdade hoje.
 function jsonLd(t, L, url) {
-  const name = t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`;
+  const name = C.GAME_NAME[L.code];
   const media = (rel) => `${C.SITE}${A}${rel}`;
   const game = {
     "@type": ["VideoGame", "MobileApplication"],
@@ -216,7 +235,11 @@ function jsonLd(t, L, url) {
     alternateName: L.code === "pt" ? "Forest Guardian" : "Guardião da Floresta",
     url,
     inLanguage: L.html,
-    description: t.meta.description,
+    description: tok(t.about.def, factVars(L)),
+    abstract: t.meta.description,
+    dateModified: C.FACTS_UPDATED,
+    isAccessibleForFree: true,
+    sameAs: C.SAME_AS,
     genre: ["Roguelite", "Survival", "Action"],
     keywords: t.meta.keywords,
     gamePlatform: "Android",
@@ -247,8 +270,23 @@ function jsonLd(t, L, url) {
     inLanguage: L.html,
     mainEntity: t.faq.items.map((it) => ({ "@type": "Question", name: it.q, acceptedAnswer: { "@type": "Answer", text: it.a } })),
   };
+  const page = {
+    "@type": ["WebPage", "AboutPage"],
+    "@id": `${url}#webpage`,
+    url,
+    name: t.meta.title,
+    description: t.meta.description,
+    inLanguage: L.html,
+    dateModified: C.FACTS_UPDATED,
+    isPartOf: { "@id": `${C.SITE}/#website` },
+    about: { "@id": `${url}#game` },
+    mainEntity: { "@id": `${url}#game` },
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    primaryImageOfPage: { "@type": "ImageObject", url: media(`img/social-${L.code}.jpg`) },
+  };
   const site = { "@type": "WebSite", "@id": `${C.SITE}/#website`, url: `${C.SITE}/`, name: C.STUDIO, publisher: { "@id": ORG_ID } };
-  const data = { "@context": "https://schema.org", "@graph": [studioOrg(), site, game, faq] };
+  const data = { "@context": "https://schema.org", "@graph": [studioOrg(), site, page, game, faq] };
   return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\u003c")}</script>`;
 }
 
@@ -349,6 +387,17 @@ ${head(t, L, {
   </div>
   <a class="scroll-hint" href="#play" aria-label="${esc(t.hero.scroll)}">${icon("down", { size: 3 })}</a>
   ${treeline(7, { color: PAL.t0, back: PAL.t1, h: 34 })}
+</section>
+
+<section class="sec sec-about" id="about" aria-labelledby="h-about">
+  <div class="wrap">
+    ${sectionHead(t.about.title, "", { accent: PAL.straw3, id: "h-about" })}
+    <p class="about-def">${esc(tok(t.about.def, factVars(L)))}</p>
+    <dl class="panel facts-table about-facts" style="--accent:${PAL.straw3}">
+      ${t.about.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(tok(v, factVars(L)))}</dd></div>`).join("")}
+    </dl>
+    <p class="about-updated"><time datetime="${C.FACTS_UPDATED}">${esc(tok(t.about.updated, factVars(L)))}</time></p>
+  </div>
 </section>
 
 <section class="sec sec-howto" id="play" aria-labelledby="h-play">
@@ -498,7 +547,7 @@ ${head(t, L, {
       ${t.fair.items.map((it) => `<li>${icon("check", { size: 3 })}<div><h3>${esc(it.t)}</h3><p>${esc(it.d)}</p></div></li>`).join("")}
     </ul>
     <ul class="numbers" aria-label="${esc(t.press.title)}">
-      ${t.numbers.map(([n, w]) => `<li><span class="num">${esc(n)}</span><span class="what">${esc(w)}</span></li>`).join("")}
+      ${t.numbers.map(([n, w]) => `<li><span class="num">${esc(tok(n, factVars(L)))}</span><span class="what">${esc(w)}</span></li>`).join("")}
     </ul>
   </div>
 </section>

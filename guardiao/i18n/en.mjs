@@ -91,8 +91,25 @@ export default {
       { t: "Runs on simple phones", d: "Graphics quality adjusts to your device automatically." },
     ],
   },
+  about: {
+    title: "WHAT IS FOREST GUARDIAN?",
+    def: "Forest Guardian (Guardião da Floresta) is a survival roguelite for Android, made in Brazil by Komedy Games Studio and inspired by Brazilian folklore. In runs of about {runMinutes} minutes, players face the horde of the Rot alongside legends such as the Curupira, the Iara and the Saci, pick a card at every level and combine Fire, Ice, Lightning and Wind into {reactions} elemental reactions. It is free, plays offline and only shows an ad if you choose to watch one. If you like Vampire Survivors, you will recognize the style.",
+    facts: [
+      ["Name","Forest Guardian (Portuguese title: Guardião da Floresta)"],
+      ["Genre","Survival roguelite (survivor-like), single player"],
+      ["Platform","Android 7 or newer"],
+      ["Price","Free, with no energy limits and no paid loot boxes. Ads are optional and only for a reward. Power is never for sale. Optional purchases, such as removing ads and cosmetic items."],
+      ["Status","Closed testing. Google Play launch planned for December 2026. Play before launch: request your invite."],
+      ["Developer","Komedy Games Studio, an independent studio from Nova Friburgo (RJ), Brazil"],
+      ["Run length","About {runMinutes} minutes; plays offline"],
+      ["Languages","Portuguese, English, Spanish, Japanese, Simplified Chinese and Traditional Chinese"],
+      ["Content","{guardians} guardians, {weapons} weapons and {evolutions} evolutions, {reactions} elemental reactions, {maps} maps (Amazon and Caatinga), {dangers} Danger levels, {achievements} achievements"],
+      ["Legends","Guardians: {legends}. Bosses: {bosses}. Mini-bosses: {minibosses}."],
+    ],
+    updated: "Fact sheet updated on {date}.",
+  },
   numbers: [
-    ["18", "weapons"], ["18", "evolutions"], ["7", "guardians"], ["6", "reactions"], ["2", "maps"], ["32", "achievements"],
+    ["{weapons}", "weapons"], ["{evolutions}", "evolutions"], ["{guardians}", "guardians"], ["{reactions}", "reactions"], ["{maps}", "maps"], ["{achievements}", "achievements"],
   ],
   trailer: {
     title: "TRAILER",

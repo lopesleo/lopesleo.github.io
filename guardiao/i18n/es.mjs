@@ -91,8 +91,25 @@ export default {
       { t: "Funciona en móviles sencillos", d: "La calidad gráfica se ajusta sola a tu dispositivo." },
     ],
   },
+  about: {
+    title: "¿QUÉ ES GUARDIÁN DEL BOSQUE?",
+    def: "Guardián del Bosque (Guardião da Floresta) es un roguelite de supervivencia para Android, hecho en Brasil por Komedy Games Studio e inspirado en el folclore brasileño. En partidas de unos {runMinutes} minutos, el jugador se enfrenta a la horda de la Podredumbre junto a leyendas como el Curupira, la Iara y el Saci, elige una carta en cada nivel y combina Fuego, Hielo, Rayo y Viento en {reactions} reacciones elementales. Es gratis, funciona sin conexión y solo muestra un anuncio si tú quieres verlo. Si te gusta Vampire Survivors, reconocerás el estilo.",
+    facts: [
+      ["Nombre","Guardián del Bosque (título original en portugués: Guardião da Floresta)"],
+      ["Género","Roguelite de supervivencia (survivor-like), para un jugador"],
+      ["Plataforma","Android 7 o más reciente"],
+      ["Precio","Gratis, sin energía y sin cofres de pago aleatorios. Los anuncios son opcionales y a cambio de una recompensa. El poder no se compra. Compras opcionales, como quitar los anuncios y objetos visuales."],
+      ["Estado","En prueba cerrada. Lanzamiento en Google Play previsto para diciembre de 2026. Juega antes del lanzamiento: pide tu invitación."],
+      ["Desarrollador","Komedy Games Studio, estudio independiente de Nova Friburgo (RJ), Brasil"],
+      ["Partida","Unos {runMinutes} minutos; funciona sin conexión"],
+      ["Idiomas","Portugués, inglés, español, japonés, chino simplificado y chino tradicional"],
+      ["Contenido","{guardians} guardianes, {weapons} armas y {evolutions} evoluciones, {reactions} reacciones elementales, {maps} mapas (Amazonia y Caatinga), {dangers} niveles de Peligro, {achievements} logros"],
+      ["Leyendas","Guardianes: {legends}. Jefes: {bosses}. Minijefes: {minibosses}."],
+    ],
+    updated: "Ficha actualizada el {date}.",
+  },
   numbers: [
-    ["18", "armas"], ["18", "evoluciones"], ["7", "guardianes"], ["6", "reacciones"], ["2", "mapas"], ["32", "logros"],
+    ["{weapons}", "armas"], ["{evolutions}", "evoluciones"], ["{guardians}", "guardianes"], ["{reactions}", "reacciones"], ["{maps}", "mapas"], ["{achievements}", "logros"],
   ],
   trailer: {
     title: "TRÁILER",

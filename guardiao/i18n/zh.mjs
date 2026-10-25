@@ -91,8 +91,25 @@ export default {
       { t: "普通手机也能流畅运行", d: "画质会根据设备自动调整。" },
     ],
   },
+  about: {
+    title: "什么是|《森林守护者》？",
+    def: "《森林守护者》（葡萄牙语原名 Guardião da Floresta）是巴西 Komedy Games Studio 开发的安卓生存类肉鸽游戏，取材于巴西民间传说。每局约{runMinutes}分钟，玩家与库鲁皮拉、伊亚拉、萨西等传说人物并肩，对抗腐朽的兽群；每次升级选一张卡牌，并把火、冰、雷、风组合成{reactions}种元素反应。游戏免费，可离线游玩，只有你愿意时才会看到广告。喜欢 Vampire Survivors 的玩家会觉得很熟悉。",
+    facts: [
+      ["名称","森林守护者（英文名 Forest Guardian，葡萄牙语原名 Guardião da Floresta）"],
+      ["类型","生存类肉鸽（类幸存者），单人游戏"],
+      ["平台","Android 7 及以上"],
+      ["价格","免费，无体力限制，无付费抽奖。广告可选，仅用于换取奖励。实力无法购买。另有可选购买，如去除广告和外观物品。"],
+      ["状态","封闭测试中。Google Play 上线预计在 2026 年 12 月。上线前可申请邀请抢先玩。"],
+      ["开发者","Komedy Games Studio，来自巴西里约热内卢州新弗里堡的独立工作室"],
+      ["单局时长","约{runMinutes}分钟；可离线游玩"],
+      ["语言","葡萄牙语、英语、西班牙语、日语、简体中文、繁体中文"],
+      ["内容","{guardians}位守护者，{weapons}种武器和{evolutions}种进化，{reactions}种元素反应，{maps}张地图（亚马孙和卡廷加），{dangers}个危险度等级，{achievements}项成就"],
+      ["传说人物","守护者：{legends}。头目：{bosses}。小头目：{minibosses}。"],
+    ],
+    updated: "资料更新于 {date}",
+  },
   numbers: [
-    ["18", "种武器"], ["18", "种进化"], ["7", "位守护者"], ["6", "种反应"], ["2", "张地图"], ["32", "项成就"],
+    ["{weapons}", "种武器"], ["{evolutions}", "种进化"], ["{guardians}", "位守护者"], ["{reactions}", "种反应"], ["{maps}", "张地图"], ["{achievements}", "项成就"],
   ],
   trailer: {
     title: "预告片",

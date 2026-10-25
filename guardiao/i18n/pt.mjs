@@ -93,8 +93,25 @@ export default {
       { t: "Roda em celular simples", d: "A qualidade gráfica se ajusta sozinha ao aparelho." },
     ],
   },
+  about: {
+    title: "O QUE É GUARDIÃO DA FLORESTA?",
+    def: "Guardião da Floresta é um roguelite de sobrevivência para Android, feito no Brasil pela Komedy Games Studio e inspirado no folclore brasileiro. Em partidas de cerca de {runMinutes} minutos, o jogador enfrenta a horda da Podridão ao lado de lendas como Curupira, Iara e Saci, escolhe uma carta a cada nível e combina Fogo, Gelo, Raio e Vento em {reactions} reações elementais. É grátis, joga offline e só mostra anúncio se você quiser. Se você gosta de Vampire Survivors, vai reconhecer o estilo.",
+    facts: [
+      ["Nome","Guardião da Floresta (em inglês, Forest Guardian)"],
+      ["Gênero","Roguelite de sobrevivência (survivor-like), para um jogador"],
+      ["Plataforma","Android 7 ou mais novo"],
+      ["Preço","Grátis, sem energia e sem sorteio pago. Anúncio só opcional, em troca de prêmio. Poder não se compra. Compras opcionais, como remover os anúncios e itens visuais."],
+      ["Situação","Em teste fechado. Lançamento na Google Play previsto para dezembro de 2026. Jogue antes do lançamento: peça seu convite."],
+      ["Desenvolvedor","Komedy Games Studio, estúdio independente de Nova Friburgo (RJ), Brasil"],
+      ["Partida","Cerca de {runMinutes} minutos; joga offline"],
+      ["Idiomas","Português, inglês, espanhol, japonês, chinês simplificado e chinês tradicional"],
+      ["Conteúdo","{guardians} guardiões, {weapons} armas e {evolutions} evoluções, {reactions} reações elementais, {maps} mapas (Amazônia e Caatinga), {dangers} níveis de Perigo, {achievements} conquistas"],
+      ["Lendas","Guardiões: {legends}. Chefes: {bosses}. Minichefes: {minibosses}."],
+    ],
+    updated: "Ficha atualizada em {date}.",
+  },
   numbers: [
-    ["18", "armas"], ["18", "evoluções"], ["7", "guardiões"], ["6", "reações"], ["2", "mapas"], ["32", "conquistas"],
+    ["{weapons}", "armas"], ["{evolutions}", "evoluções"], ["{guardians}", "guardiões"], ["{reactions}", "reações"], ["{maps}", "mapas"], ["{achievements}", "conquistas"],
   ],
   trailer: {
     title: "TRAILER",
