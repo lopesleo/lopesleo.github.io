@@ -159,6 +159,7 @@ export function head(t, L, { title, description, canonical, alternates, ogImage,
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="${canonical}">
 ${alternates}
 <meta name="theme-color" content="${PAL.t0}">
@@ -172,11 +173,18 @@ ${alternates}
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:locale" content="${L.og}">
+${C.LANGS.filter((o) => o.code !== L.code).map((o) => `<meta property="og:locale:alternate" content="${o.og}">`).join("\n")}
 <meta property="og:image" content="${C.SITE}${ogImage}">
-<meta property="og:image:width" content="1024">
-<meta property="og:image:height" content="500">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(ogAlt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${C.SITE}${ogImage}">
+<meta name="twitter:image:alt" content="${esc(ogAlt)}">
+<meta name="twitter:site" content="@guardiao_game">
 <link rel="preload" href="${A}fonts/Jersey15.woff2" as="font" type="font/woff2" crossorigin>
 ${cjkFont}
 <link rel="stylesheet" href="${ver("css/guardiao.css")}">
@@ -184,28 +192,64 @@ ${extra}
 </head>`;
 }
 
+// Nome do estúdio e da marca: `@id`s fixos para os blocos se referenciarem
+const ORG_ID = `${C.SITE}/#organization`;
+export const studioOrg = () => ({
+  "@type": "Organization",
+  "@id": ORG_ID,
+  name: C.STUDIO,
+  url: `${C.SITE}/`,
+  logo: `${C.SITE}/assets/favicon.svg`,
+  email: C.CONTACT,
+  sameAs: ["https://discord.gg/TTYnNtQAes", "https://www.instagram.com/guardiaodaflorestaofc/", "https://x.com/guardiao_game"],
+});
+
+// Dados estruturados da página principal: o jogo (com o trailer), o estúdio e as perguntas frequentes.
+// Nada de nota, avaliação ou número de downloads: só o que é verdade hoje.
 function jsonLd(t, L, url) {
   const name = t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`;
-  const data = {
-    "@context": "https://schema.org",
+  const media = (rel) => `${C.SITE}${A}${rel}`;
+  const game = {
     "@type": ["VideoGame", "MobileApplication"],
+    "@id": `${url}#game`,
     name,
     alternateName: L.code === "pt" ? "Forest Guardian" : "Guardião da Floresta",
     url,
     inLanguage: L.html,
     description: t.meta.description,
-    genre: ["Roguelite", "Action", "Survival"],
+    genre: ["Roguelite", "Survival", "Action"],
+    keywords: t.meta.keywords,
     gamePlatform: "Android",
     operatingSystem: "Android 7.0+",
     applicationCategory: "GameApplication",
-    image: `${C.SITE}${A}img/og-${L.code}.jpg`,
-    author: { "@type": "Organization", name: C.STUDIO, email: C.CONTACT },
-    publisher: { "@type": "Organization", name: C.STUDIO },
+    playMode: "SinglePlayer",
+    image: media(`img/social-${L.code}.jpg`),
+    screenshot: [media(`img/shots/cards-${L.code}.webp`)],
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    creator: { "@id": ORG_ID },
     offers: { "@type": "Offer", price: "0", priceCurrency: "BRL" },
-    availableLanguage: ["pt-BR", "en", "es", "ja", "zh-Hans", "zh-Hant"],
-    ...(C.STAGE === "loja" ? { installUrl: C.PLAY_URL } : {}),
+    availableLanguage: C.LANGS.map((o) => o.html),
+    video: {
+      "@type": "VideoObject",
+      name: `${name}: ${t.trailer.title.toLowerCase()}`,
+      description: t.meta.description,
+      thumbnailUrl: media("media/trailer.webp"),
+      contentUrl: media("media/trailer-720p.mp4"),
+      uploadDate: "2026-10-09",
+      duration: "PT1M31S",
+      inLanguage: L.html,
+    },
   };
-  return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
+  const faq = {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    inLanguage: L.html,
+    mainEntity: t.faq.items.map((it) => ({ "@type": "Question", name: it.q, acceptedAnswer: { "@type": "Answer", text: it.a } })),
+  };
+  const site = { "@type": "WebSite", "@id": `${C.SITE}/#website`, url: `${C.SITE}/`, name: C.STUDIO, publisher: { "@id": ORG_ID } };
+  const data = { "@context": "https://schema.org", "@graph": [studioOrg(), site, game, faq] };
+  return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\u003c")}</script>`;
 }
 
 export function footerHtml(t, L, pagePath = "") {
@@ -251,9 +295,11 @@ ${head(t, L, {
   description: t.meta.description,
   canonical: url,
   alternates,
-  ogImage: `${A}img/og-${L.code}.jpg`,
+  ogImage: `${A}img/social-${L.code}.jpg`,
   ogAlt: t.meta.ogAlt,
-  extra: jsonLd(t, L, url) + `<script>document.documentElement.classList.remove("no-js")</script>`,
+  extra: `<link rel="preload" as="image" href="${ver("media/hero-wide.webp")}" media="(min-aspect-ratio: 4/5)" fetchpriority="high">
+<link rel="preload" as="image" href="${ver("media/hero-tall.webp")}" media="(max-aspect-ratio: 4/5)" fetchpriority="high">
+` + jsonLd(t, L, url) + `<script>document.documentElement.classList.remove("no-js")</script>`,
 })}
 <body>
 <a class="skip" href="#main">${esc(t.skip)}</a>
@@ -471,6 +517,15 @@ ${head(t, L, {
   </div>
 </section>
 
+<section class="sec sec-faq" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    ${sectionHead(t.faq.title, t.faq.sub, { accent: PAL.ice2, id: "h-faq" })}
+    <div class="faq">
+      ${t.faq.items.map((it, i) => `<details class="panel faq-item" style="--accent:${[PAL.g6, PAL.ice2, PAL.org2, PAL.straw3, PAL.yel2, PAL.pur2, PAL.pink][i % 7]}"${i === 0 ? " open" : ""}><summary><h3>${esc(it.q)}</h3></summary><p>${esc(it.a)}</p></details>`).join("\n      ")}
+    </div>
+  </div>
+</section>
+
 <section class="sec sec-join" id="join" aria-labelledby="h-join">
   ${treeline(55, { color: PAL.g0, back: PAL.t1, h: 30 })}
   <div class="wrap">
@@ -498,8 +553,8 @@ ${head(t, L, {
       <div class="press-side">
         <p class="press-about">${esc(t.press.about)}</p>
         <div class="downloads">
-          <a class="dl" href="${A}guardiao-da-floresta-presskit.zip" download data-cta="presskit" data-where="press">${icon("download", { size: 3 })}<span><strong>${esc(t.press.kit)}</strong><small>${esc(fmt(t.press.kitMeta, mb("guardiao-da-floresta-presskit.zip")))}</small></span></a>
-          <a class="dl" href="${A}media/trailer-720p.mp4" download="guardiao-da-floresta-trailer-720p.mp4" data-cta="trailer_download" data-where="press">${icon("download", { size: 3 })}<span><strong>${esc(t.press.trailer)}</strong><small>${esc(fmt(t.press.trailerMeta, mb("media/trailer-720p.mp4")))}</small></span></a>
+          <a class="dl" href="${ver("guardiao-da-floresta-presskit.zip")}" download data-cta="presskit" data-where="press">${icon("download", { size: 3 })}<span><strong>${esc(t.press.kit)}</strong><small>${esc(fmt(t.press.kitMeta, mb("guardiao-da-floresta-presskit.zip")))}</small></span></a>
+          <a class="dl" href="${ver("media/trailer-720p.mp4")}" download="guardiao-da-floresta-trailer-720p.mp4" data-cta="trailer_download" data-where="press">${icon("download", { size: 3 })}<span><strong>${esc(t.press.trailer)}</strong><small>${esc(fmt(t.press.trailerMeta, mb("media/trailer-720p.mp4")))}</small></span></a>
           <a class="dl" href="${esc(C.DISCORD)}" target="_blank" rel="noopener" data-cta="discord" data-where="press">${icon("chat", { size: 3 })}<span><strong>${esc(t.discord.press)}</strong><small>${esc(t.discord.meta)}</small></span></a>
           <a class="dl" href="mailto:${C.CONTACT}" data-cta="contact" data-where="press">${icon("mail", { size: 3 })}<span><strong>${esc(t.press.contact)}</strong><small>${esc(C.CONTACT)}</small></span></a>
         </div>

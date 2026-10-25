@@ -1,6 +1,6 @@
 // Página "Novidades" (notas de versão), uma por idioma. Mesmo cabeçalho, rodapé, paleta e CSS da página principal.
 import * as C from "./config.mjs";
-import { esc, head, footerHtml, langMenu, primaryCta, newsHref } from "./page.mjs";
+import { esc, head, footerHtml, langMenu, primaryCta, newsHref, studioOrg } from "./page.mjs";
 import { PAL } from "./palette.mjs";
 import { visible } from "./patchnotes.mjs";
 
@@ -44,6 +44,23 @@ export function renderNews(t, L, list) {
   const versions = visible(list).filter((v) => v.notes[L.code]?.length);
   const home = `${C.BASE}${L.dir}`;
   const brand = t.titleLines[2] === "big-first" ? `${t.titleLines[0]} ${t.titleLines[1]}` : `${t.titleLines[0]}${CJK[L.code] ? "" : " "}${t.titleLines[1]}`;
+  const crumb = (i, name, item) => ({ "@type": "ListItem", position: i, name, item });
+  const ld = {
+    "@context": "https://schema.org",
+    "@graph": [
+      studioOrg(),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          crumb(1, C.STUDIO, `${C.SITE}/`),
+          crumb(2, brand, `${C.SITE}${home}`),
+          crumb(3, t.nav.news, url),
+        ],
+      },
+      { "@type": "CollectionPage", "@id": `${url}#page`, url, name: n.metaTitle, description: n.metaDesc, inLanguage: L.html, isPartOf: { "@id": `${C.SITE}/#website` }, about: { "@type": "VideoGame", name: brand, url: `${C.SITE}${home}` }, publisher: { "@id": studioOrg()["@id"] } },
+    ],
+  };
+  const ldTag = `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\u003c")}</script>`;
   const cards = versions
     .map(
       (v, i) => `<li class="panel news-card" id="v${v.version}" style="--accent:${i === 0 ? PAL.yel2 : PAL.g6}">
@@ -57,7 +74,7 @@ export function renderNews(t, L, list) {
     .join("\n");
   return `<!doctype html>
 <html lang="${L.html}" data-lang="${L.code}" data-stage="${C.STAGE}" class="${CJK[L.code] ? "cjk" : "latin"}">
-${head(t, L, { title: n.metaTitle, description: n.metaDesc, canonical: url, alternates, ogImage: `${A}img/og-${L.code}.jpg`, ogAlt: t.meta.ogAlt, extra: `<style>${CSS.replace(/\s*\n\s*/g, "")}</style>` })}
+${head(t, L, { title: n.metaTitle, description: n.metaDesc, canonical: url, alternates, ogImage: `${A}img/social-${L.code}.jpg`, ogAlt: t.meta.ogAlt, extra: `${ldTag}<style>${CSS.replace(/\s*\n\s*/g, "")}</style>` })}
 <body>
 <a class="skip" href="#main">${esc(t.skip)}</a>
 <header class="topbar solid">
