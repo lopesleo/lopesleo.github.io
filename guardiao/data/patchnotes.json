@@ -2,6 +2,43 @@
   "source": "docs/PLAY_STORE.md (repositório do jogo)",
   "versions": [
     {
+      "version": "1.0.26",
+      "code": 27,
+      "date": "2026-10-25",
+      "notes": {
+        "pt": [
+          "O baú dourado dos minichefes agora sobe um nível de cada arma, além da carta extra: as evoluções chegam bem mais cedo.",
+          "A carta de arma nova avisa quando completa uma evolução.",
+          "Dia do Saci, até 7/11: pegue o redemoinho na Clareira e ganhe a Carapuça do Saci, grátis."
+        ],
+        "en": [
+          "Mini-boss golden chests now level up every weapon, on top of the extra card: evolutions arrive much sooner.",
+          "New weapon cards show when they complete an evolution.",
+          "Saci Day, until Nov 7: catch the whirlwind in the Clearing and get the Saci's Cap for free."
+        ],
+        "es": [
+          "El cofre dorado de los minijefes ahora sube un nivel cada arma, además de la carta extra: las evoluciones llegan mucho antes.",
+          "La carta de arma nueva avisa cuando completa una evolución.",
+          "Día del Saci, hasta el 7/11: atrapa el remolino en el Claro y gana el Gorro del Saci gratis."
+        ],
+        "ja": [
+          "中ボスの金の宝箱で、追加のカードに加えて全武器のレベルが1上がるように。進化がずっと早く来ます。",
+          "新しい武器のカードが、進化を完成させるときに知らせてくれます。",
+          "サシの日（11月7日まで）：広場でつむじ風をつかまえて、サシの帽子を無料でゲット。"
+        ],
+        "zh": [
+          "小头目的金色宝箱现在除了额外卡牌，还会让每把武器升1级：进化来得更早。",
+          "新武器卡牌会提示它能完成哪个进化。",
+          "萨西节（至11月7日）：在空地抓住旋风，免费获得萨西的红帽。"
+        ],
+        "zht": [
+          "小頭目的金色寶箱現在除了額外卡牌，還會讓每把武器升1級：進化來得更早。",
+          "新武器卡牌會提示它能完成哪個進化。",
+          "薩西節（至11月7日）：在空地抓住旋風，免費獲得薩西的紅帽。"
+        ]
+      }
+    },
+    {
       "version": "1.0.25",
       "code": 26,
       "date": "2026-10-25",
