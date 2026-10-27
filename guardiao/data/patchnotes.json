@@ -2,6 +2,49 @@
   "source": "docs/PLAY_STORE.md (repositório do jogo)",
   "versions": [
     {
+      "version": "1.0.27",
+      "code": 28,
+      "date": "2026-10-26",
+      "notes": {
+        "pt": [
+          "A tela de Reviver foi refeita: o guardião diante da fogueira, música própria e um 3, 2, 1 antes de voltar, com uma onda de luz que abre espaço na horda.",
+          "As peças grátis do Guarda-roupa agora são prêmio de conquistas, como 1.000 abates e a primeira vitória.",
+          "A tela inicial mostra a versão do jogo.",
+          "Dia do Saci, até 7/11: pegue o redemoinho na Clareira e ganhe a Carapuça do Saci, grátis."
+        ],
+        "en": [
+          "The Revive screen was redone: the guardian by the campfire, its own music and a 3, 2, 1 before you return, with a wave of light that clears space in the horde.",
+          "Free Wardrobe pieces are now achievement rewards, such as 1,000 kills and your first victory.",
+          "The title screen shows the game version.",
+          "Saci Day, until Nov 7: catch the whirlwind in the Clearing and get the Saci's Cap for free."
+        ],
+        "es": [
+          "Rehicimos la pantalla de Revivir: el guardián frente a la fogata, música propia y un 3, 2, 1 antes de volver, con una onda de luz que abre espacio en la horda.",
+          "Las piezas gratis del Vestuario ahora son premios de logros, como derrotar a 1.000 enemigos y la primera victoria.",
+          "La pantalla de inicio muestra la versión del juego.",
+          "Día del Saci, hasta el 7/11: atrapa el remolino en el Claro y gana el Gorro del Saci gratis."
+        ],
+        "ja": [
+          "復活画面を作り直しました。焚き火の前の守護者、専用の音楽、戻る前の3・2・1、そして群れを押し返す光の波。",
+          "衣装箱の無料アイテムは実績の報酬になりました（敵1,000体撃破、初勝利など）。",
+          "タイトル画面にゲームのバージョンを表示します。",
+          "サシの日（11月7日まで）：広場でつむじ風をつかまえて、サシの帽子を無料でゲット。"
+        ],
+        "zh": [
+          "复活画面全新改版：篝火前的守护者、专属音乐、回到战斗前的3、2、1倒数，还有推开怪群的光之波。",
+          "衣橱的免费装扮现在是成就奖励，例如击败1000个敌人和首次胜利。",
+          "标题画面会显示游戏版本。",
+          "萨西节（至11月7日）：在空地抓住旋风，免费获得萨西的红帽。"
+        ],
+        "zht": [
+          "復活畫面全新改版：營火前的守護者、專屬音樂、回到戰鬥前的3、2、1倒數，還有推開怪群的光之波。",
+          "衣櫥的免費裝扮現在是成就獎勵，例如擊敗1000個敵人和首次勝利。",
+          "標題畫面會顯示遊戲版本。",
+          "薩西節（至11月7日）：在空地抓住旋風，免費獲得薩西的紅帽。"
+        ]
+      }
+    },
+    {
       "version": "1.0.26",
       "code": 27,
       "date": "2026-10-25",

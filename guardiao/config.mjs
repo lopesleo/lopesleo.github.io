@@ -61,7 +61,7 @@ export const PRIVACY = [
 export const PATCH_NOTES_SOURCE = "D:/dev/Dalmo-game/p2/guardiao/docs/PLAY_STORE.md";
 // Última versão já publicada para os testadores. Versões acima dela não aparecem no site.
 // Ao publicar uma versão nova na Play, suba este número e rode o build.
-export const PATCH_NOTES_MAX = "1.0.26";
+export const PATCH_NOTES_MAX = "1.0.27";
 // Endereço da página por idioma (depois de BASE + dir do idioma)
 export const NEWS_PATH = { pt: "novidades/", en: "patch-notes/", es: "novedades/", ja: "updates/", zh: "updates/", zht: "updates/" };
 
